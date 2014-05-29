@@ -1,5 +1,5 @@
 //
-//  CCBContextManifest.h
+//  CCHContextManifest.h
 //  ContextHub
 //
 //  Created by Kevin Lee on 10/23/13.
@@ -16,18 +16,22 @@
 @interface CCHElementManifestService : NSObject
 
 /** 
- returns the static instance of the service.
+ Returns the static instance of the service.
  */
 
 + (CCHElementManifestService *)sharedService;
 
 /** 
  Qureies the element manifest and posts a notfication for each of the elements that are returned from the api.  The notifications names are contstructed using the following 
- patter: <element>_required_notification
+ pattern: <element>_required_notification
  
- So if the location element is returned in the manifest, a location_required_notification will be posted to the default notification center.
+ For example, when the location element is returned in the manifest, a location_required_notification will be posted to the default notification center.
  */
 - (void)getManifest;
 
+/**
+ Gets the manifest from the ContextHub server
+ @param completion executed when the call completes;
+ */
 - (void)getManifestWithcompletion:(void(^)(BOOL didFetchContent))completion;
 @end

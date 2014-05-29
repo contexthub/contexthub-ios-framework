@@ -1,6 +1,6 @@
 //
 //  CCHSubscriptionService.h
-//  CarbonBlack
+//  ContextHub
 //
 //  Created by Kevin Lee on 4/17/14.
 //  Copyright (c) 2014 ChaiOne. All rights reserved.
@@ -12,7 +12,7 @@
 /**
  ContextHub Subscription error codes.
  */
-typedef NS_ENUM(NSInteger, CCBCarbonSubscriptionErrorCode) {
+typedef NS_ENUM(NSInteger, CCHSubscriptionErrorCode) {
     /**
      Null tags error code.
      */

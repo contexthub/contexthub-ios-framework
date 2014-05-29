@@ -1,5 +1,5 @@
 //
-//  CCBElementServiceLocator.h
+//  CCHElementServiceLocator.h
 //  ContextHub
 //
 //  Created by Kevin Lee on 10/24/13.
@@ -12,9 +12,9 @@
 #import "CCHDeviceInformationService.h"
 
 /** 
- The elemente service locator is the class that manages all of the objects that implement the CCBElementServiceProtocol.  
- It listens for notifications that are typically posted from the CCBElementManifestService.  It provides a method for registering user defined CCBElementServiceProtocol classes.
- When an element notification is received for a registered service, it will find the registered service and call the [CCBElementServiceProtocol requestServiceAuthorizationForElement:element] method
+ The elemente service locator is the class that manages all of the objects that implement the CCHElementServiceProtocol.
+ It listens for notifications that are typically posted from the CCHElementManifestService.  It provides a method for registering user defined CCHElementServiceProtocol classes.
+ When an element notification is received for a registered service, it will find the registered service and call the [CCHElementServiceProtocol requestServiceAuthorizationForElement:element] method
  for the related element.
  */
 @interface CCHElementServiceLocator : NSObject
@@ -26,7 +26,7 @@
 
 /** 
  Used to exted the service with userdefined elements.
- @param elementService service that implements the CCBElementServiceProtocol
+ @param elementService service that implements the CCHElementServiceProtocol
  @param element is the element that the service will manage.
  */
 - (void)registerService:(id<CCHElementServiceProtocol>)elementService forElement:(NSString *)element;

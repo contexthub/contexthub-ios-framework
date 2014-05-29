@@ -72,7 +72,7 @@
 
 /**
  When contextual elements are changed, ContextHub will send background push notifications to the applicaiton letting you know that new content is available.
- This will allow the context events to update and stay in sync with the server.  Otherwise, the user will need to relaunch the app to recieving context changes.
+ This will allow the context events to update and stay in sync with the server.  Otherwise, the user will need to relaunch the app to receiving context changes.
  @param application that is receiving the remote notification.
  @param userInfo that was delivered with the remote notification.
  @param completion a completion block that is executed when the context sync is completed.

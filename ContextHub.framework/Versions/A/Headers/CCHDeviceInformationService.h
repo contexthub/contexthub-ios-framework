@@ -1,5 +1,5 @@
 //
-//  CCBDeviceInformationService.h
+//  CCHDeviceInformationService.h
 //  ContextHub
 //
 //  Created by Kevin Lee on 12/16/13.

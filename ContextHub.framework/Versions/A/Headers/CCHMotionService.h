@@ -1,5 +1,5 @@
 //
-//  CCBMotionService.h
+//  CCHMotionService.h
 //  ContextHub
 //
 //  Created by Kevin Lee on 12/13/13.
@@ -13,9 +13,9 @@
 #define kMotionChangedEvent @"motion_changed"
 
 /**
- The CCBMotionService uses a CMMotionActivityManager to track and register motion activities.
+ The CCHMotionService uses a CMMotionActivityManager to track and register motion activities.
  
-  This class implements the `CCBElementServiceProtocol`.
+  This class implements the `CCHElementServiceProtocol`.
  
  ## Notifications
  
@@ -29,7 +29,7 @@
 @interface CCHMotionService : NSObject <CCHElementServiceProtocol>
 
 /**
- returs a static shared instnace of the CCBMotionService
+ returs a static shared instnace of the CCHMotionService
  */
 + (CCHMotionService *)sharedService;
 

@@ -1,5 +1,5 @@
 //
-//  CCBElementServiceProtocol.h
+//  CCHElementServiceProtocol.h
 //  ContextHub
 //
 //  Created by Kevin Lee on 10/24/13.

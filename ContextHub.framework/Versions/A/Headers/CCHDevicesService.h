@@ -1,5 +1,5 @@
 //
-//  CCBDevicesService.h
+//  CCHDevicesService.h
 //  ContextHub
 //
 //  Created by Kevin Lee on 2/12/14.
@@ -11,13 +11,7 @@
 #import "CCHElementServiceLocator.h"
 
 
-/**
- This service is intended to be used by the SDK.
- */
 @interface CCHDevicesService : NSObject
 
-/**
- Send the device profile to ContextHub.
- */
 + (void)registerDevice;
 @end

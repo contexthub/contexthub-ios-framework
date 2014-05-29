@@ -1,5 +1,5 @@
 //
-//  CCBVaultItem.h
+//  CCHVaultItem.h
 //  ContextHub
 //
 //  Created by Kevin Lee on 11/1/13.
@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 /**
- The CCBVaultItem protocol can be used if you want to easily save your objects to the Vault.
+ The CCHVaultItem protocol can be used if you want to easily save your objects to the Vault.
  
  @note We recommend creating an initWithDictionary: method for your class so that you can easily initialize your objects
  from the API responses.  If you set the valutInfo diction to the value of the vault_info key in the response

@@ -1,5 +1,5 @@
 //
-//  CCBVaultResource.h
+//  CCHVaultResource.h
 //  ContextHub
 //
 //  Created by Kevin Lee on 10/21/13.
@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 /**
- The CCBVaultResource is an object that should be used to provide information about the resource/file that needs to be uploaded.
+ The CCHVaultResource is an object that should be used to provide information about the resource/file that needs to be uploaded.
  */
 @interface CCHVaultResource : NSObject <NSCoding>
 

@@ -1,5 +1,5 @@
 //
-//  CCBContextEventManager.h
+//  CCHContextEventManager.h
 //  ContextHub
 //
 //  Created by Kevin Lee on 10/25/13.
@@ -35,7 +35,7 @@
 */
 @interface CCHContextEventManager : NSObject
 /** 
- returns the static instnace of the CCBContextEventManager
+ Returns the static instnace of the CCHContextEventManager
  */
 + (CCHContextEventManager *)sharedManager;
 
@@ -52,7 +52,7 @@
  If you return NO, none of the other delegate methods will git called, and the event will be discarded.  
  @note No history of the event will be captured if you return NO here.
  returns boolean indicating if the event should be posted to ContextHUB
- @param eventManager the CCBContextEventManager that handling the context event.
+ @param eventManager the CCHContextEventManager that handling the context event.
  @param event the context event that triggered the call.
  */
 - (BOOL)contextEventManager:(CCHContextEventManager *)eventManager
@@ -60,8 +60,8 @@
 
 
 /**
- called before an event was sent to ContextHub.
- @param eventManager the CCBContextEventManager that will the event
+ Called before an event was sent to ContextHub.
+ @param eventManager the CCHContextEventManager that will the event
  @param event the context event that was sent to ContextHub
  */
 - (void)contextEventManager:(CCHContextEventManager *)eventManager
@@ -69,8 +69,8 @@
 
 
 /**
- called after an event was sent to ContextHub.
- @param eventManager the CCBContextEventManager that sent the event
+ Called after an event was sent to ContextHub.
+ @param eventManager the CCHContextEventManager that sent the event
  @param event the context event that was sent to ContextHub
  */
 - (void)contextEventManager:(CCHContextEventManager *)eventManager
@@ -86,15 +86,15 @@ Implement the data source when you want to add custom data to the context event.
 @optional
 
 /**
- returns a serializable dictionary that will get added to context event payload property.
+ Returns a serializable dictionary that will get added to context event payload property.
  @param event is the event that will be sent to the server.
  */
 - (NSDictionary *)payloadForEvent:(NSDictionary *)event;
 
 /**
- returns a serializable dictionary that will get added to context event payload property.
+ Returns a serializable dictionary that will get added to context event payload property.
  @param event is the event that will be sent to the server.
- @param eventManager the CCBContextEventManager that will send the event.
+ @param eventManager the CCHContextEventManager that will send the event.
  */
 - (NSDictionary *)contextEventManager:(CCHContextEventManager *)eventManager payloadForEvent:(NSDictionary *)event;
 
@@ -103,12 +103,12 @@ Implement the data source when you want to add custom data to the context event.
 
 @interface CCHContextEventManager ()
 /**
- The CCBContextEventManagerDelegate
+ The CCHContextEventManagerDelegate
  */
 @property id<CCHContextEventManagerDelegate> delegate;
 
 /**
- the CCBContextEventManagerDataSource
+ The CCHContextEventManagerDataSource
  */
 @property id<CCHContextEventManagerDataSource> dataSource;
 

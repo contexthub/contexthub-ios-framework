@@ -1,5 +1,5 @@
 //
-//  CCBLocationService.h
+//  CCHLocationService.h
 //  ContextHub
 //
 //  Created by Kevin Lee on 10/24/13.
@@ -24,16 +24,16 @@
 #define kBeaconProximityImmediate @"immediate_state"
 
 /**
-The CCBLocation service works the CLLocationManager to track and register location based information.  It will detect and register Geofences that are configured in the ContextHub api.
+The CCHLocation service works the CLLocationManager to track and register location based information.  It will detect and register Geofences that are configured in the ContextHub api.
  If the location element is configured for the app, it will also monitor for significant location changes.  When region events or location change events are triggered, it posts a context_event_triggered notification and sets the event package as the contents.
  
 
- This class implements the CCBElementServiceProtocol and the CLLocationManagerDelegate.
+ This class implements the CCHElementServiceProtocol and the CLLocationManagerDelegate.
  */
 @interface CCHLocationService : NSObject <CCHElementServiceProtocol, CLLocationManagerDelegate>
 
 /**
-returns the static shared instance f the CCBLocationService
+returns the static shared instance f the CCHLocationService
  */
 + (CCHLocationService *)sharedService;
 

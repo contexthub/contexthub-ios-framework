@@ -1,5 +1,5 @@
 //
-//  CCBVaultService.h
+//  CCHVaultService.h
 //  ContextHub
 //
 //  Created by Kevin Lee on 10/7/13.
@@ -9,27 +9,26 @@
 #import <Foundation/Foundation.h>
 #import "CCHVaultItem.h"
 
-#define kCarbonVaultErrorDomain @"com.chaione.carbon.vault.error"
+#define kContextHubVaultErrorDomain @"com.contexthub.vault.error"
 /** 
  ContextHub Vault error codes.
  */
-typedef NS_ENUM(NSInteger, CCBCarbonVaultErrorCode) {
+typedef NS_ENUM(NSInteger, CCHVaultErrorCode) {
     /**
      missing container error code.
      */
-    CCBMissingContainerCode = 0
+    CCHMissingContainerCode = 0
 };
 
-typedef void (^vaultCompletionBlock)(NSDictionary *carbonResponse, NSError *error);
-typedef void (^vaultListingCompletionBlock)(NSArray *carbonResponses, NSError *error);
+typedef void (^vaultCompletionBlock)(NSDictionary *response, NSError *error);
+typedef void (^vaultListingCompletionBlock)(NSArray *responses, NSError *error);
 
 /**
- The shared CCBVaultSerivce should be used to persist data to the ContextHub Vault API.  This class provides methods for creating data in containers.
+ The shared CCHVaultSerivce should be used to persist data to the ContextHub Vault API.  This class provides methods for creating data in containers.
  You can think of a container as a bucket for common data.
- Once you persist data, you can retrieve it id.  You can also retrieve all data in a specific container.
+ Once you persist data, you can retrieve it by Id.  You can also retrieve all data in a specific container.
  */
 @interface CCHVaultService : NSObject
-
 
 /**
  @returns the static shared instance of the the Vault Service
@@ -37,104 +36,45 @@ typedef void (^vaultListingCompletionBlock)(NSArray *carbonResponses, NSError *e
 + (CCHVaultService *)sharedService;
 
 /**
-If you need to store data in the ContextHub Vault, you will create the data in a container.
- @param item the NSDictionary representation of the item you want to persist
- @param containerName the name of the container that will be used to store similar data
- @param completionBlock executed after the create operation has completed on the server.
- */
-- (void)createItem:(NSDictionary *)item inContainer:(NSString *)containerName completion:(vaultCompletionBlock)completionBlock;
-
-/** 
- If you need to store data AND resources in the ContextHub Vault, you will need to pass the data and an array of CCBVaultResource objects for the files that you want uploaded.
+ Creates items in the ContextHub Vault.
  @param item the NSDictionary representation of the item you want to persist.
- @param resources an array CCBVaultResource for the files that you want to upload.
  @param containerName the name of the container that will be used to store similar data.
- @param completionBlock executed after the create operation has completed on the server.
+ @param attachments (optional) an array of CCHVaultResource objects.
+ @param completion (optional) called when the request completes. The block is passed an NSDictionary representation of the item. If an error occurs, the NSError will be passed to the block.
+ @note the dictionary that is returned will have a key name vault_info.  This object contains the id and other metadata that is used to work with the item on the ContextHub server.
+ @note the name used in the CCHVaultResource will be added as a property on the item.  The property will contain the URL that you can use to download the file.
  */
-- (void)createItem:(NSDictionary *)item withResources:(NSArray *) resources inContainer:(NSString *)containerName completion:(vaultCompletionBlock)completionBlock;
-
-/** 
-Used to retrieve the latest version of an item that is stored in the ContextHub Vault.
- @param item custom data item with vault id
- @param completionBlock executed when api request completes.
- */
-- (void)getItem:(NSDictionary *)item completion:(vaultCompletionBlock)completionBlock;
+- (void)createItem:(NSDictionary *)item inContainer:(NSString *)containerName withAttachments:(NSArray *)attachments completion:(vaultCompletionBlock)completion;
 
 /**
- Used to retrieve the latest version of an item that is stored in the ContextHub Vault.
- @param containerName name of the container for the items
- @param completionBlock executed when the api request completes.
+ Gets an item from a container in the Vault.
+ @param vaultId the vault id of the item.  The id is found in the key path @"vault_info.id".
+ @param containerName the name of the container. the container name can be found in the key path @"vault_info.container"
+ @param completion called when the request completes.
  */
-- (void)getItemsInContainer:(NSString *)containerName completion:(vaultListingCompletionBlock)completionBlock;
-
-///**
-// Used to retrieve a list of all containers that are stored in the ContextHub Vault.
-// @param completionBlock excuted when api request completes.
-// */
-//- (void)getContainersWithCompletion:(vaultListingCompletionBlock)completionBlock;
+- (void)getItemWithId:(NSString *)vaultId inContainer:(NSString *)containerName completion:(vaultCompletionBlock)completion;
 
 /**
-executes the vaultCompletionBlock passing in the dictionary and error.
- @param block a valut completeion block
- @param carbonResponse response dictionary from ContextHub vault api
- @param error NSError object.  can be nil.
+ Gets all items stored in a container in the Vault.
+ @param containerName name of the container for the items.
+ @param completion called when the request completes. The block is passed an NSArray of dictionaries that representation of the items.  If an error occurs, the NSError will be passed to the block.
  */
-- (void)executeVaultCompletionBlock:(vaultCompletionBlock)block
-            withCarbonResponse:(NSDictionary *)carbonResponse
-                         error:(NSError *)error;
+- (void)getItemsInContainer:(NSString *)containerName completion:(vaultListingCompletionBlock)completion;
 
 /**
- executes the vaultListingCompletionBlock passing in the dictionary and error.
- @param block a valut completeion block
- @param carbonResponse response dictionary from ContextHub vault api
- @param error NSError object.  can be nil.
+ Updates an item in the Vault.
+ @param item to be updated.
+ @param attachments (optional) an array of CCHVaultResource objects.
+ @param completion (optional) called when the request completes. The block is passed an NSDictionary representation of the item. If an error occurs, the NSError will be passed to the block.
+ @note the name used in the CCHVaultResource will be added as a property on the item.  The property will contain the URL that you can use to download the file.
  */
-- (void)executeVaultListingCompletionBlock:(vaultListingCompletionBlock)block
-                 withCarbonResponse:(NSDictionary *)carbonResponse
-                              error:(NSError *)error;
+- (void)updateItem:(NSDictionary *)item withAttachments:(NSArray *)attachments completion:(vaultCompletionBlock)completion;
 
 /**
- updates the item
- @param item item to be updated;
- @param completionBlock vaultCompletionBlock
- */
-- (void)updateItem:(NSDictionary *)item completion:(vaultCompletionBlock)completionBlock;
-
-/**
- updates the item with associated file resources
- @param resources an array of CCBVaultResource objects for the files that will be associated.
- @param item item to be updated;
- @param completionBlock vaultCompletionBlock
- */
-- (void)updateItem:(NSDictionary *)item withResources:(NSArray *)resources completion:(vaultCompletionBlock)completionBlock;
-
-/**
- deletes the item
+ Deletes an item from the Vault.
  @param item item to be deleted;
- @param completionBlock vaultCompletionBlock
+ @param completion (optional) called when the request completes. If an error occurs, the NSError will be passed to the block.
  */
-- (void)deleteItem:(NSDictionary *)item completion:(vaultCompletionBlock)completionBlock;
+- (void)deleteItem:(NSDictionary *)item completion:(vaultCompletionBlock)completion;
 
-/**
- Save an object that implements the CCBVaultItem protocol in the ContextHub Vault.
- @param item the CCBVault item that you want to persist
- @param completionBlock executed after the create operation has completed on the server.
- */
-- (void)createVaultItem:(id<CCHVaultItem>)item completion:(vaultCompletionBlock)completionBlock;
-
-/**
- Update an object that implements the CCBVaultItem protocol in the ContextHub Vault.
- @warning Your object must have maintain the vaultInfo property.
- @param item the CCBVault item that you want to persist
- @param completionBlock executed after the create operation has completed on the server.
- */
-- (void)updateVaultItem:(id<CCHVaultItem>)item completion:(vaultCompletionBlock)completionBlock;
-
-/**
- Delete an object that implements the CCBVaultItem protocol from the ContextHub Vault.
- @warning Your object must have maintain the vaultInfo property.
- @param item the CCBVault item that you want to persist.
- @param completionBlock executed after the create operation has completed on the server.
- */
-- (void)deleteVaultItem:(id<CCHVaultItem>)item completion:(vaultCompletionBlock)completionBlock;
 @end
