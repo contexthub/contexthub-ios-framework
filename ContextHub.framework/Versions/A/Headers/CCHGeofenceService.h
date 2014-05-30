@@ -37,7 +37,7 @@
  @param location (optional) to be used to filter the nearest geofences.  Passing nil will return all geofences.
  @param completion called when the request completes. The block is passed an NSArray of NSDictionary objects that represent geofences.  If an error occurs, the NSError will be passed to the block.
  */
-+ (void)getGeofencesWithTag:(NSString *)tag nearLocation:(CLLocation *)location withSuccess:(void(^)(NSArray *geofences, NSError *error))completion;
++ (void)getGeofencesWithTag:(NSString *)tag nearLocation:(CLLocation *)location completion:(void(^)(NSArray *geofences, NSError *error))completion;
 
 /**
  Updates a geofence on the ContextHub server.

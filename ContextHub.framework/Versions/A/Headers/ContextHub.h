@@ -1,5 +1,5 @@
 //
-//  CarbonBlack.h
+//  ContextHub.h
 //  ContextHub
 //
 //  Created by Travis Fischer on 9/18/13.
@@ -28,12 +28,12 @@
 #import "CCHVaultService.h"
 
 /**
- * The primary interface with the ContextHub Black SDK
+ * The primary interface with the ContextHub SDK
  */
 @interface ContextHub : NSObject <CLLocationManagerDelegate>
 
 /**
- * Returns the default instance of CabonBlack
+ * Returns the default instance of ContextHub
  */
 + (ContextHub *)sharedInstance;
 

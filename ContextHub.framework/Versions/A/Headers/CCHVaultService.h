@@ -26,12 +26,12 @@ typedef void (^vaultListingCompletionBlock)(NSArray *responses, NSError *error);
 /**
  The shared CCHVaultSerivce should be used to persist data to the ContextHub Vault API.  This class provides methods for creating data in containers.
  You can think of a container as a bucket for common data.
- Once you persist data, you can retrieve it by Id.  You can also retrieve all data in a specific container.
+ Once you persist data, you can retrieve it by Container and Id.
  */
 @interface CCHVaultService : NSObject
 
 /**
- @returns the static shared instance of the the Vault Service
+ @returns singleton instance of the the Vault Service
  */
 + (CCHVaultService *)sharedService;
 
