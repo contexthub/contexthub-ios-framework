@@ -51,7 +51,7 @@
 /**
  Implement the data source when you want to add custom data to the context event.
  */
-@protocol CCHSenesorPipelineDataSource <NSObject>
+@protocol CCHSensorPipelineDataSource <NSObject>
 
 @optional
 
@@ -147,7 +147,7 @@ extern NSString * const CCHSensorPipelineDidCancelEvent;
 /**
  The CCHSenesorPipelineDataSource
  */
-@property id<CCHSenesorPipelineDataSource> dataSource;
+@property id<CCHSensorPipelineDataSource> dataSource;
 
 @end
 
