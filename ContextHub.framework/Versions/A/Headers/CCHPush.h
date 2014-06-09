@@ -46,7 +46,7 @@
   @param userInfo Other data to be sent in the notification
   @param completionHandler Completion block.  If an error occurs an NSError will be passed to the block.
  */
-- (void)sendPushToDevices:(NSArray *)devices userInfo:(NSDictionary *)userInfo completionHandler:(void (^)(NSError *error))completionHandler;
+- (void)sendNotificationToDevices:(NSArray *)devices userInfo:(NSDictionary *)userInfo completionHandler:(void (^)(NSError *error))completionHandler;
 
 
 /**
