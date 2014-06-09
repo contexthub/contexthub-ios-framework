@@ -91,6 +91,10 @@ extern NSString * const CCHSensorPipelineDidPostEvent;
  */
 extern NSString * const CCHSensorPipelineDidCancelEvent;
 
+/**
+ Represents untagged elements.
+ */
+extern NSString * const CCHUntaggedElements;
 
 /**
  The CCHSensorPipeline monitors events as they are triggered.  You can use the CCHSensorPipline to gain access to the events before and after they are sent to the server, and gives you the ability to filter events and add custom data to events before they are sent to the ContextHub server.
@@ -140,14 +144,19 @@ extern NSString * const CCHSensorPipelineDidCancelEvent;
 - (BOOL)removeSubscriptionForTags:(NSArray *)tags;
 
 /**
+ @return Returns an array of the tags that you have subscribed to.
+ */
+- (NSArray *)subscriptions;
+
+/**
  The CCHSensorPipelineDelegate
  */
-@property id<CCHSensorPipelineDelegate> delegate;
+@property (nonatomic, strong) id<CCHSensorPipelineDelegate> delegate;
 
 /**
  The CCHSenesorPipelineDataSource
  */
-@property id<CCHSensorPipelineDataSource> dataSource;
+@property (nonatomic, strong) id<CCHSensorPipelineDataSource> dataSource;
 
 @end
 

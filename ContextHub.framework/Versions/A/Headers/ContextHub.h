@@ -22,9 +22,6 @@
 #import "CCHVaultAttachment.h"
 
 
-
-#define CCHGlobalTag @""
-
 /**
  * The primary interface with the ContextHub SDK
  */
