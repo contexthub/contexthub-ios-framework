@@ -59,6 +59,8 @@
 	
 	<option value="//api/name/removeSubscriptionForTags:">&nbsp;&nbsp;&nbsp;&nbsp;- removeSubscriptionForTags:</option>
 	
+	<option value="//api/name/subscriptions">&nbsp;&nbsp;&nbsp;&nbsp;- subscriptions</option>
+	
 	<option value="//api/name/synchronize:">&nbsp;&nbsp;&nbsp;&nbsp;- synchronize:</option>
 	
 	
@@ -106,6 +108,8 @@
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/addSubscriptionForTags:">addSubscriptionForTags:</a></span></li>
 	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/removeSubscriptionForTags:">removeSubscriptionForTags:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/subscriptions">subscriptions</a></span></li>
 	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/synchronize:">synchronize:</a></span></li>
 	
@@ -206,6 +210,12 @@ The CCHSensorPipeline will call datasource and <a href="#//api/name/delegate">de
 	
 </li><li>
 	<span class="tooltip">
+		<code><a href="#//api/name/subscriptions">&ndash;&nbsp;subscriptions</a></code>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
 		<code><a href="#//api/name/delegate">&nbsp;&nbsp;delegate</a></code>
 	</span>
 	<span class="task-item-suffix">property</span>
@@ -241,7 +251,7 @@ The CCHSensorPipeline will call datasource and <a href="#//api/name/delegate">de
 	
     
 
-	<div class="method-subsection method-declaration"><code>@property id&lt;CCHSensorPipelineDataSource&gt; dataSource</code></div>
+	<div class="method-subsection method-declaration"><code>@property (nonatomic, strong) id&lt;CCHSensorPipelineDataSource&gt; dataSource</code></div>
 
     
 	
@@ -277,7 +287,7 @@ The CCHSensorPipeline will call datasource and <a href="#//api/name/delegate">de
 	
     
 
-	<div class="method-subsection method-declaration"><code>@property id&lt;CCHSensorPipelineDelegate&gt; delegate</code></div>
+	<div class="method-subsection method-declaration"><code>@property (nonatomic, strong) id&lt;CCHSensorPipelineDelegate&gt; delegate</code></div>
 
     
 	
@@ -411,7 +421,7 @@ The CCHSensorPipeline will call datasource and <a href="#//api/name/delegate">de
 	
 	
 	<div class="method-subsection brief-description">
-		<p>To disable automatic region monitoring for geofences and beacons, you must remove subscriptions.</p>
+		<p>To disable automatic region monitoring for geofences and beacons, you must remove <a href="#//api/name/subscriptions">subscriptions</a>.</p>
 	</div>		
 	
     
@@ -435,6 +445,47 @@ The CCHSensorPipeline will call datasource and <a href="#//api/name/delegate">de
 	<div class="method-subsection return">
 		<h4 class="method-subtitle parameter-title">Return Value</h4>
 		<p>Returns A boolean indicating that the <a href="#//api/name/tags">tags</a> were removed successfully.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">CCHSensorPipeline.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/subscriptions" title="subscriptions"></a>
+	<h3 class="subsubtitle method-title">subscriptions</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Returns an array of the <a href="#//api/name/tags">tags</a> that you have subscribed to.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (NSArray *)subscriptions</code></div>
+
+    
+	
+	
+	
+	<div class="method-subsection return">
+		<h4 class="method-subtitle parameter-title">Return Value</h4>
+		<p>Returns an array of the <a href="#//api/name/tags">tags</a> that you have subscribed to.</p>
 	</div>
 	
 	
