@@ -54,9 +54,9 @@
 	
 	<option value="//api/name/sendNotificationToAliases:userInfo:completionHandler:">&nbsp;&nbsp;&nbsp;&nbsp;- sendNotificationToAliases:userInfo:completionHandler:</option>
 	
-	<option value="//api/name/sendNotificationToTags:userInfo:completionHandler:">&nbsp;&nbsp;&nbsp;&nbsp;- sendNotificationToTags:userInfo:completionHandler:</option>
+	<option value="//api/name/sendNotificationToDevices:userInfo:completionHandler:">&nbsp;&nbsp;&nbsp;&nbsp;- sendNotificationToDevices:userInfo:completionHandler:</option>
 	
-	<option value="//api/name/sendPushToDevices:userInfo:completionHandler:">&nbsp;&nbsp;&nbsp;&nbsp;- sendPushToDevices:userInfo:completionHandler:</option>
+	<option value="//api/name/sendNotificationToTags:userInfo:completionHandler:">&nbsp;&nbsp;&nbsp;&nbsp;- sendNotificationToTags:userInfo:completionHandler:</option>
 	
 	
 	
@@ -98,9 +98,9 @@
 	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/sendNotificationToAliases:userInfo:completionHandler:">sendNotificationToAliases:userInfo:completionHandler:</a></span></li>
 	
-	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/sendNotificationToTags:userInfo:completionHandler:">sendNotificationToTags:userInfo:completionHandler:</a></span></li>
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/sendNotificationToDevices:userInfo:completionHandler:">sendNotificationToDevices:userInfo:completionHandler:</a></span></li>
 	
-	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/sendPushToDevices:userInfo:completionHandler:">sendPushToDevices:userInfo:completionHandler:</a></span></li>
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/sendNotificationToTags:userInfo:completionHandler:">sendNotificationToTags:userInfo:completionHandler:</a></span></li>
 	
 </ul></li>
 
@@ -169,7 +169,7 @@
 	
 </li><li>
 	<span class="tooltip">
-		<code><a href="#//api/name/sendPushToDevices:userInfo:completionHandler:">&ndash;&nbsp;sendPushToDevices:userInfo:completionHandler:</a></code>
+		<code><a href="#//api/name/sendNotificationToDevices:userInfo:completionHandler:">&ndash;&nbsp;sendNotificationToDevices:userInfo:completionHandler:</a></code>
 	</span>
 	
 	
@@ -459,6 +459,96 @@ This implementation will pull out the apns keys and pass all other items as cust
 </div>
 						
 						<div class="section-method">
+	<a name="//api/name/sendNotificationToDevices:userInfo:completionHandler:" title="sendNotificationToDevices:userInfo:completionHandler:"></a>
+	<h3 class="subsubtitle method-title">sendNotificationToDevices:userInfo:completionHandler:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Send Push Notifications to devices.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (void)sendNotificationToDevices:(NSArray *)<em>devices</em> userInfo:(NSDictionary *)<em>userInfo</em> completionHandler:(void ( ^ ) ( NSError *error ))<em>completionHandler</em></code></div>
+
+    
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>devices</em></dt>
+			<dd><p>The device Id&rsquo;s to notify.</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>userInfo</em></dt>
+			<dd><p>Other data to be sent in the notification</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>completionHandler</em></dt>
+			<dd><p>Completion block.  If an error occurs an NSError will be passed to the block.</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>The userInfo dictionary can contain custom data and standard apple push notification properties.
+This implementation will pull out the apns keys and pass all other items as custom data.</p>
+
+<table>
+<thead>
+<tr>
+<th> key </th>
+<th> value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td> alert </td>
+<td> the message you want sent </td>
+</tr>
+<tr>
+<td> sound </td>
+<td> sound you want played </td>
+</tr>
+<tr>
+<td> content-available </td>
+<td> pass in a 1 if you want to deliver a push in the background </td>
+</tr>
+<tr>
+<td> badge </td>
+<td> the number to be displayed on the icon </td>
+</tr>
+</tbody>
+</table>
+
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">CCHPush.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
 	<a name="//api/name/sendNotificationToTags:userInfo:completionHandler:" title="sendNotificationToTags:userInfo:completionHandler:"></a>
 	<h3 class="subsubtitle method-title">sendNotificationToTags:userInfo:completionHandler:</h3>
 	
@@ -548,96 +638,6 @@ This implementation will pull out the apns keys and pass all other items as cust
 	
 </div>
 						
-						<div class="section-method">
-	<a name="//api/name/sendPushToDevices:userInfo:completionHandler:" title="sendPushToDevices:userInfo:completionHandler:"></a>
-	<h3 class="subsubtitle method-title">sendPushToDevices:userInfo:completionHandler:</h3>
-	
-	
-	
-	<div class="method-subsection brief-description">
-		<p>Send Push Notifications to devices.</p>
-	</div>		
-	
-    
-
-	<div class="method-subsection method-declaration"><code>- (void)sendPushToDevices:(NSArray *)<em>devices</em> userInfo:(NSDictionary *)<em>userInfo</em> completionHandler:(void ( ^ ) ( NSError *error ))<em>completionHandler</em></code></div>
-
-    
-	
-	<div class="method-subsection arguments-section parameters">
-		<h4 class="method-subtitle parameter-title">Parameters</h4>
-		
-		<dl class="argument-def parameter-def">
-			<dt><em>devices</em></dt>
-			<dd><p>The device Id&rsquo;s to notify.</p></dd>
-		</dl>
-		
-		<dl class="argument-def parameter-def">
-			<dt><em>userInfo</em></dt>
-			<dd><p>Other data to be sent in the notification</p></dd>
-		</dl>
-		
-		<dl class="argument-def parameter-def">
-			<dt><em>completionHandler</em></dt>
-			<dd><p>Completion block.  If an error occurs an NSError will be passed to the block.</p></dd>
-		</dl>
-		
-	</div>
-	
-	
-	
-	
-	
-	
-	
-	<div class="method-subsection discussion-section">
-		<h4 class="method-subtitle">Discussion</h4>
-		<p>The userInfo dictionary can contain custom data and standard apple push notification properties.
-This implementation will pull out the apns keys and pass all other items as custom data.</p>
-
-<table>
-<thead>
-<tr>
-<th> key </th>
-<th> value</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td> alert </td>
-<td> the message you want sent </td>
-</tr>
-<tr>
-<td> sound </td>
-<td> sound you want played </td>
-</tr>
-<tr>
-<td> content-available </td>
-<td> pass in a 1 if you want to deliver a push in the background </td>
-</tr>
-<tr>
-<td> badge </td>
-<td> the number to be displayed on the icon </td>
-</tr>
-</tbody>
-</table>
-
-	</div>
-	
-	
-	
-	
-	
-	
-	
-	<div class="method-subsection declared-in-section">
-		<h4 class="method-subtitle">Declared In</h4>
-		<code class="declared-in-ref">CCHPush.h</code><br />
-	</div>				
-	
-	
-</div>
-						
 					</div>
 					
 					
@@ -653,7 +653,7 @@ This implementation will pull out the apns keys and pass all other items as cust
 				<div id="footer">
 					<hr />
 					<div class="footer-copyright">
-						<p><span class="copyright">&copy; 2014 ChaiONE. All rights reserved. (Last updated: 2014-06-08)</span><br />
+						<p><span class="copyright">&copy; 2014 ChaiONE. All rights reserved. (Last updated: 2014-06-09)</span><br />
 						
 						<span class="generator">Generated by <a href="http://appledoc.gentlebytes.com">appledoc 2.2 (build 961)</a>.</span></p>
 						
