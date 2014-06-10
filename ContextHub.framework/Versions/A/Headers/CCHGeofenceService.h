@@ -17,7 +17,7 @@
 /**
  @return The singleton instance of the CCHGeofenceService.
  */
-+ (instancetype)sharedService;
++ (instancetype)sharedInstance;
 
 /**
  Creates a new geofence on the ContextHub server.

@@ -18,7 +18,7 @@
 /**
  @ return The singleton instance of the CCHPush service.
  */
-+ (id)sharedService;
++ (instancetype)sharedInstance;
 
 /**
  * Register a device for push notifications.

@@ -91,7 +91,7 @@ When changes are detected, the subscription service will post notifications to t
 /** 
  @return The singleton instance of the CCHSubscriptionService.
  */
-+ (instancetype)sharedService;
++ (instancetype)sharedInstance;
 
 /**
  Gets all subscriptions for the current device.

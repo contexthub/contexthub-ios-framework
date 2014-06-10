@@ -17,7 +17,7 @@
 /**
  @return The singleton instance of the CCHBeaconService.
  */
-+ (instancetype)sharedService;
++ (instancetype)sharedInstance;
 
 /**
  Creates a new beacon on the ContextHub server.

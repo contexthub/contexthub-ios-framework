@@ -120,7 +120,7 @@ extern NSString * const CCHUntaggedElements;
 /**
  Returns the singleton instnace of the CCHSensorPipeline
  */
-+ (instancetype)sharedPipeline;
++ (instancetype)sharedInstance;
 
 /**
  Calling synchronize will tell the SDK to check for server-side context changes and will update monitored regions.
