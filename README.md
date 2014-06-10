@@ -10,4 +10,16 @@ ios-framework
 - CoreMotion
 
 
-Import '<ContextHub/ContextHub.h>' in your AppDelegate.
+Add ` #import <ContextHub/ContextHub.h>` to your AppDelegate.
+
+```objective-c
+- (BOOL)application:(UIApplication *)application 
+			didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+
+    //Register your app
+    [ContextHub registerWithAppId:@"ENTER-THE-UUID-FOR-YOURAPP"];
+
+    return YES;
+}
+
+```
