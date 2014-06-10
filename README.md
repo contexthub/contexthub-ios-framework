@@ -1,16 +1,19 @@
-ios-framework
+ContextHub iOS framework
 =============
 
-1. download the framework
-1. copy it into your framework folder
-1. Link your binary with the following Libraries
+## Download the framework
+https://github.com/contexthub/contexthub-ios-framework/archive/master.zip
 
-
+## Add to Project
+Copy `ContextHub.framework` into the framework group of your Xcode project.
+Be sure you select `copy items into to destination's group folder (if needed)`
+ 
+## Include Libraries
 - MobileCoreServices
 - CoreLocation
 - CoreMotion
 
-
+## Register
 Add ` #import <ContextHub/ContextHub.h>` to your AppDelegate.
 
 ```objective-c
