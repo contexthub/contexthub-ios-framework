@@ -27,3 +27,10 @@ Add ` #import <ContextHub/ContextHub.h>` to your AppDelegate.
 }
 
 ```
+
+##Support
+
+If you have questions, bugs, or feature requests, please open an issue with us.  We are working hard to make this framework great and would love to hear from you.
+
+https://github.com/contexthub/contexthub-ios-framework/issues
+
