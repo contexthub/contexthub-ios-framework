@@ -5,7 +5,7 @@ ios-framework
 1. copy it into your framework folder
 1. Link your binary with the following Libraries
 
-Libraries
+
 - MobileCoreServices
 - CoreLocation
 - CoreMotion
