@@ -55,14 +55,9 @@
 
 @optional
 
-/**
- Returns a serializable dictionary that will get added to context event payload property.
- @param event The event that was triggered.
- */
-- (NSDictionary *)payloadForEvent:(NSDictionary *)event;
 
 /**
- Returns a serializable dictionary that will get added to context event payload property.
+ Return a serializable dictionary that will get added to context event payload property.
  @param event The event that was triggered.
  @param sensorPipeline The CCHSensorPipeline.
  */
@@ -154,7 +149,7 @@ extern NSString * const CCHUntaggedElements;
 @property (nonatomic, strong) id<CCHSensorPipelineDelegate> delegate;
 
 /**
- The CCHSenesorPipelineDataSource
+ The CCHSensorPipelineDataSource
  */
 @property (nonatomic, strong) id<CCHSensorPipelineDataSource> dataSource;
 
