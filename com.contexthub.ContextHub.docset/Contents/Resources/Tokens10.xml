@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Tokens version="1.0">
+	<File path="Protocols/CCHSensorPipelineDelegate.html">
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/intf/CCHSensorPipelineDelegate</TokenIdentifier>
+			<Abstract type="html">Implement the delegate if you want to take action before or after an event is sent to ContextHub.  You can also decide keep an event from firing.</Abstract>
+			<DeclaredIn>CCHSensorPipeline.h</DeclaredIn>
+            
+			
+			<NodeRef refid="10"/>
+		</Token>
+		
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/intfm/CCHSensorPipelineDelegate/sensorPipeline:shouldPostEvent:</TokenIdentifier>
+			<Abstract type="html">Sometimes you may want to keep an event from posting to the ContextHub service.  This method gives you the opportunity to stop the call.
+If you return NO, none of the other delegate methods will git called, and the event will be discarded.</Abstract>
+			<DeclaredIn>CCHSensorPipeline.h</DeclaredIn>
+			
+			<Declaration>- (BOOL)sensorPipeline:(CCHSensorPipeline *)sensorPipeline shouldPostEvent:(NSDictionary *)event</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>sensorPipeline</Name>
+					<Abstract type="html">The CCHSensorPipeline.</Abstract>
+				</Parameter><Parameter>
+					<Name>event</Name>
+					<Abstract type="html">The event that was triggered.</Abstract>
+				</Parameter>
+			</Parameters>
+			
+			<Anchor>//api/name/sensorPipeline:shouldPostEvent:</Anchor>
+            <NodeRef refid="10"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/intfm/CCHSensorPipelineDelegate/sensorPipeline:willPostEvent:</TokenIdentifier>
+			<Abstract type="html">Called before an event was sent to ContextHub.</Abstract>
+			<DeclaredIn>CCHSensorPipeline.h</DeclaredIn>
+			
+			<Declaration>- (void)sensorPipeline:(CCHSensorPipeline *)sensorPipeline willPostEvent:(NSDictionary *)event</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>sensorPipeline</Name>
+					<Abstract type="html">the CCHSensorPipeline.</Abstract>
+				</Parameter><Parameter>
+					<Name>event</Name>
+					<Abstract type="html">The event that was triggered.</Abstract>
+				</Parameter>
+			</Parameters>
+			
+			<Anchor>//api/name/sensorPipeline:willPostEvent:</Anchor>
+            <NodeRef refid="10"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/intfm/CCHSensorPipelineDelegate/sensorPipeline:didPostEvent:</TokenIdentifier>
+			<Abstract type="html">Called after an event was sent to ContextHub.</Abstract>
+			<DeclaredIn>CCHSensorPipeline.h</DeclaredIn>
+			
+			<Declaration>- (void)sensorPipeline:(CCHSensorPipeline *)sensorPipeline didPostEvent:(NSDictionary *)event</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>sensorPipeline</Name>
+					<Abstract type="html">The CCHSensorPipeline.</Abstract>
+				</Parameter><Parameter>
+					<Name>event</Name>
+					<Abstract type="html">The event that was triggered.</Abstract>
+				</Parameter>
+			</Parameters>
+			
+			<Anchor>//api/name/sensorPipeline:didPostEvent:</Anchor>
+            <NodeRef refid="10"/>
+		</Token>
+		
+        
+	</File>
+</Tokens>

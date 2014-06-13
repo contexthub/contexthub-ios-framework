@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Tokens version="1.0">
+	<File path="Protocols/CCHSensorPipelineDataSource.html">
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/intf/CCHSensorPipelineDataSource</TokenIdentifier>
+			<Abstract type="html">Implement the data source when you want to add custom data to the context event.</Abstract>
+			<DeclaredIn>CCHSensorPipeline.h</DeclaredIn>
+            
+			
+			<NodeRef refid="9"/>
+		</Token>
+		
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/intfm/CCHSensorPipelineDataSource/sensorPipeline:payloadForEvent:</TokenIdentifier>
+			<Abstract type="html">Return a serializable dictionary that will get added to context event payload property.</Abstract>
+			<DeclaredIn>CCHSensorPipeline.h</DeclaredIn>
+			
+			<Declaration>- (NSDictionary *)sensorPipeline:(CCHSensorPipeline *)sensorPipeline payloadForEvent:(NSDictionary *)event</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>sensorPipeline</Name>
+					<Abstract type="html">The CCHSensorPipeline.</Abstract>
+				</Parameter><Parameter>
+					<Name>event</Name>
+					<Abstract type="html">The event that was triggered.</Abstract>
+				</Parameter>
+			</Parameters>
+			
+			<Anchor>//api/name/sensorPipeline:payloadForEvent:</Anchor>
+            <NodeRef refid="9"/>
+		</Token>
+		
+        
+	</File>
+</Tokens>

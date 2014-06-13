@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Tokens version="1.0">
+	<File path="Classes/CCHVault.html">
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/cl/CCHVault</TokenIdentifier>
+			<Abstract type="html">The CCHVault should be used to persist data to the ContextHub Vault API.  This class provides methods for creating data in containers.
+Once you persist data, you can retrieve it by Container and Id.</Abstract>
+			<DeclaredIn>CCHVault.h</DeclaredIn>
+            
+			
+			<NodeRef refid="6"/>
+		</Token>
+		
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/clm/CCHVault/sharedInstance</TokenIdentifier>
+			<Abstract type="html">Returns the singleton instance of the the Vault.</Abstract>
+			<DeclaredIn>CCHVault.h</DeclaredIn>
+			
+			<Declaration>+ (instancetype)sharedInstance</Declaration>
+			
+			<ReturnValue><Abstract type="html">Returns the singleton instance of the the Vault.</Abstract></ReturnValue>
+			<Anchor>//api/name/sharedInstance</Anchor>
+            <NodeRef refid="6"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/CCHVault/createItem:container:attachments:completionHandler:</TokenIdentifier>
+			<Abstract type="html">Creates items in the ContextHub Vault.</Abstract>
+			<DeclaredIn>CCHVault.h</DeclaredIn>
+			
+			<Declaration>- (void)createItem:(NSDictionary *)item container:(NSString *)containerName attachments:(NSArray *)attachments completionHandler:(vaultCompletionBlock)completionHandler</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>item</Name>
+					<Abstract type="html">the NSDictionary representation of the item you want to persist.</Abstract>
+				</Parameter><Parameter>
+					<Name>containerName</Name>
+					<Abstract type="html">the name of the container that will be used to store similar data.</Abstract>
+				</Parameter><Parameter>
+					<Name>attachments</Name>
+					<Abstract type="html">(optional) an array of CCHVaultResource objects.</Abstract>
+				</Parameter><Parameter>
+					<Name>completionHandler</Name>
+					<Abstract type="html">(optional) called when the request completes. The block is passed an NSDictionary representation of the item. If an error occurs, the NSError will be passed to the block.</Abstract>
+				</Parameter>
+			</Parameters>
+			
+			<Anchor>//api/name/createItem:container:attachments:completionHandler:</Anchor>
+            <NodeRef refid="6"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/CCHVault/getItemWithId:container:completionHandler:</TokenIdentifier>
+			<Abstract type="html">Gets an item from a container in the Vault.</Abstract>
+			<DeclaredIn>CCHVault.h</DeclaredIn>
+			
+			<Declaration>- (void)getItemWithId:(NSString *)vaultId container:(NSString *)containerName completionHandler:(vaultCompletionBlock)completionHandler</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>vaultId</Name>
+					<Abstract type="html">the vault id of the item.  The id is found in the key path @&quot;vault_info.id&quot;.</Abstract>
+				</Parameter><Parameter>
+					<Name>containerName</Name>
+					<Abstract type="html">the name of the container. the container name can be found in the key path @&quot;vault_info.container&quot;</Abstract>
+				</Parameter><Parameter>
+					<Name>completionHandler</Name>
+					<Abstract type="html">called when the request completes.</Abstract>
+				</Parameter>
+			</Parameters>
+			
+			<Anchor>//api/name/getItemWithId:container:completionHandler:</Anchor>
+            <NodeRef refid="6"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/CCHVault/getItemsInContainer:completionHandler:</TokenIdentifier>
+			<Abstract type="html">Gets all items stored in a container in the Vault.</Abstract>
+			<DeclaredIn>CCHVault.h</DeclaredIn>
+			
+			<Declaration>- (void)getItemsInContainer:(NSString *)containerName completionHandler:(vaultListingCompletionBlock)completionHandler</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>containerName</Name>
+					<Abstract type="html">name of the container for the items.</Abstract>
+				</Parameter><Parameter>
+					<Name>completionHandler</Name>
+					<Abstract type="html">called when the request completes. The block is passed an NSArray of dictionaries that representation of the items.  If an error occurs, the NSError will be passed to the block.</Abstract>
+				</Parameter>
+			</Parameters>
+			
+			<Anchor>//api/name/getItemsInContainer:completionHandler:</Anchor>
+            <NodeRef refid="6"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/CCHVault/updateItem:attachments:completionHandler:</TokenIdentifier>
+			<Abstract type="html">Updates an item in the Vault.</Abstract>
+			<DeclaredIn>CCHVault.h</DeclaredIn>
+			
+			<Declaration>- (void)updateItem:(NSDictionary *)item attachments:(NSArray *)attachments completionHandler:(vaultCompletionBlock)completionHandler</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>item</Name>
+					<Abstract type="html">to be updated.</Abstract>
+				</Parameter><Parameter>
+					<Name>attachments</Name>
+					<Abstract type="html">(optional) an array of CCHVaultResource objects.</Abstract>
+				</Parameter><Parameter>
+					<Name>completionHandler</Name>
+					<Abstract type="html">(optional) called when the request completes. The block is passed an NSDictionary representation of the item. If an error occurs, the NSError will be passed to the block.</Abstract>
+				</Parameter>
+			</Parameters>
+			
+			<Anchor>//api/name/updateItem:attachments:completionHandler:</Anchor>
+            <NodeRef refid="6"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/CCHVault/deleteItem:completionHandler:</TokenIdentifier>
+			<Abstract type="html">Deletes an item from the Vault.</Abstract>
+			<DeclaredIn>CCHVault.h</DeclaredIn>
+			
+			<Declaration>- (void)deleteItem:(NSDictionary *)item completionHandler:(vaultCompletionBlock)completionHandler</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>item</Name>
+					<Abstract type="html">item to be deleted;</Abstract>
+				</Parameter><Parameter>
+					<Name>completionHandler</Name>
+					<Abstract type="html">(optional) called when the request completes. If an error occurs, the NSError will be passed to the block.</Abstract>
+				</Parameter>
+			</Parameters>
+			
+			<Anchor>//api/name/deleteItem:completionHandler:</Anchor>
+            <NodeRef refid="6"/>
+		</Token>
+		
+        
+	</File>
+</Tokens>

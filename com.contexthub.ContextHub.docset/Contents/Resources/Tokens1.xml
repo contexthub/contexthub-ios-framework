@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Tokens version="1.0">
+	<File path="Classes/CCHBeaconService.html">
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/cl/CCHBeaconService</TokenIdentifier>
+			<Abstract type="html">The Beacon Service is used to create, read, update, and delete beacons on ContextHub.</Abstract>
+			<DeclaredIn>CCHBeaconService.h</DeclaredIn>
+            
+			
+			<NodeRef refid="1"/>
+		</Token>
+		
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/clm/CCHBeaconService/sharedInstance</TokenIdentifier>
+			<Abstract type="html">The singleton instance of the CCHBeaconService.</Abstract>
+			<DeclaredIn>CCHBeaconService.h</DeclaredIn>
+			
+			<Declaration>+ (instancetype)sharedInstance</Declaration>
+			
+			<ReturnValue><Abstract type="html">The singleton instance of the CCHBeaconService.</Abstract></ReturnValue>
+			<Anchor>//api/name/sharedInstance</Anchor>
+            <NodeRef refid="1"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/CCHBeaconService/createBeacon:tags:completionHandler:</TokenIdentifier>
+			<Abstract type="html">Creates a new beacon on the ContextHub server.</Abstract>
+			<DeclaredIn>CCHBeaconService.h</DeclaredIn>
+			
+			<Declaration>- (void)createBeacon:(CLBeaconRegion *)beaconRegion tags:(NSArray *)tags completionHandler:(void ( ^ ) ( NSDictionary *beacon , NSError *error ))completionHandler</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>beaconRegion</Name>
+					<Abstract type="html">CLBeaconRegion to be added to ContextHub.</Abstract>
+				</Parameter><Parameter>
+					<Name>tags</Name>
+					<Abstract type="html">(optional) The tags to be applied to the beacon.</Abstract>
+				</Parameter><Parameter>
+					<Name>completionHandler</Name>
+					<Abstract type="html">(optional) Called when the request completes.  The block is passed an NSDictionary object that represents the beacon. If an error occurs, the NSError will be passed to the block.</Abstract>
+				</Parameter>
+			</Parameters>
+			
+			<Anchor>//api/name/createBeacon:tags:completionHandler:</Anchor>
+            <NodeRef refid="1"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/CCHBeaconService/getBeaconWithId:completionHandler:</TokenIdentifier>
+			<Abstract type="html">Gets a beacon from ContextHub using the beacon Id.</Abstract>
+			<DeclaredIn>CCHBeaconService.h</DeclaredIn>
+			
+			<Declaration>- (void)getBeaconWithId:(NSString *)beaconId completionHandler:(void ( ^ ) ( NSDictionary *beacon , NSError *error ))completionHandler</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>beaconId</Name>
+					<Abstract type="html">The id of the beacon stored in ContextHub.</Abstract>
+				</Parameter><Parameter>
+					<Name>completionHandler</Name>
+					<Abstract type="html">Called when the request completes.  The block is passed an NSDictionary object that represents the beacon. If an error occurs, the NSError will be passed to the block.</Abstract>
+				</Parameter>
+			</Parameters>
+			
+			<Anchor>//api/name/getBeaconWithId:completionHandler:</Anchor>
+            <NodeRef refid="1"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/CCHBeaconService/getBeaconsWithTags:completionHandler:</TokenIdentifier>
+			<Abstract type="html">Gets beacons from the ContextHub server.</Abstract>
+			<DeclaredIn>CCHBeaconService.h</DeclaredIn>
+			
+			<Declaration>- (void)getBeaconsWithTags:(NSArray *)tags completionHandler:(void ( ^ ) ( NSArray *beacons , NSError *error ))completionHandler</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>tags</Name>
+					<Abstract type="html">(optional) Tags of the beacons that you are interested in.  Passing nil will return beacons without tags.</Abstract>
+				</Parameter><Parameter>
+					<Name>completionHandler</Name>
+					<Abstract type="html">Called when the request completes.  The block is passed an NSArray of NSDictionary objects that represent iBeacons.  If an error occurs, the NSError will be passed to the block.</Abstract>
+				</Parameter>
+			</Parameters>
+			
+			<Anchor>//api/name/getBeaconsWithTags:completionHandler:</Anchor>
+            <NodeRef refid="1"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/CCHBeaconService/updateBeacon:completionHandler:</TokenIdentifier>
+			<Abstract type="html">Updates a beacon on the ContextHub server.</Abstract>
+			<DeclaredIn>CCHBeaconService.h</DeclaredIn>
+			
+			<Declaration>- (void)updateBeacon:(NSDictionary *)beacon completionHandler:(void ( ^ ) ( NSError *error ))completionHandler</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>beacon</Name>
+					<Abstract type="html">The beacon to be updated on ContextHub.</Abstract>
+				</Parameter><Parameter>
+					<Name>completionHandler</Name>
+					<Abstract type="html">Called when the request completes.  If an error occurs, the NSError will be passed to the block.</Abstract>
+				</Parameter>
+			</Parameters>
+			
+			<Anchor>//api/name/updateBeacon:completionHandler:</Anchor>
+            <NodeRef refid="1"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/CCHBeaconService/deleteBeacon:completionHandler:</TokenIdentifier>
+			<Abstract type="html">Deletes an existing beacon from ContextHub.</Abstract>
+			<DeclaredIn>CCHBeaconService.h</DeclaredIn>
+			
+			<Declaration>- (void)deleteBeacon:(NSDictionary *)beacon completionHandler:(void ( ^ ) ( NSError *error ))completionHandler</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>beacon</Name>
+					<Abstract type="html">The beacon to be deleted from ContextHub.</Abstract>
+				</Parameter><Parameter>
+					<Name>completionHandler</Name>
+					<Abstract type="html">Called when the request completes.  If an error occurs, the NSError will be passed to the block.</Abstract>
+				</Parameter>
+			</Parameters>
+			
+			<Anchor>//api/name/deleteBeacon:completionHandler:</Anchor>
+            <NodeRef refid="1"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/clm/CCHBeaconService/regionForBeacon:</TokenIdentifier>
+			<Abstract type="html">Creates a CLBeaconRegion from a beacon dictionary.</Abstract>
+			<DeclaredIn>CCHBeaconService.h</DeclaredIn>
+			
+			<Declaration>+ (CLBeaconRegion *)regionForBeacon:(NSDictionary *)beacon</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>beacon</Name>
+					<Abstract type="html">NSDictionary that contains beacon information.</Abstract>
+				</Parameter>
+			</Parameters>
+			<ReturnValue><Abstract type="html">A CLBeaconRegion from a beacon dictionary.</Abstract></ReturnValue>
+			<Anchor>//api/name/regionForBeacon:</Anchor>
+            <NodeRef refid="1"/>
+		</Token>
+		
+        
+	</File>
+</Tokens>
