@@ -9,6 +9,17 @@
 #import <CoreLocation/CoreLocation.h>
 #import "ContextHub.h"
 
+#define kGeofenceErrorDomain @"com.contexthub.geofenceservice.error"
+/**
+ ContextHub GeofenceService error codes.
+ */
+typedef NS_ENUM(NSInteger, CCHGeofenceServiceErrorCode) {
+    /**
+     Dictionary can't be used to create a geofence.
+     */
+    CCHInvalidGeofenceDictionary = 0
+};
+
 /** 
  The Geofence Service is used to create, read, update, and delete geofences on ContextHub.
  */

@@ -8,6 +8,17 @@
 
 #import <Foundation/Foundation.h>
 
+#define kContextHubSensorPipelineErrorDomain @"com.contexthub.sensorpipeline.error"
+/**
+ ContextHub Pipeline error codes.
+ */
+typedef NS_ENUM(NSInteger, CCHSensorPipelineErrorCode) {
+    /**
+     Synchronization timeout error code.
+     */
+    CCHSensorPipelineTimeOutError = 0
+};
+
 @class CCHSensorPipeline;
 /**
  Implement the delegate if you want to take action before or after an event is sent to ContextHub.  You can also decide keep an event from firing.

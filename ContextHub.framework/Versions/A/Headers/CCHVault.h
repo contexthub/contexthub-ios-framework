@@ -16,7 +16,20 @@ typedef NS_ENUM(NSInteger, CCHVaultErrorCode) {
     /**
      missing container error code.
      */
-    CCHMissingContainerCode = 0
+    CCHMissingContainer = 0,
+    /**
+     missing item error code.
+     */
+    CCHMissingItem = 1,
+    /**
+     missing vault id error code.
+     */
+    CCHMissingVaultId = 2,
+    /**
+     missing vault information error code.
+     */
+    CCHInvalidVaultDictionary = 3
+    
 };
 
 typedef void (^vaultCompletionBlock)(NSDictionary *response, NSError *error);

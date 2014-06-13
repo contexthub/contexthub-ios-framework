@@ -9,6 +9,17 @@
 #import <Foundation/Foundation.h>
 #import <CoreLocation/CoreLocation.h>
 
+#define kBeaconErrorDomain @"com.contexthub.beaconservice.error"
+/**
+ ContextHub BeaconService error codes.
+ */
+typedef NS_ENUM(NSInteger, CCHBeaconServiceErrorCode) {
+    /**
+     Dictionary can't be used to create a beacon.
+     */
+    CCHInvalidBeaconDictionary = 0
+};
+
 /**
  The Beacon Service is used to create, read, update, and delete beacons on ContextHub.
  */
