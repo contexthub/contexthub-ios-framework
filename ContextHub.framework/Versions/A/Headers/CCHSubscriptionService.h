@@ -95,9 +95,10 @@ When changes are detected, the subscription service will post notifications to t
 
 /**
  Gets all subscriptions for the current device.
- @param completion executed when the request completes.  The block is passed an NSArray of subscriptions.  If an error occurs, the NSError will be passed to the block.
+ @note Access individual subscriptions using "BeaconSubscription" and "GeofenceSubscription" keys
+ @param completion executed when the request completes.  The block is passed an NSDictionary of subscriptions.  If an error occurs, the NSError will be passed to the block.
  */
-- (void)getSubscriptionsWithCompletion:(void(^)(NSArray *subscripitons, NSError *error))completion;
+- (void)getSubscriptionsWithCompletion:(void(^)(NSDictionary *subscriptions, NSError *error))completion;
 
 /**
  Subscribes the device to beacon change notifications for the specified tags.

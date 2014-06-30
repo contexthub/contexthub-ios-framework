@@ -1,0 +1,649 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="html/html; charset=utf-8" />
+		<title>CCHVault Class Reference</title>
+		<meta id="xcode-display" name="xcode-display" content="render"/>
+		<link rel="stylesheet" type="text/css" href="../css/styles.css" media="all" />
+		<link rel="stylesheet" type="text/css" media="print" href="../css/stylesPrint.css" />
+		<meta name="generator" content="appledoc 2.2 (build 961)" />
+	</head>
+	<body>
+		<header id="top_header">
+			<div id="library" class="hideInXcode">
+				<h1><a id="libraryTitle" href="../index.html">ContextHub </a></h1>
+				<a id="developerHome" href="../index.html">ContextHub</a>
+			</div>
+			
+			<div id="title" role="banner">
+				<h1 class="hideInXcode">CCHVault Class Reference</h1>
+			</div>
+			<ul id="headerButtons" role="toolbar">
+				<li id="toc_button">
+					<button aria-label="Show Table of Contents" role="checkbox" class="open" id="table_of_contents"><span class="disclosure"></span>Table of Contents</button>
+				</li>
+				<li id="jumpto_button" role="navigation">
+					<select id="jumpTo">
+	<option value="top">Jump To&#133;</option>
+	
+	<option value="overview">Overview</option>
+	
+	
+	
+	
+	<option value="tasks">Tasks</option>
+	
+	
+	
+	
+	
+	
+	
+	<option value="class_methods">Class Methods</option>
+	
+	<option value="//api/name/sharedInstance">&nbsp;&nbsp;&nbsp;&nbsp;+ sharedInstance</option>
+	
+	
+	
+	
+	<option value="instance_methods">Instance Methods</option>
+	
+	<option value="//api/name/createItem:tags:completionHandler:">&nbsp;&nbsp;&nbsp;&nbsp;- createItem:tags:completionHandler:</option>
+	
+	<option value="//api/name/deleteItem:completionHandler:">&nbsp;&nbsp;&nbsp;&nbsp;- deleteItem:completionHandler:</option>
+	
+	<option value="//api/name/getItemWithId:completionHandler:">&nbsp;&nbsp;&nbsp;&nbsp;- getItemWithId:completionHandler:</option>
+	
+	<option value="//api/name/getItemsWithTags:completionHandler:">&nbsp;&nbsp;&nbsp;&nbsp;- getItemsWithTags:completionHandler:</option>
+	
+	<option value="//api/name/updateItem:completionHandler:">&nbsp;&nbsp;&nbsp;&nbsp;- updateItem:completionHandler:</option>
+	
+	
+	
+</select>
+				</li>
+			</ul>
+		</header>
+		<nav id="tocContainer" class="isShowingTOC">
+			<ul id="toc" role="tree">
+				
+<li role="treeitem"><span class="nodisclosure"></span><span class="sectionName"><a href="#overview">Overview</a></span></li>
+
+
+
+
+<li role="treeitem" id="task_treeitem"><span class="nodisclosure"></span><span class="sectionName"><a href="#tasks">Tasks</a></span><ul>
+	
+</ul></li>
+
+
+
+
+
+
+
+<li role="treeitem" class="children"><span class="disclosure"></span><span class="sectionName"><a href="#class_methods">Class Methods</a></span><ul>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/sharedInstance">sharedInstance</a></span></li>
+	
+</ul></li>
+
+
+
+<li role="treeitem" class="children"><span class="disclosure"></span><span class="sectionName"><a href="#instance_methods">Instance Methods</a></span><ul>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/createItem:tags:completionHandler:">createItem:tags:completionHandler:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/deleteItem:completionHandler:">deleteItem:completionHandler:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/getItemWithId:completionHandler:">getItemWithId:completionHandler:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/getItemsWithTags:completionHandler:">getItemsWithTags:completionHandler:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/updateItem:completionHandler:">updateItem:completionHandler:</a></span></li>
+	
+</ul></li>
+
+
+			</ul>
+		</nav>
+		<article>
+			<div id="contents" class="isShowingTOC" role="main">
+				<a title="CCHVault Class Reference" name="top"></a>
+				<div class="main-navigation navigation-top">
+					<ul>
+	<li><a href="../index.html">Index</a></li>
+	<li><a href="../hierarchy.html">Hierarchy</a></li>
+</ul>
+				</div>
+				<div id="header">
+					<div class="section-header">
+						<h1 class="title title-header">CCHVault Class Reference</h1>
+					</div>		
+				</div>
+				<div id="container">	
+					
+					<div class="section section-specification"><table cellspacing="0"><tbody>
+						<tr>
+	<td class="specification-title">Inherits from</td>
+	<td class="specification-value">NSObject</td>
+</tr><tr>
+	<td class="specification-title">Declared in</td>
+	<td class="specification-value">CCHVault.h<br />CCHVault.m</td>
+</tr>
+						</tbody></table></div>
+					
+                    
+                    
+					
+					<div class="section section-overview">
+						<a title="Overview" name="overview"></a>
+						<h2 class="subtitle subtitle-overview">Overview</h2>
+						<p>The CCHVault is used to persist data on the <a href="../Classes/ContextHub.html">ContextHub</a> servers.  This class provides methods for storing data on <a href="../Classes/ContextHub.html">ContextHub</a> servers.  Data stored in the vault can be accessed inside the ContextRules.
+Once you persist data, you can retrieve it by Tag or id.</p><div class="note"><p><strong>Note:</strong> It&rsquo;s a good idea to tag similar items with a common tag. For example, employee objects could be tagged as employees. You can add multiple tags to an item.</p>
+
+<p>Vault repsponses will contain a dictionary with a data key and a vault_info key.  The data key contains the JSON data that was used to create the record.
+The value of the vault_info key is used by the Vault Service to manage the data.
+Structure of vault_info
+| key       | value     |
+| &mdash;&mdash;&mdash; | &mdash;&mdash;&mdash; |
+| id        | unique id of the vault item on the <a href="../Classes/ContextHub.html">ContextHub</a> server |
+| created_on | the date/time the item was created on the server |
+| updated_on | the date/time that the item was last modified |
+| tags | an array of tags assigned to the item |</p></div>
+					</div>
+					
+					
+					
+					
+					
+					<div class="section section-tasks">
+						<a title="Tasks" name="tasks"></a>
+						<h2 class="subtitle subtitle-tasks">Tasks</h2>
+						
+						
+						
+						
+
+						<ul class="task-list">
+							<li>
+	<span class="tooltip">
+		<code><a href="#//api/name/sharedInstance">+&nbsp;sharedInstance</a></code>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/createItem:tags:completionHandler:">&ndash;&nbsp;createItem:tags:completionHandler:</a></code>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/getItemWithId:completionHandler:">&ndash;&nbsp;getItemWithId:completionHandler:</a></code>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/getItemsWithTags:completionHandler:">&ndash;&nbsp;getItemsWithTags:completionHandler:</a></code>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/updateItem:completionHandler:">&ndash;&nbsp;updateItem:completionHandler:</a></code>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/deleteItem:completionHandler:">&ndash;&nbsp;deleteItem:completionHandler:</a></code>
+	</span>
+	
+	
+</li>
+						</ul>
+						
+					</div>
+					
+					
+					
+					
+					
+					
+					
+					<div class="section section-methods">
+						<a title="Class Methods" name="class_methods"></a>
+						<h2 class="subtitle subtitle-methods">Class Methods</h2>
+						
+						<div class="section-method">
+	<a name="//api/name/sharedInstance" title="sharedInstance"></a>
+	<h3 class="subsubtitle method-title">sharedInstance</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Returns the singleton instance of the the Vault.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>+ (instancetype)sharedInstance</code></div>
+
+    
+	
+	
+	
+	<div class="method-subsection return">
+		<h4 class="method-subtitle parameter-title">Return Value</h4>
+		<p>Returns the singleton instance of the the Vault.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">CCHVault.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+					</div>
+					
+					
+					
+					<div class="section section-methods">
+						<a title="Instance Methods" name="instance_methods"></a>
+						<h2 class="subtitle subtitle-methods">Instance Methods</h2>
+						
+						<div class="section-method">
+	<a name="//api/name/createItem:tags:completionHandler:" title="createItem:tags:completionHandler:"></a>
+	<h3 class="subsubtitle method-title">createItem:tags:completionHandler:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Creates items in the Vault.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (void)createItem:(id)<em>item</em> tags:(NSArray *)<em>tags</em> completionHandler:(vaultCompletionBlock)<em>completionHandler</em></code></div>
+
+    
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>item</em></dt>
+			<dd><p>The item you want to persist.  This item must be a valid JSON object. See NSJSONSerialization:isValidJSONObject.</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>tags</em></dt>
+			<dd><p>(optional) The tags to be applied to the item.</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>completionHandler</em></dt>
+			<dd><p>(optional) Called when the request completes. The block is passed an NSDictionary representation of the item. If an error occurs, the NSError will be passed to the block.</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<div class="note"><p><strong>Note:</strong> The dictionary that is returned will have a vault_info key.  This object contains the id, tags, and other metadata that is used to work with the item on the <a href="../Classes/ContextHub.html">ContextHub</a> server.</p></div>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">CCHVault.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/deleteItem:completionHandler:" title="deleteItem:completionHandler:"></a>
+	<h3 class="subsubtitle method-title">deleteItem:completionHandler:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Deletes an item from the Vault.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (void)deleteItem:(NSDictionary *)<em>item</em> completionHandler:(vaultCompletionBlock)<em>completionHandler</em></code></div>
+
+    
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>item</em></dt>
+			<dd><p>The item to be deleted;</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>completionHandler</em></dt>
+			<dd><p>(optional) Called when the request completes. If an error occurs, the NSError will be passed to the block.</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">CCHVault.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/getItemWithId:completionHandler:" title="getItemWithId:completionHandler:"></a>
+	<h3 class="subsubtitle method-title">getItemWithId:completionHandler:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Gets an item from the Vault.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (void)getItemWithId:(NSString *)<em>vaultId</em> completionHandler:(vaultCompletionBlock)<em>completionHandler</em></code></div>
+
+    
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>vaultId</em></dt>
+			<dd><p>the vault id of the item.  The id is found in the key path @&ldquo;vault_info.id&rdquo;.</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>completionHandler</em></dt>
+			<dd><p>called when the request completes.</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">CCHVault.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/getItemsWithTags:completionHandler:" title="getItemsWithTags:completionHandler:"></a>
+	<h3 class="subsubtitle method-title">getItemsWithTags:completionHandler:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Gets items stored in the Vault.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (void)getItemsWithTags:(NSArray *)<em>tags</em> completionHandler:(vaultListingCompletionBlock)<em>completionHandler</em></code></div>
+
+    
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>tags</em></dt>
+			<dd><p>(optional) The tags to be applied to the item.</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>completionHandler</em></dt>
+			<dd><p>Called when the request completes. The block is passed an NSArray of dictionaries that representation of the items.  If an error occurs, the NSError will be passed to the block.</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">CCHVault.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/updateItem:completionHandler:" title="updateItem:completionHandler:"></a>
+	<h3 class="subsubtitle method-title">updateItem:completionHandler:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Updates an item in the Vault.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (void)updateItem:(NSDictionary *)<em>item</em> completionHandler:(vaultCompletionBlock)<em>completionHandler</em></code></div>
+
+    
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>item</em></dt>
+			<dd><p>to be updated.</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>completionHandler</em></dt>
+			<dd><p>(optional) Called when the request completes. The block is passed an NSDictionary representation of the item. If an error occurs, the NSError will be passed to the block.</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">CCHVault.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+					</div>
+					
+					
+                    
+                    
+				</div>
+				<div class="main-navigation navigation-bottom">
+					<ul>
+	<li><a href="../index.html">Index</a></li>
+	<li><a href="../hierarchy.html">Hierarchy</a></li>
+</ul>
+				</div>
+				<div id="footer">
+					<hr />
+					<div class="footer-copyright">
+						<p><span class="copyright">&copy; 2014 ContextHub. All rights reserved. (Last updated: 2014-06-30)</span><br />
+						
+						<span class="generator">Generated by <a href="http://appledoc.gentlebytes.com">appledoc 2.2 (build 961)</a>.</span></p>
+						
+					</div>
+				</div>
+			</div>
+		</article>
+		<script type="text/javascript">
+			function jumpToChange()
+			{
+				window.location.hash = this.options[this.selectedIndex].value;
+			}
+			
+			function toggleTOC()
+			{
+				var contents = document.getElementById('contents');
+				var tocContainer = document.getElementById('tocContainer');
+				
+				if (this.getAttribute('class') == 'open')
+				{
+					this.setAttribute('class', '');
+					contents.setAttribute('class', '');
+					tocContainer.setAttribute('class', '');
+					
+					window.name = "hideTOC";
+				}
+				else
+				{
+					this.setAttribute('class', 'open');
+					contents.setAttribute('class', 'isShowingTOC');
+					tocContainer.setAttribute('class', 'isShowingTOC');
+					
+					window.name = "";
+				}
+				return false;
+			}
+			
+			function toggleTOCEntryChildren(e)
+			{
+				e.stopPropagation();
+				var currentClass = this.getAttribute('class');
+				if (currentClass == 'children') {
+					this.setAttribute('class', 'children open');
+				}
+				else if (currentClass == 'children open') {
+					this.setAttribute('class', 'children');
+				}
+				return false;
+			}
+			
+			function tocEntryClick(e)
+			{
+				e.stopPropagation();
+				return true;
+			}
+			
+			function init()
+			{
+				var selectElement = document.getElementById('jumpTo');
+				selectElement.addEventListener('change', jumpToChange, false);
+				
+				var tocButton = document.getElementById('table_of_contents');
+				tocButton.addEventListener('click', toggleTOC, false);
+				
+				var taskTreeItem = document.getElementById('task_treeitem');
+				if (taskTreeItem.getElementsByTagName('li').length > 0)
+				{
+					taskTreeItem.setAttribute('class', 'children');
+					taskTreeItem.firstChild.setAttribute('class', 'disclosure');
+				}
+				
+				var tocList = document.getElementById('toc');
+				
+				var tocEntries = tocList.getElementsByTagName('li');
+				for (var i = 0; i < tocEntries.length; i++) {
+					tocEntries[i].addEventListener('click', toggleTOCEntryChildren, false);
+				}
+				
+				var tocLinks = tocList.getElementsByTagName('a');
+				for (var i = 0; i < tocLinks.length; i++) {
+					tocLinks[i].addEventListener('click', tocEntryClick, false);
+				}
+				
+				if (window.name == "hideTOC") {
+					toggleTOC.call(tocButton);
+				}
+			}
+			
+			window.onload = init;
+			
+			// If showing in Xcode, hide the TOC and Header
+			if (navigator.userAgent.match(/xcode/i)) {
+				document.getElementById("contents").className = "hideInXcode"
+				document.getElementById("tocContainer").className = "hideInXcode"
+				document.getElementById("top_header").className = "hideInXcode"
+			}
+			
+		</script>
+	</body>
+</html>

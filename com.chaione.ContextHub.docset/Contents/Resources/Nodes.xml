@@ -1,0 +1,383 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<DocSetNodes version="1.0">
+    <TOC>
+        <Node type="folder">
+            <Name>ContextHub</Name>
+            <Path>index.html</Path>
+			<Subnodes>
+                
+				
+				<Node type="folder">
+					<Name>Classes</Name>
+					<Path>index.html</Path>
+					<Subnodes>
+						<NodeRef refid="1"/>
+						<NodeRef refid="2"/>
+						<NodeRef refid="3"/>
+						<NodeRef refid="4"/>
+						<NodeRef refid="5"/>
+						<NodeRef refid="6"/>
+						<NodeRef refid="7"/>
+						
+					</Subnodes>
+				</Node>
+				
+				
+                
+				<Node>
+					<Name>Protocols</Name>
+					<Path>index.html</Path>
+					<Subnodes>
+						<NodeRef refid="8"/>
+						<NodeRef refid="9"/>
+						
+					</Subnodes>
+				</Node>
+				
+                
+				<Node>
+					<Name>Constants</Name>
+					<Path>index.html</Path>
+					<Subnodes>
+						<NodeRef refid="10"/>
+						<NodeRef refid="11"/>
+						<NodeRef refid="12"/>
+						<NodeRef refid="13"/>
+						<NodeRef refid="14"/>
+						<NodeRef refid="15"/>
+						
+					</Subnodes>
+				</Node>
+				
+			</Subnodes>
+        </Node>
+    </TOC>
+	<Library>
+		
+		<Node id="1" type="file" documentType="reference">
+            <Name>CCHBeaconService</Name>
+            <Path>Classes/CCHBeaconService.html</Path>
+            
+                <Subnodes>
+                <Node type="section">
+                    <Path>Classes/CCHBeaconService.html</Path>
+                    <Name>Overview</Name>
+                    <Anchor>overview</Anchor>
+                </Node>
+                <Node type="section">
+                    <Path>Classes/CCHBeaconService.html</Path>
+                    <Name>Tasks</Name>
+                    <Anchor>tasks</Anchor>
+                </Node>
+                
+                
+                <Node type="section">
+                    <Path>Classes/CCHBeaconService.html</Path>
+                    <Name>Class Methods</Name>
+                    <Anchor>class_methods</Anchor>
+                </Node>
+                
+                
+                <Node type="section">
+                    <Path>Classes/CCHBeaconService.html</Path>
+                    <Name>Instance Methods</Name>
+                    <Anchor>instance_methods</Anchor>
+                </Node>
+                
+            </Subnodes>
+            
+        </Node>
+		<Node id="2" type="file" documentType="reference">
+            <Name>CCHGeofenceService</Name>
+            <Path>Classes/CCHGeofenceService.html</Path>
+            
+                <Subnodes>
+                <Node type="section">
+                    <Path>Classes/CCHGeofenceService.html</Path>
+                    <Name>Overview</Name>
+                    <Anchor>overview</Anchor>
+                </Node>
+                <Node type="section">
+                    <Path>Classes/CCHGeofenceService.html</Path>
+                    <Name>Tasks</Name>
+                    <Anchor>tasks</Anchor>
+                </Node>
+                
+                
+                <Node type="section">
+                    <Path>Classes/CCHGeofenceService.html</Path>
+                    <Name>Class Methods</Name>
+                    <Anchor>class_methods</Anchor>
+                </Node>
+                
+                
+                <Node type="section">
+                    <Path>Classes/CCHGeofenceService.html</Path>
+                    <Name>Instance Methods</Name>
+                    <Anchor>instance_methods</Anchor>
+                </Node>
+                
+            </Subnodes>
+            
+        </Node>
+		<Node id="3" type="file" documentType="reference">
+            <Name>CCHPush</Name>
+            <Path>Classes/CCHPush.html</Path>
+            
+                <Subnodes>
+                <Node type="section">
+                    <Path>Classes/CCHPush.html</Path>
+                    <Name>Overview</Name>
+                    <Anchor>overview</Anchor>
+                </Node>
+                <Node type="section">
+                    <Path>Classes/CCHPush.html</Path>
+                    <Name>Tasks</Name>
+                    <Anchor>tasks</Anchor>
+                </Node>
+                
+                
+                <Node type="section">
+                    <Path>Classes/CCHPush.html</Path>
+                    <Name>Class Methods</Name>
+                    <Anchor>class_methods</Anchor>
+                </Node>
+                
+                
+                <Node type="section">
+                    <Path>Classes/CCHPush.html</Path>
+                    <Name>Instance Methods</Name>
+                    <Anchor>instance_methods</Anchor>
+                </Node>
+                
+            </Subnodes>
+            
+        </Node>
+		<Node id="4" type="file" documentType="reference">
+            <Name>CCHSensorPipeline</Name>
+            <Path>Classes/CCHSensorPipeline.html</Path>
+            
+                <Subnodes>
+                <Node type="section">
+                    <Path>Classes/CCHSensorPipeline.html</Path>
+                    <Name>Overview</Name>
+                    <Anchor>overview</Anchor>
+                </Node>
+                <Node type="section">
+                    <Path>Classes/CCHSensorPipeline.html</Path>
+                    <Name>Tasks</Name>
+                    <Anchor>tasks</Anchor>
+                </Node>
+                
+                <Node type="section">
+                    <Path>Classes/CCHSensorPipeline.html</Path>
+                    <Name>Properties</Name>
+                    <Anchor>properties</Anchor>
+                </Node>
+                
+                
+                <Node type="section">
+                    <Path>Classes/CCHSensorPipeline.html</Path>
+                    <Name>Class Methods</Name>
+                    <Anchor>class_methods</Anchor>
+                </Node>
+                
+                
+                <Node type="section">
+                    <Path>Classes/CCHSensorPipeline.html</Path>
+                    <Name>Instance Methods</Name>
+                    <Anchor>instance_methods</Anchor>
+                </Node>
+                
+            </Subnodes>
+            
+        </Node>
+		<Node id="5" type="file" documentType="reference">
+            <Name>CCHSubscriptionService</Name>
+            <Path>Classes/CCHSubscriptionService.html</Path>
+            
+                <Subnodes>
+                <Node type="section">
+                    <Path>Classes/CCHSubscriptionService.html</Path>
+                    <Name>Overview</Name>
+                    <Anchor>overview</Anchor>
+                </Node>
+                <Node type="section">
+                    <Path>Classes/CCHSubscriptionService.html</Path>
+                    <Name>Tasks</Name>
+                    <Anchor>tasks</Anchor>
+                </Node>
+                
+                
+                <Node type="section">
+                    <Path>Classes/CCHSubscriptionService.html</Path>
+                    <Name>Class Methods</Name>
+                    <Anchor>class_methods</Anchor>
+                </Node>
+                
+                
+                <Node type="section">
+                    <Path>Classes/CCHSubscriptionService.html</Path>
+                    <Name>Instance Methods</Name>
+                    <Anchor>instance_methods</Anchor>
+                </Node>
+                
+            </Subnodes>
+            
+        </Node>
+		<Node id="6" type="file" documentType="reference">
+            <Name>CCHVault</Name>
+            <Path>Classes/CCHVault.html</Path>
+            
+                <Subnodes>
+                <Node type="section">
+                    <Path>Classes/CCHVault.html</Path>
+                    <Name>Overview</Name>
+                    <Anchor>overview</Anchor>
+                </Node>
+                <Node type="section">
+                    <Path>Classes/CCHVault.html</Path>
+                    <Name>Tasks</Name>
+                    <Anchor>tasks</Anchor>
+                </Node>
+                
+                
+                <Node type="section">
+                    <Path>Classes/CCHVault.html</Path>
+                    <Name>Class Methods</Name>
+                    <Anchor>class_methods</Anchor>
+                </Node>
+                
+                
+                <Node type="section">
+                    <Path>Classes/CCHVault.html</Path>
+                    <Name>Instance Methods</Name>
+                    <Anchor>instance_methods</Anchor>
+                </Node>
+                
+            </Subnodes>
+            
+        </Node>
+		<Node id="7" type="file" documentType="reference">
+            <Name>ContextHub</Name>
+            <Path>Classes/ContextHub.html</Path>
+            
+                <Subnodes>
+                <Node type="section">
+                    <Path>Classes/ContextHub.html</Path>
+                    <Name>Overview</Name>
+                    <Anchor>overview</Anchor>
+                </Node>
+                <Node type="section">
+                    <Path>Classes/ContextHub.html</Path>
+                    <Name>Tasks</Name>
+                    <Anchor>tasks</Anchor>
+                </Node>
+                
+                <Node type="section">
+                    <Path>Classes/ContextHub.html</Path>
+                    <Name>Properties</Name>
+                    <Anchor>properties</Anchor>
+                </Node>
+                
+                
+                <Node type="section">
+                    <Path>Classes/ContextHub.html</Path>
+                    <Name>Class Methods</Name>
+                    <Anchor>class_methods</Anchor>
+                </Node>
+                
+                
+            </Subnodes>
+            
+        </Node>
+		
+		
+        <Node id="8" type="file" documentType="reference">
+            <Name>CCHSensorPipelineDataSource</Name>
+            <Path>Protocols/CCHSensorPipelineDataSource.html</Path>
+            
+                <Subnodes>
+                <Node type="section">
+                    <Path>Protocols/CCHSensorPipelineDataSource.html</Path>
+                    <Name>Overview</Name>
+                    <Anchor>overview</Anchor>
+                </Node>
+                <Node type="section">
+                    <Path>Protocols/CCHSensorPipelineDataSource.html</Path>
+                    <Name>Tasks</Name>
+                    <Anchor>tasks</Anchor>
+                </Node>
+                
+                
+                
+                <Node type="section">
+                    <Path>Protocols/CCHSensorPipelineDataSource.html</Path>
+                    <Name>Instance Methods</Name>
+                    <Anchor>instance_methods</Anchor>
+                </Node>
+                
+            </Subnodes>
+            
+        </Node>
+		<Node id="9" type="file" documentType="reference">
+            <Name>CCHSensorPipelineDelegate</Name>
+            <Path>Protocols/CCHSensorPipelineDelegate.html</Path>
+            
+                <Subnodes>
+                <Node type="section">
+                    <Path>Protocols/CCHSensorPipelineDelegate.html</Path>
+                    <Name>Overview</Name>
+                    <Anchor>overview</Anchor>
+                </Node>
+                <Node type="section">
+                    <Path>Protocols/CCHSensorPipelineDelegate.html</Path>
+                    <Name>Tasks</Name>
+                    <Anchor>tasks</Anchor>
+                </Node>
+                
+                
+                
+                <Node type="section">
+                    <Path>Protocols/CCHSensorPipelineDelegate.html</Path>
+                    <Name>Instance Methods</Name>
+                    <Anchor>instance_methods</Anchor>
+                </Node>
+                
+            </Subnodes>
+            
+        </Node>
+		
+        <Node id="10" type="file" documentType="reference">
+            <Name>CCHBeaconServiceErrorCode</Name>
+            <Path>Constants/CCHBeaconServiceErrorCode.html</Path>
+            
+        </Node>
+		<Node id="11" type="file" documentType="reference">
+            <Name>CCHGeofenceServiceErrorCode</Name>
+            <Path>Constants/CCHGeofenceServiceErrorCode.html</Path>
+            
+        </Node>
+		<Node id="12" type="file" documentType="reference">
+            <Name>CCHSensorPipelineErrorCode</Name>
+            <Path>Constants/CCHSensorPipelineErrorCode.html</Path>
+            
+        </Node>
+		<Node id="13" type="file" documentType="reference">
+            <Name>CCHSubscriptionErrorCode</Name>
+            <Path>Constants/CCHSubscriptionErrorCode.html</Path>
+            
+        </Node>
+		<Node id="14" type="file" documentType="reference">
+            <Name>CCHVaultErrorCode</Name>
+            <Path>Constants/CCHVaultErrorCode.html</Path>
+            
+        </Node>
+		<Node id="15" type="file" documentType="reference">
+            <Name>XCTAsyncTestCaseStatus</Name>
+            <Path>Constants/XCTAsyncTestCaseStatus.html</Path>
+            
+        </Node>
+		
+	</Library>
+</DocSetNodes>

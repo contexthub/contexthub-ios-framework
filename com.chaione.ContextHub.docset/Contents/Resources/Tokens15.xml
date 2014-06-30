@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Tokens version="1.0">
+	<File path="Constants/XCTAsyncTestCaseStatus.html">
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/c/tdef/XCTAsyncTestCaseStatus</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>XCTestCase+AsyncTesting.h</DeclaredIn>
+            
+			
+			<NodeRef refid="15"/>
+		</Token>
+		
+		
+        
+        <Token>
+            <TokenIdentifier>//apple_ref/c/econst/XCTAsyncTestCaseStatusUnknown</TokenIdentifier>
+            <Abstract type="html"></Abstract>
+            <Declaration>XCTAsyncTestCaseStatusUnknown</Declaration>
+            
+            <DeclaredIn>XCTestCase+AsyncTesting.h</DeclaredIn>
+            
+            <NodeRef refid="15"/>
+        </Token>
+        
+        <Token>
+            <TokenIdentifier>//apple_ref/c/econst/XCTAsyncTestCaseStatusWaiting</TokenIdentifier>
+            <Abstract type="html"></Abstract>
+            <Declaration>XCTAsyncTestCaseStatusWaiting</Declaration>
+            
+            <DeclaredIn>XCTestCase+AsyncTesting.h</DeclaredIn>
+            
+            <NodeRef refid="15"/>
+        </Token>
+        
+        <Token>
+            <TokenIdentifier>//apple_ref/c/econst/XCTAsyncTestCaseStatusSucceeded</TokenIdentifier>
+            <Abstract type="html"></Abstract>
+            <Declaration>XCTAsyncTestCaseStatusSucceeded</Declaration>
+            
+            <DeclaredIn>XCTestCase+AsyncTesting.h</DeclaredIn>
+            
+            <NodeRef refid="15"/>
+        </Token>
+        
+        <Token>
+            <TokenIdentifier>//apple_ref/c/econst/XCTAsyncTestCaseStatusFailed</TokenIdentifier>
+            <Abstract type="html"></Abstract>
+            <Declaration>XCTAsyncTestCaseStatusFailed</Declaration>
+            
+            <DeclaredIn>XCTestCase+AsyncTesting.h</DeclaredIn>
+            
+            <NodeRef refid="15"/>
+        </Token>
+        
+        <Token>
+            <TokenIdentifier>//apple_ref/c/econst/XCTAsyncTestCaseStatusCancelled</TokenIdentifier>
+            <Abstract type="html"></Abstract>
+            <Declaration>XCTAsyncTestCaseStatusCancelled</Declaration>
+            
+            <DeclaredIn>XCTestCase+AsyncTesting.h</DeclaredIn>
+            
+            <NodeRef refid="15"/>
+        </Token>
+        
+	</File>
+</Tokens>

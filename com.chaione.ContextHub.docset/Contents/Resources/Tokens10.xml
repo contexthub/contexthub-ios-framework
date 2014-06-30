@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Tokens version="1.0">
+	<File path="Constants/CCHBeaconServiceErrorCode.html">
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/c/tdef/CCHBeaconServiceErrorCode</TokenIdentifier>
+			<Abstract type="html">ContextHub BeaconService error codes.</Abstract>
+			<DeclaredIn>CCHBeaconService.h</DeclaredIn>
+            
+			
+			<NodeRef refid="10"/>
+		</Token>
+		
+		
+        
+        <Token>
+            <TokenIdentifier>//apple_ref/c/econst/CCHInvalidBeaconDictionary</TokenIdentifier>
+            <Abstract type="html">     The Dictionary can&apos;t be used to create a beacon.
+     </Abstract>
+            <Declaration>CCHInvalidBeaconDictionary</Declaration>
+            
+            <DeclaredIn>CCHBeaconService.h</DeclaredIn>
+            
+            <NodeRef refid="10"/>
+        </Token>
+        
+        <Token>
+            <TokenIdentifier>//apple_ref/c/econst/CCHInvalidBeaconUUIDParameter</TokenIdentifier>
+            <Abstract type="html">     UUID cannot be nil and must be  a valid NSUUID.
+     </Abstract>
+            <Declaration>CCHInvalidBeaconUUIDParameter</Declaration>
+            
+            <DeclaredIn>CCHBeaconService.h</DeclaredIn>
+            
+            <NodeRef refid="10"/>
+        </Token>
+        
+        <Token>
+            <TokenIdentifier>//apple_ref/c/econst/CCHInvalidBeaconNameParameter</TokenIdentifier>
+            <Abstract type="html">     Name cannot be nil.
+     </Abstract>
+            <Declaration>CCHInvalidBeaconNameParameter</Declaration>
+            
+            <DeclaredIn>CCHBeaconService.h</DeclaredIn>
+            
+            <NodeRef refid="10"/>
+        </Token>
+        
+        <Token>
+            <TokenIdentifier>//apple_ref/c/econst/CCHInvalidBeaconIdParameter</TokenIdentifier>
+            <Abstract type="html">     Beacon id cannot be nil.
+     </Abstract>
+            <Declaration>CCHInvalidBeaconIdParameter</Declaration>
+            
+            <DeclaredIn>CCHBeaconService.h</DeclaredIn>
+            
+            <NodeRef refid="10"/>
+        </Token>
+        
+	</File>
+</Tokens>

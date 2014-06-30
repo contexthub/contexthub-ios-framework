@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Tokens version="1.0">
+	<File path="Classes/ContextHub.html">
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/cl/ContextHub</TokenIdentifier>
+			<Abstract type="html">The primary interface with the ContextHub SDK</Abstract>
+			<DeclaredIn>ContextHub.h</DeclaredIn>
+            
+			
+			<NodeRef refid="7"/>
+		</Token>
+		
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/clm/ContextHub/sharedInstance</TokenIdentifier>
+			<Abstract type="html">Returns the default instance of ContextHub</Abstract>
+			<DeclaredIn>ContextHub.h</DeclaredIn>
+			
+			<Declaration>+ (ContextHub *)sharedInstance</Declaration>
+			
+			
+			<Anchor>//api/name/sharedInstance</Anchor>
+            <NodeRef refid="7"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/clm/ContextHub/registerWithAppId:</TokenIdentifier>
+			<Abstract type="html">Registers the app with ContextHub. This call should be made on app launch.
+You must register your app with the ContextHub SDK before you use any of the other API&apos;s provided in this SDK.</Abstract>
+			<DeclaredIn>ContextHub.h</DeclaredIn>
+			
+			<Declaration>+ (void)registerWithAppId:(NSString *)appId</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>appId</Name>
+					<Abstract type="html">The application id that is assigned on ContextHub.</Abstract>
+				</Parameter>
+			</Parameters>
+			
+			<Anchor>//api/name/registerWithAppId:</Anchor>
+            <NodeRef refid="7"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/clm/ContextHub/applicationId</TokenIdentifier>
+			<Abstract type="html">The application&apos;s ID registered with ContextHub.</Abstract>
+			<DeclaredIn>ContextHub.h</DeclaredIn>
+			
+			<Declaration>+ (NSString *)applicationId</Declaration>
+			
+			
+			<Anchor>//api/name/applicationId</Anchor>
+            <NodeRef refid="7"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/clm/ContextHub/deviceId</TokenIdentifier>
+			<Abstract type="html">The Vendor device ID.</Abstract>
+			<DeclaredIn>ContextHub.h</DeclaredIn>
+			
+			<Declaration>+ (NSString *)deviceId</Declaration>
+			
+			
+			<Anchor>//api/name/deviceId</Anchor>
+            <NodeRef refid="7"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/ContextHub/setDebug:</TokenIdentifier>
+			<Abstract type="html">If you are using Push Notifications, set this value to YES for debug builds.  This will tell ContextHub that the push token for the device should be used with the Sandbox push service.</Abstract>
+			<DeclaredIn>ContextHub.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, assign) BOOL debug</Declaration>
+			
+			
+			<Anchor>//api/name/debug</Anchor>
+            <NodeRef refid="7"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/ContextHub/debug</TokenIdentifier>
+			<Abstract type="html">If you are using Push Notifications, set this value to YES for debug builds.  This will tell ContextHub that the push token for the device should be used with the Sandbox push service.</Abstract>
+			<DeclaredIn>ContextHub.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, assign) BOOL debug</Declaration>
+			
+			
+			<Anchor>//api/name/debug</Anchor>
+            <NodeRef refid="7"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/ContextHub/debug</TokenIdentifier>
+			<Abstract type="html">If you are using Push Notifications, set this value to YES for debug builds.  This will tell ContextHub that the push token for the device should be used with the Sandbox push service.</Abstract>
+			<DeclaredIn>ContextHub.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, assign) BOOL debug</Declaration>
+			
+			
+			<Anchor>//api/name/debug</Anchor>
+            <NodeRef refid="7"/>
+		</Token>
+		
+        
+	</File>
+</Tokens>
