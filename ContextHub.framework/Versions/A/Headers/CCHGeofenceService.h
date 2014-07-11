@@ -40,6 +40,7 @@ typedef NS_ENUM(NSInteger, CCHGeofenceServiceErrorCode) {
  The Geofence Service is used to create, read, update, and delete geofences on ContextHub.
  
  Structure of geofence NSDictionary
+ 
  | key       | value     |
  | --------- | --------- |
  | id        | unique id of the geofence on the ContextHub server |

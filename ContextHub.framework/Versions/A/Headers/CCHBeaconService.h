@@ -37,6 +37,7 @@ typedef NS_ENUM(NSInteger, CCHBeaconServiceErrorCode) {
  The Beacon Service is used to create, read, update, and delete beacons on ContextHub.
  
  Structure of the beacon NSDictionary
+ 
  | key   | value |
  | ----- | ----- |
  | id    | unique id of the beacon on the ContextHub server |
