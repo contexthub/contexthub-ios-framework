@@ -44,7 +44,6 @@
 						<NodeRef refid="12"/>
 						<NodeRef refid="13"/>
 						<NodeRef refid="14"/>
-						<NodeRef refid="15"/>
 						
 					</Subnodes>
 				</Node>
@@ -371,11 +370,6 @@
 		<Node id="14" type="file" documentType="reference">
             <Name>CCHVaultErrorCode</Name>
             <Path>Constants/CCHVaultErrorCode.html</Path>
-            
-        </Node>
-		<Node id="15" type="file" documentType="reference">
-            <Name>XCTAsyncTestCaseStatus</Name>
-            <Path>Constants/XCTAsyncTestCaseStatus.html</Path>
             
         </Node>
 		
