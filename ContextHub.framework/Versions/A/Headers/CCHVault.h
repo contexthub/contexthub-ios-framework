@@ -45,7 +45,9 @@ typedef void (^vaultListingCompletionBlock)(NSArray *responses, NSError *error);
  
  Vault repsponses will contain a dictionary with a data key and a vault_info key.  The data key contains the JSON data that was used to create the record.
  The value of the vault_info key is used by the Vault Service to manage the data.
+ 
  Structure of vault_info
+ 
  | key       | value     |
  | --------- | --------- |
  | id        | unique id of the vault item on the ContextHub server |
@@ -67,34 +69,46 @@ typedef void (^vaultListingCompletionBlock)(NSArray *responses, NSError *error);
  @param completionHandler (optional) Called when the request completes. The block is passed an NSDictionary representation of the item. If an error occurs, the NSError will be passed to the block.
  @note The dictionary that is returned will have a vault_info key.  This object contains the id, tags, and other metadata that is used to work with the item on the ContextHub server.
  */
-- (void)createItem:(id)item tags:(NSArray *)tags completionHandler:(vaultCompletionBlock)completionHandler;
+- (void)createItem:(id)item tags:(NSArray *)tags completionHandler:(void(^)(NSDictionary *response, NSError *error))completionHandler;
 
 /**
  Gets an item from the Vault.
- @param vaultId the vault id of the item.  The id is found in the key path @"vault_info.id".
- @param completionHandler called when the request completes.
+ @param vaultId The vault id of the item.  The id is found in the key path @"vault_info.id".
+ @param completionHandler Called when the request completes.
  */
-- (void)getItemWithId:(NSString *)vaultId completionHandler:(vaultCompletionBlock)completionHandler;
+- (void)getItemWithId:(NSString *)vaultId completionHandler:(void(^)(NSDictionary *response, NSError *error))completionHandler;
 
 /**
  Gets items stored in the Vault.
  @param tags (optional) The tags to be applied to the item.
- @param completionHandler Called when the request completes. The block is passed an NSArray of dictionaries that representation of the items.  If an error occurs, the NSError will be passed to the block.
+ @param completionHandler Called when the request completes. The block is passed an NSArray of dictionaries that represent the items.  If an error occurs, the NSError will be passed to the block.
  */
-- (void)getItemsWithTags:(NSArray *)tags completionHandler:(vaultListingCompletionBlock)completionHandler;
+- (void)getItemsWithTags:(NSArray *)tags completionHandler:(void(^)(NSArray *responses, NSError *error))completionHandler;
+
+/**
+ Gets items stored in the Vault.
+ @note If you pass a keyPath and a value, it will return all items that have the key path equal to the value.
+ If you pass only a keyPath, it will return all items that conatin the keypath.  If you do not pass a keyPath, then both the keypath and value are ignored.
+ @param tags (optional) The tags to be applied to the item.
+ @param keyPath (optional) The keyPath that you want to look for.
+ @param value (optional) The value that you want to find for the keyPath.
+ @param completionHandler Called when the request completes. The block is passed an NSArray of dictionaries that represent the items.  If an error occurs, the NSError will be passed to the block.
+ */
+- (void)getItemsWithTags:(NSArray *)tags keyPath:(NSString *)keyPath value:(NSString *)value completionHandler:(vaultListingCompletionBlock)completionHandler;
 
 /**
  Updates an item in the Vault.
- @param item to be updated.
+ @param item The item to be updated.
  @param completionHandler (optional) Called when the request completes. The block is passed an NSDictionary representation of the item. If an error occurs, the NSError will be passed to the block.
  */
-- (void)updateItem:(NSDictionary *)item completionHandler:(vaultCompletionBlock)completionHandler;
+- (void)updateItem:(NSDictionary *)item completionHandler:(void(^)(NSDictionary *response, NSError *error))completionHandler;
 
 /**
  Deletes an item from the Vault.
  @param item The item to be deleted;
  @param completionHandler (optional) Called when the request completes. If an error occurs, the NSError will be passed to the block.
  */
-- (void)deleteItem:(NSDictionary *)item completionHandler:(vaultCompletionBlock)completionHandler;
+- (void)deleteItem:(NSDictionary *)item completionHandler:(void(^)(NSDictionary *response, NSError *error))completionHandler;
+
 
 @end

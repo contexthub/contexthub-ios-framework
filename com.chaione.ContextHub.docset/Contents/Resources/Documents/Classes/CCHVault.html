@@ -56,6 +56,8 @@
 	
 	<option value="//api/name/getItemsWithTags:completionHandler:">&nbsp;&nbsp;&nbsp;&nbsp;- getItemsWithTags:completionHandler:</option>
 	
+	<option value="//api/name/getItemsWithTags:keyPath:value:completionHandler:">&nbsp;&nbsp;&nbsp;&nbsp;- getItemsWithTags:keyPath:value:completionHandler:</option>
+	
 	<option value="//api/name/updateItem:completionHandler:">&nbsp;&nbsp;&nbsp;&nbsp;- updateItem:completionHandler:</option>
 	
 	
@@ -100,6 +102,8 @@
 	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/getItemsWithTags:completionHandler:">getItemsWithTags:completionHandler:</a></span></li>
 	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/getItemsWithTags:keyPath:value:completionHandler:">getItemsWithTags:keyPath:value:completionHandler:</a></span></li>
+	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/updateItem:completionHandler:">updateItem:completionHandler:</a></span></li>
 	
 </ul></li>
@@ -143,14 +147,37 @@
 Once you persist data, you can retrieve it by Tag or id.</p><div class="note"><p><strong>Note:</strong> It&rsquo;s a good idea to tag similar items with a common tag. For example, employee objects could be tagged as employees. You can add multiple tags to an item.</p>
 
 <p>Vault repsponses will contain a dictionary with a data key and a vault_info key.  The data key contains the JSON data that was used to create the record.
-The value of the vault_info key is used by the Vault Service to manage the data.
-Structure of vault_info
-| key       | value     |
-| &mdash;&mdash;&mdash; | &mdash;&mdash;&mdash; |
-| id        | unique id of the vault item on the <a href="../Classes/ContextHub.html">ContextHub</a> server |
-| created_on | the date/time the item was created on the server |
-| updated_on | the date/time that the item was last modified |
-| tags | an array of tags assigned to the item |</p></div>
+The value of the vault_info key is used by the Vault Service to manage the data.</p>
+
+<p>Structure of vault_info</p>
+
+<table>
+<thead>
+<tr>
+<th> key       </th>
+<th> value     </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td> id        </td>
+<td> unique id of the vault item on the <a href="../Classes/ContextHub.html">ContextHub</a> server </td>
+</tr>
+<tr>
+<td> created_on </td>
+<td> the date/time the item was created on the server </td>
+</tr>
+<tr>
+<td> updated_on </td>
+<td> the date/time that the item was last modified </td>
+</tr>
+<tr>
+<td> tags </td>
+<td> an array of tags assigned to the item </td>
+</tr>
+</tbody>
+</table>
+</div>
 					</div>
 					
 					
@@ -187,6 +214,12 @@ Structure of vault_info
 </li><li>
 	<span class="tooltip">
 		<code><a href="#//api/name/getItemsWithTags:completionHandler:">&ndash;&nbsp;getItemsWithTags:completionHandler:</a></code>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/getItemsWithTags:keyPath:value:completionHandler:">&ndash;&nbsp;getItemsWithTags:keyPath:value:completionHandler:</a></code>
 	</span>
 	
 	
@@ -278,7 +311,7 @@ Structure of vault_info
 	
     
 
-	<div class="method-subsection method-declaration"><code>- (void)createItem:(id)<em>item</em> tags:(NSArray *)<em>tags</em> completionHandler:(vaultCompletionBlock)<em>completionHandler</em></code></div>
+	<div class="method-subsection method-declaration"><code>- (void)createItem:(id)<em>item</em> tags:(NSArray *)<em>tags</em> completionHandler:(void ( ^ ) ( NSDictionary *response , NSError *error ))<em>completionHandler</em></code></div>
 
     
 	
@@ -339,7 +372,7 @@ Structure of vault_info
 	
     
 
-	<div class="method-subsection method-declaration"><code>- (void)deleteItem:(NSDictionary *)<em>item</em> completionHandler:(vaultCompletionBlock)<em>completionHandler</em></code></div>
+	<div class="method-subsection method-declaration"><code>- (void)deleteItem:(NSDictionary *)<em>item</em> completionHandler:(void ( ^ ) ( NSDictionary *response , NSError *error ))<em>completionHandler</em></code></div>
 
     
 	
@@ -390,7 +423,7 @@ Structure of vault_info
 	
     
 
-	<div class="method-subsection method-declaration"><code>- (void)getItemWithId:(NSString *)<em>vaultId</em> completionHandler:(vaultCompletionBlock)<em>completionHandler</em></code></div>
+	<div class="method-subsection method-declaration"><code>- (void)getItemWithId:(NSString *)<em>vaultId</em> completionHandler:(void ( ^ ) ( NSDictionary *response , NSError *error ))<em>completionHandler</em></code></div>
 
     
 	
@@ -399,12 +432,12 @@ Structure of vault_info
 		
 		<dl class="argument-def parameter-def">
 			<dt><em>vaultId</em></dt>
-			<dd><p>the vault id of the item.  The id is found in the key path @&ldquo;vault_info.id&rdquo;.</p></dd>
+			<dd><p>The vault id of the item.  The id is found in the key path @&ldquo;vault_info.id&rdquo;.</p></dd>
 		</dl>
 		
 		<dl class="argument-def parameter-def">
 			<dt><em>completionHandler</em></dt>
-			<dd><p>called when the request completes.</p></dd>
+			<dd><p>Called when the request completes.</p></dd>
 		</dl>
 		
 	</div>
@@ -441,7 +474,7 @@ Structure of vault_info
 	
     
 
-	<div class="method-subsection method-declaration"><code>- (void)getItemsWithTags:(NSArray *)<em>tags</em> completionHandler:(vaultListingCompletionBlock)<em>completionHandler</em></code></div>
+	<div class="method-subsection method-declaration"><code>- (void)getItemsWithTags:(NSArray *)<em>tags</em> completionHandler:(void ( ^ ) ( NSArray *responses , NSError *error ))<em>completionHandler</em></code></div>
 
     
 	
@@ -455,7 +488,7 @@ Structure of vault_info
 		
 		<dl class="argument-def parameter-def">
 			<dt><em>completionHandler</em></dt>
-			<dd><p>Called when the request completes. The block is passed an NSArray of dictionaries that representation of the items.  If an error occurs, the NSError will be passed to the block.</p></dd>
+			<dd><p>Called when the request completes. The block is passed an NSArray of dictionaries that represent the items.  If an error occurs, the NSError will be passed to the block.</p></dd>
 		</dl>
 		
 	</div>
@@ -465,6 +498,73 @@ Structure of vault_info
 	
 	
 	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">CCHVault.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/getItemsWithTags:keyPath:value:completionHandler:" title="getItemsWithTags:keyPath:value:completionHandler:"></a>
+	<h3 class="subsubtitle method-title">getItemsWithTags:keyPath:value:completionHandler:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Gets items stored in the Vault.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (void)getItemsWithTags:(NSArray *)<em>tags</em> keyPath:(NSString *)<em>keyPath</em> value:(NSString *)<em>value</em> completionHandler:(vaultListingCompletionBlock)<em>completionHandler</em></code></div>
+
+    
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>tags</em></dt>
+			<dd><p>(optional) The tags to be applied to the item.</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>keyPath</em></dt>
+			<dd><p>(optional) The keyPath that you want to look for.</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>value</em></dt>
+			<dd><p>(optional) The value that you want to find for the keyPath.</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>completionHandler</em></dt>
+			<dd><p>Called when the request completes. The block is passed an NSArray of dictionaries that represent the items.  If an error occurs, the NSError will be passed to the block.</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<div class="note"><p><strong>Note:</strong> If you pass a keyPath and a value, it will return all items that have the key path equal to the value.
+If you pass only a keyPath, it will return all items that conatin the keypath.  If you do not pass a keypath, then both the keypath and value are ignored.</p></div>
+	</div>
 	
 	
 	
@@ -492,7 +592,7 @@ Structure of vault_info
 	
     
 
-	<div class="method-subsection method-declaration"><code>- (void)updateItem:(NSDictionary *)<em>item</em> completionHandler:(vaultCompletionBlock)<em>completionHandler</em></code></div>
+	<div class="method-subsection method-declaration"><code>- (void)updateItem:(NSDictionary *)<em>item</em> completionHandler:(void ( ^ ) ( NSDictionary *response , NSError *error ))<em>completionHandler</em></code></div>
 
     
 	
@@ -501,7 +601,7 @@ Structure of vault_info
 		
 		<dl class="argument-def parameter-def">
 			<dt><em>item</em></dt>
-			<dd><p>to be updated.</p></dd>
+			<dd><p>The item to be updated.</p></dd>
 		</dl>
 		
 		<dl class="argument-def parameter-def">
@@ -546,7 +646,7 @@ Structure of vault_info
 				<div id="footer">
 					<hr />
 					<div class="footer-copyright">
-						<p><span class="copyright">&copy; 2014 ContextHub. All rights reserved. (Last updated: 2014-06-30)</span><br />
+						<p><span class="copyright">&copy; 2014 ContextHub. All rights reserved. (Last updated: 2014-07-11)</span><br />
 						
 						<span class="generator">Generated by <a href="http://appledoc.gentlebytes.com">appledoc 2.2 (build 961)</a>.</span></p>
 						
