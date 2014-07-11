@@ -73,32 +73,32 @@ typedef void (^vaultListingCompletionBlock)(NSArray *responses, NSError *error);
 
 /**
  Gets an item from the Vault.
- @param vaultId the vault id of the item.  The id is found in the key path @"vault_info.id".
- @param completionHandler called when the request completes.
+ @param vaultId The vault id of the item.  The id is found in the key path @"vault_info.id".
+ @param completionHandler Called when the request completes.
  */
 - (void)getItemWithId:(NSString *)vaultId completionHandler:(void(^)(NSDictionary *response, NSError *error))completionHandler;
 
 /**
  Gets items stored in the Vault.
  @param tags (optional) The tags to be applied to the item.
- @param completionHandler Called when the request completes. The block is passed an NSArray of dictionaries that representation of the items.  If an error occurs, the NSError will be passed to the block.
+ @param completionHandler Called when the request completes. The block is passed an NSArray of dictionaries that represent the items.  If an error occurs, the NSError will be passed to the block.
  */
 - (void)getItemsWithTags:(NSArray *)tags completionHandler:(void(^)(NSArray *responses, NSError *error))completionHandler;
 
 /**
  Gets items stored in the Vault.
  @note If you pass a keyPath and a value, it will return all items that have the key path equal to the value.
- If you pass only a keyPath, it will return all items that conatin the keypath.  If you do not pass a keypath, then both the keypath and value are ignored.
+ If you pass only a keyPath, it will return all items that conatin the keypath.  If you do not pass a keyPath, then both the keypath and value are ignored.
  @param tags (optional) The tags to be applied to the item.
  @param keyPath (optional) The keyPath that you want to look for.
- @param value (optional the value that you want to find for the keyPath.
- @param completionHandler Called when the request completes. The block is passed an NSArray of dictionaries that representation of the items.  If an error occurs, the NSError will be passed to the block.
+ @param value (optional) The value that you want to find for the keyPath.
+ @param completionHandler Called when the request completes. The block is passed an NSArray of dictionaries that represent the items.  If an error occurs, the NSError will be passed to the block.
  */
 - (void)getItemsWithTags:(NSArray *)tags keyPath:(NSString *)keyPath value:(NSString *)value completionHandler:(vaultListingCompletionBlock)completionHandler;
 
 /**
  Updates an item in the Vault.
- @param item to be updated.
+ @param item The item to be updated.
  @param completionHandler (optional) Called when the request completes. The block is passed an NSDictionary representation of the item. If an error occurs, the NSError will be passed to the block.
  */
 - (void)updateItem:(NSDictionary *)item completionHandler:(void(^)(NSDictionary *response, NSError *error))completionHandler;
