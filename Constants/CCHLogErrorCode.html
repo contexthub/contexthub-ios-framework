@@ -2,7 +2,7 @@
 <html>
 	<head>
 		<meta http-equiv="Content-Type" content="html/html; charset=utf-8" />
-		<title>CCHVaultErrorCode Constants Reference</title>
+		<title>CCHLogErrorCode Constants Reference</title>
 		<meta id="xcode-display" name="xcode-display" content="render"/>
 		<link rel="stylesheet" type="text/css" href="../css/styles.css" media="all" />
 		<link rel="stylesheet" type="text/css" media="print" href="../css/stylesPrint.css" />
@@ -16,7 +16,7 @@
 			</div>
 			
 			<div id="title" role="banner">
-				<h1 class="hideInXcode">CCHVaultErrorCode Constants Reference</h1>
+				<h1 class="hideInXcode">CCHLogErrorCode Constants Reference</h1>
 			</div>
 			<ul id="headerButtons" role="toolbar">
 				<li id="toc_button">
@@ -45,7 +45,7 @@
 		</nav>
 		<article>
 			<div id="contents" class="isShowingTOC" role="main">
-				<a title="CCHVaultErrorCode Constants Reference" name="top"></a>
+				<a title="CCHLogErrorCode Constants Reference" name="top"></a>
 				<div class="main-navigation navigation-top">
 					<ul>
 	<li><a href="../index.html">Index</a></li>
@@ -54,7 +54,7 @@
 				</div>
 				<div id="header">
 					<div class="section-header">
-						<h1 class="title title-header">CCHVaultErrorCode Constants Reference</h1>
+						<h1 class="title title-header">CCHLogErrorCode Constants Reference</h1>
 					</div>		
 				</div>
 				<div id="container">	
@@ -62,7 +62,7 @@
 					<div class="section section-specification"><table cellspacing="0"><tbody>
 						<tr>
 	<td class="specification-title">Declared in</td>
-	<td class="specification-value">CCHVault.h</td>
+	<td class="specification-value">CCHLog.h</td>
 </tr>
 						</tbody></table></div>
 					
@@ -74,11 +74,11 @@
 					
                     
                     
-                    <h3 class="subsubtitle method-title">CCHVaultErrorCode</h3>
+                    <h3 class="subsubtitle method-title">CCHLogErrorCode</h3>
                     
 					
 					<div class="section section-overview">
-                        <p><a href="../Classes/ContextHub.html">ContextHub</a> Vault error codes.</p>
+                        <p><a href="../Classes/ContextHub.html">ContextHub</a> <a href="../Classes/CCHLog.html">CCHLog</a> error codes.</p>
 					</div>
 					
 					
@@ -86,17 +86,11 @@
                         <!-- display enum values -->
                         
                         <h4 class="method-subtitle">Definition</h4>
-                        <code>typedef NS_ENUM(NSInteger, CCHVaultErrorCode ) {<br/>
+                        <code>typedef NS_ENUM(NSInteger, CCHLogErrorCode ) {<br/>
                             
-                            &nbsp;&nbsp; <a href="">CCHMissingContainer</a>,<br/>
+                            &nbsp;&nbsp; <a href="">CCHInvalidLogJSONObject</a>,<br/>
                             
-                            &nbsp;&nbsp; <a href="">CCHMissingItem</a>,<br/>
-                            
-                            &nbsp;&nbsp; <a href="">CCHMissingVaultId</a>,<br/>
-                            
-                            &nbsp;&nbsp; <a href="">CCHInvalidVaultDictionary</a>,<br/>
-                            
-                            &nbsp;&nbsp; <a href="">CCHInvalidVaultJSONObject</a>,<br/>
+                            &nbsp;&nbsp; <a href="">CCHMissingMessage</a>,<br/>
                             
                             };</code>
                     
@@ -106,11 +100,11 @@
                         <h4 class="method-subtitle">Constants</h4>
                         <dl class="termdef">
                             
-                            <dt><a name="" title="CCHMissingContainer"></a><code>CCHMissingContainer</code></dt>
+                            <dt><a name="" title="CCHInvalidLogJSONObject"></a><code>CCHInvalidLogJSONObject</code></dt>
 <dd>
 
 
-<pre><code> missing container error code.
+<pre><code> Invalid JSON object.
 </code></pre>
 
     
@@ -119,16 +113,16 @@
 
     
 	<p>
-		Declared In <code class="declared-in-ref">CCHVault.h</code>.
+		Declared In <code class="declared-in-ref">CCHLog.h</code>.
 	</p>
 	
 </dd>
                             
-                            <dt><a name="" title="CCHMissingItem"></a><code>CCHMissingItem</code></dt>
+                            <dt><a name="" title="CCHMissingMessage"></a><code>CCHMissingMessage</code></dt>
 <dd>
 
 
-<pre><code> missing item error code.
+<pre><code> Missing message.
 </code></pre>
 
     
@@ -137,61 +131,7 @@
 
     
 	<p>
-		Declared In <code class="declared-in-ref">CCHVault.h</code>.
-	</p>
-	
-</dd>
-                            
-                            <dt><a name="" title="CCHMissingVaultId"></a><code>CCHMissingVaultId</code></dt>
-<dd>
-
-
-<pre><code> missing vault id error code.
-</code></pre>
-
-    
-
-    
-
-    
-	<p>
-		Declared In <code class="declared-in-ref">CCHVault.h</code>.
-	</p>
-	
-</dd>
-                            
-                            <dt><a name="" title="CCHInvalidVaultDictionary"></a><code>CCHInvalidVaultDictionary</code></dt>
-<dd>
-
-
-<pre><code> missing vault information error code.
-</code></pre>
-
-    
-
-    
-
-    
-	<p>
-		Declared In <code class="declared-in-ref">CCHVault.h</code>.
-	</p>
-	
-</dd>
-                            
-                            <dt><a name="" title="CCHInvalidVaultJSONObject"></a><code>CCHInvalidVaultJSONObject</code></dt>
-<dd>
-
-
-<pre><code> invalid JSON object.
-</code></pre>
-
-    
-
-    
-
-    
-	<p>
-		Declared In <code class="declared-in-ref">CCHVault.h</code>.
+		Declared In <code class="declared-in-ref">CCHLog.h</code>.
 	</p>
 	
 </dd>
@@ -208,7 +148,7 @@
                     
                     <div class="method-subsection declared-in-section">
                         <h4 class="method-subtitle">Declared In</h4>
-                        <code class="declared-in-ref">CCHVault.h</code><br />
+                        <code class="declared-in-ref">CCHLog.h</code><br />
                     </div>				
                     
                     
