@@ -52,11 +52,15 @@
 	
 	<option value="//api/name/addGeofenceSubscriptionForTags:completionHandler:">&nbsp;&nbsp;&nbsp;&nbsp;- addGeofenceSubscriptionForTags:completionHandler:</option>
 	
+	<option value="//api/name/addSubscriptionsForTags:options:completionHandler:">&nbsp;&nbsp;&nbsp;&nbsp;- addSubscriptionsForTags:options:completionHandler:</option>
+	
 	<option value="//api/name/getSubscriptionsWithCompletion:">&nbsp;&nbsp;&nbsp;&nbsp;- getSubscriptionsWithCompletion:</option>
 	
 	<option value="//api/name/removeBeaconSubscriptionForTags:completionHandler:">&nbsp;&nbsp;&nbsp;&nbsp;- removeBeaconSubscriptionForTags:completionHandler:</option>
 	
 	<option value="//api/name/removeGeofenceSubscriptionForTags:completionHandler:">&nbsp;&nbsp;&nbsp;&nbsp;- removeGeofenceSubscriptionForTags:completionHandler:</option>
+	
+	<option value="//api/name/removeSubscriptionsForTags:options:completionHandler:">&nbsp;&nbsp;&nbsp;&nbsp;- removeSubscriptionsForTags:options:completionHandler:</option>
 	
 	
 	
@@ -96,11 +100,15 @@
 	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/addGeofenceSubscriptionForTags:completionHandler:">addGeofenceSubscriptionForTags:completionHandler:</a></span></li>
 	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/addSubscriptionsForTags:options:completionHandler:">addSubscriptionsForTags:options:completionHandler:</a></span></li>
+	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/getSubscriptionsWithCompletion:">getSubscriptionsWithCompletion:</a></span></li>
 	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/removeBeaconSubscriptionForTags:completionHandler:">removeBeaconSubscriptionForTags:completionHandler:</a></span></li>
 	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/removeGeofenceSubscriptionForTags:completionHandler:">removeGeofenceSubscriptionForTags:completionHandler:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/removeSubscriptionsForTags:options:completionHandler:">removeSubscriptionsForTags:options:completionHandler:</a></span></li>
 	
 </ul></li>
 
@@ -139,8 +147,8 @@
 					<div class="section section-overview">
 						<a title="Overview" name="overview"></a>
 						<h2 class="subtitle subtitle-overview">Overview</h2>
-						<p>The subscription service is used tell <a href="../Classes/ContextHub.html">ContextHub</a> that you want to be notified when tagged elements are created, updated, and deleted on the server.  You must enable configure the push notifications if you want to receive updates from the server.
-When changes are detected, the subscription service will post notifications to the NSNotificationCenter.</p>
+						<p>The subscription service is used tell <a href="../Classes/ContextHub.html">ContextHub</a> that you want to be notified when tagged elements are created, updated, and deleted on the server.  You must enable push notifications if you want to receive updates from the server.
+When server changes are made, the device is notified using a background push notification.  The subscription service will post notifications to the NSNotificationCenter when changes are detected.</p>
 
 <h2>Notifications</h2>
 
@@ -229,6 +237,18 @@ When changes are detected, the subscription service will post notifications to t
 </li><li>
 	<span class="tooltip">
 		<code><a href="#//api/name/removeGeofenceSubscriptionForTags:completionHandler:">&ndash;&nbsp;removeGeofenceSubscriptionForTags:completionHandler:</a></code>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/addSubscriptionsForTags:options:completionHandler:">&ndash;&nbsp;addSubscriptionsForTags:options:completionHandler:</a></code>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/removeSubscriptionsForTags:options:completionHandler:">&ndash;&nbsp;removeSubscriptionsForTags:options:completionHandler:</a></code>
 	</span>
 	
 	
@@ -399,6 +419,67 @@ When changes are detected, the subscription service will post notifications to t
 </div>
 						
 						<div class="section-method">
+	<a name="//api/name/addSubscriptionsForTags:options:completionHandler:" title="addSubscriptionsForTags:options:completionHandler:"></a>
+	<h3 class="subsubtitle method-title">addSubscriptionsForTags:options:completionHandler:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Subscribes the device to change notifications for the specified tags.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (void)addSubscriptionsForTags:(NSArray *)<em>tags</em> options:(NSArray *)<em>options</em> completionHandler:(void ( ^ ) ( NSError *error ))<em>completionHandler</em></code></div>
+
+    
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>tags</em></dt>
+			<dd><p>An NSArray of tags</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>options</em></dt>
+			<dd><p>(optional) an NSArray of the elements that you want to subscribe to. (CCHOptionBeacon, CCHOptionGeofence, CCHOptionVault)</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>completionHandler</em></dt>
+			<dd><p>(optional) Is executed when the request completes.  If an error occurs, the NSError will be passed to the block.</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<div class="note"><p><strong>Note:</strong> This will turn on background push notifications for all elements that have tags matching the tags array specified.  You must enable push notifications, enbale remote notifications and background fetch capabilites, and you must call application:didReceiveRemoteNotification:completionHandler: on <a href="../Classes/CCHPush.html">CCHPush</a>.</p></div>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">CCHSubscriptionService.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
 	<a name="//api/name/getSubscriptionsWithCompletion:" title="getSubscriptionsWithCompletion:"></a>
 	<h3 class="subsubtitle method-title">getSubscriptionsWithCompletion:</h3>
 	
@@ -551,6 +632,62 @@ When changes are detected, the subscription service will post notifications to t
 	
 </div>
 						
+						<div class="section-method">
+	<a name="//api/name/removeSubscriptionsForTags:options:completionHandler:" title="removeSubscriptionsForTags:options:completionHandler:"></a>
+	<h3 class="subsubtitle method-title">removeSubscriptionsForTags:options:completionHandler:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Unsubscribes the device from change notifications for the specified tags.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (void)removeSubscriptionsForTags:(NSArray *)<em>tags</em> options:(NSArray *)<em>options</em> completionHandler:(void ( ^ ) ( NSError *error ))<em>completionHandler</em></code></div>
+
+    
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>tags</em></dt>
+			<dd><p>An NSArray of tags</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>options</em></dt>
+			<dd><p>(optional) an NSArray of the elements that you want to unsubscribe from. (CCHOptionBeacon, CCHOptionGeofence, CCHOptionVault)</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>completionHandler</em></dt>
+			<dd><p>(optional) Is executed when the request completes.  If an error occurs, the NSError will be passed to the block.</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">CCHSubscriptionService.h</code><br />
+	</div>				
+	
+	
+</div>
+						
 					</div>
 					
 					
@@ -566,7 +703,7 @@ When changes are detected, the subscription service will post notifications to t
 				<div id="footer">
 					<hr />
 					<div class="footer-copyright">
-						<p><span class="copyright">&copy; 2014 ContextHub. All rights reserved. (Last updated: 2014-07-11)</span><br />
+						<p><span class="copyright">&copy; 2014 ContextHub. All rights reserved. (Last updated: 2014-07-17)</span><br />
 						
 						<span class="generator">Generated by <a href="http://appledoc.gentlebytes.com">appledoc 2.2 (build 961)</a>.</span></p>
 						
