@@ -1,3 +1,9 @@
+## 1.1.4 - July 31, 2014
+- CCHSubscriptions -?? added device subscriptions
+- CCHDevice - ??
+- CCHSensorPipeline - updated `triggerEvent:completionHandler:`
+- CCHVersion - allows you to check the version of the framework
+
 ## 1.1.3 - July 15, 2014
 - CCHSensorPipeline - you can trigger custom events
 - CCHSubscriptions - improved the way you add and remove subscriptions
