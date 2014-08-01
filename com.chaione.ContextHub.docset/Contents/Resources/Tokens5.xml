@@ -27,11 +27,11 @@ The CCHSensorPipeline will call datasource and delegate lifecycle methods and po
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/CCHSensorPipeline/triggerEvent:completionHandeler:</TokenIdentifier>
+			<TokenIdentifier>//apple_ref/occ/instm/CCHSensorPipeline/triggerEvent:completionHandler:</TokenIdentifier>
 			<Abstract type="html">This method give you the ability to trigger custom events on the ContextHub sensor pipeline</Abstract>
 			<DeclaredIn>CCHSensorPipeline.h</DeclaredIn>
 			
-			<Declaration>- (void)triggerEvent:(NSDictionary *)event completionHandeler:(void ( ^ ) ( NSError *error ))completionHandler</Declaration>
+			<Declaration>- (void)triggerEvent:(NSDictionary *)event completionHandler:(void ( ^ ) ( NSError *error ))completionHandler</Declaration>
 			<Parameters>
 				<Parameter>
 					<Name>event</Name>
@@ -42,7 +42,7 @@ The CCHSensorPipeline will call datasource and delegate lifecycle methods and po
 				</Parameter>
 			</Parameters>
 			
-			<Anchor>//api/name/triggerEvent:completionHandeler:</Anchor>
+			<Anchor>//api/name/triggerEvent:completionHandler:</Anchor>
             <NodeRef refid="5"/>
 		</Token>
 		
