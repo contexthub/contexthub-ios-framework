@@ -37,7 +37,7 @@ http://docs.contexthub.com/contexthub-ios-framework/
 ### Xcode DocSet Installation
 
 1. Quit xcode
-2. Copy `com.contexthub.ContextHub.docset` into your DocSet folder.  `Library/Developer/Shared/Documentation/DocSets/`
+2. Copy `com.contexthub.ContextHub.docset` into your DocSet folder.  `~/Library/Developer/Shared/Documentation/DocSets/`
 3. Launch xcode and you will see reference links when you access help on the ContextHub.framework classes.
 
 ##Support
