@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Tokens version="1.0">
+	<File path="Constants/CCHSubscriptionErrorCode.html">
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/c/tdef/CCHSubscriptionErrorCode</TokenIdentifier>
+			<Abstract type="html">ContextHub Subscription error codes.</Abstract>
+			<DeclaredIn>CCHSubscriptionService.h</DeclaredIn>
+            
+			
+			<NodeRef refid="17"/>
+		</Token>
+		
+		
+        
+        <Token>
+            <TokenIdentifier>//apple_ref/c/econst/CCHNullTagsCode</TokenIdentifier>
+            <Abstract type="html">     Null tags error code.
+     </Abstract>
+            <Declaration>CCHNullTagsCode</Declaration>
+            
+            <DeclaredIn>CCHSubscriptionService.h</DeclaredIn>
+            
+            <NodeRef refid="17"/>
+        </Token>
+        
+        
+	</File>
+</Tokens>

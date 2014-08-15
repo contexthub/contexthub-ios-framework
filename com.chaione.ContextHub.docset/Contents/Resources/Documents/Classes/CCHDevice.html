@@ -2,7 +2,7 @@
 <html>
 	<head>
 		<meta http-equiv="Content-Type" content="html/html; charset=utf-8" />
-		<title>CCHVault Class Reference</title>
+		<title>CCHDevice Class Reference</title>
 		<meta id="xcode-display" name="xcode-display" content="render"/>
 		<link rel="stylesheet" type="text/css" href="../css/styles.css" media="all" />
 		<link rel="stylesheet" type="text/css" media="print" href="../css/stylesPrint.css" />
@@ -16,7 +16,7 @@
 			</div>
 			
 			<div id="title" role="banner">
-				<h1 class="hideInXcode">CCHVault Class Reference</h1>
+				<h1 class="hideInXcode">CCHDevice Class Reference</h1>
 			</div>
 			<ul id="headerButtons" role="toolbar">
 				<li id="toc_button">
@@ -48,17 +48,17 @@
 	
 	<option value="instance_methods">Instance Methods</option>
 	
-	<option value="//api/name/createItem:tags:completionHandler:">&nbsp;&nbsp;&nbsp;&nbsp;- createItem:tags:completionHandler:</option>
+	<option value="//api/name/deviceId">&nbsp;&nbsp;&nbsp;&nbsp;- deviceId</option>
 	
-	<option value="//api/name/deleteItem:completionHandler:">&nbsp;&nbsp;&nbsp;&nbsp;- deleteItem:completionHandler:</option>
+	<option value="//api/name/getDeviceWithId:completionHandler:">&nbsp;&nbsp;&nbsp;&nbsp;- getDeviceWithId:completionHandler:</option>
 	
-	<option value="//api/name/getItemWithId:completionHandler:">&nbsp;&nbsp;&nbsp;&nbsp;- getItemWithId:completionHandler:</option>
+	<option value="//api/name/getDevicesWithAlias:completionHandler:">&nbsp;&nbsp;&nbsp;&nbsp;- getDevicesWithAlias:completionHandler:</option>
 	
-	<option value="//api/name/getItemsWithTags:completionHandler:">&nbsp;&nbsp;&nbsp;&nbsp;- getItemsWithTags:completionHandler:</option>
+	<option value="//api/name/getDevicesWithTags:completionHandler:">&nbsp;&nbsp;&nbsp;&nbsp;- getDevicesWithTags:completionHandler:</option>
 	
-	<option value="//api/name/getItemsWithTags:keyPath:value:completionHandler:">&nbsp;&nbsp;&nbsp;&nbsp;- getItemsWithTags:keyPath:value:completionHandler:</option>
+	<option value="//api/name/registerDeviceWithCompletionHandler:">&nbsp;&nbsp;&nbsp;&nbsp;- registerDeviceWithCompletionHandler:</option>
 	
-	<option value="//api/name/updateItem:completionHandler:">&nbsp;&nbsp;&nbsp;&nbsp;- updateItem:completionHandler:</option>
+	<option value="//api/name/updateDeviceWithAlias:tags:completionHandler:">&nbsp;&nbsp;&nbsp;&nbsp;- updateDeviceWithAlias:tags:completionHandler:</option>
 	
 	
 	
@@ -94,17 +94,17 @@
 
 <li role="treeitem" class="children"><span class="disclosure"></span><span class="sectionName"><a href="#instance_methods">Instance Methods</a></span><ul>
 	
-	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/createItem:tags:completionHandler:">createItem:tags:completionHandler:</a></span></li>
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/deviceId">deviceId</a></span></li>
 	
-	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/deleteItem:completionHandler:">deleteItem:completionHandler:</a></span></li>
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/getDeviceWithId:completionHandler:">getDeviceWithId:completionHandler:</a></span></li>
 	
-	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/getItemWithId:completionHandler:">getItemWithId:completionHandler:</a></span></li>
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/getDevicesWithAlias:completionHandler:">getDevicesWithAlias:completionHandler:</a></span></li>
 	
-	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/getItemsWithTags:completionHandler:">getItemsWithTags:completionHandler:</a></span></li>
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/getDevicesWithTags:completionHandler:">getDevicesWithTags:completionHandler:</a></span></li>
 	
-	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/getItemsWithTags:keyPath:value:completionHandler:">getItemsWithTags:keyPath:value:completionHandler:</a></span></li>
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/registerDeviceWithCompletionHandler:">registerDeviceWithCompletionHandler:</a></span></li>
 	
-	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/updateItem:completionHandler:">updateItem:completionHandler:</a></span></li>
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/updateDeviceWithAlias:tags:completionHandler:">updateDeviceWithAlias:tags:completionHandler:</a></span></li>
 	
 </ul></li>
 
@@ -113,7 +113,7 @@
 		</nav>
 		<article>
 			<div id="contents" class="isShowingTOC" role="main">
-				<a title="CCHVault Class Reference" name="top"></a>
+				<a title="CCHDevice Class Reference" name="top"></a>
 				<div class="main-navigation navigation-top">
 					<ul>
 	<li><a href="../index.html">Index</a></li>
@@ -122,7 +122,7 @@
 				</div>
 				<div id="header">
 					<div class="section-header">
-						<h1 class="title title-header">CCHVault Class Reference</h1>
+						<h1 class="title title-header">CCHDevice Class Reference</h1>
 					</div>		
 				</div>
 				<div id="container">	
@@ -133,7 +133,7 @@
 	<td class="specification-value">NSObject</td>
 </tr><tr>
 	<td class="specification-title">Declared in</td>
-	<td class="specification-value">CCHVault.h<br />CCHVault.m</td>
+	<td class="specification-value">CCHDevice.h<br />CCHDevice.m</td>
 </tr>
 						</tbody></table></div>
 					
@@ -143,13 +143,9 @@
 					<div class="section section-overview">
 						<a title="Overview" name="overview"></a>
 						<h2 class="subtitle subtitle-overview">Overview</h2>
-						<p>The CCHVault is used to persist data on the <a href="../Classes/ContextHub.html">ContextHub</a> servers.  This class provides methods for storing data on <a href="../Classes/ContextHub.html">ContextHub</a> servers.  Data stored in the vault can be accessed inside the ContextRules.
-Once you persist data, you can retrieve it by Tag or id.</p><div class="note"><p><strong>Note:</strong> It&rsquo;s a good idea to tag similar items with a common tag. For example, employee objects could be tagged as employees. You can add multiple tags to an item.</p>
+						<p>The CCHDevice class is used work with devices.</p>
 
-<p>Vault repsponses will contain a dictionary with a data key and a vault_info key.  The data key contains the JSON data that was used to create the record.
-The value of the vault_info key is used by the Vault Service to manage the data.</p>
-
-<p>Structure of vault_info</p>
+<p>Structure of device NSDictionary</p>
 
 <table>
 <thead>
@@ -160,24 +156,40 @@ The value of the vault_info key is used by the Vault Service to manage the data.
 </thead>
 <tbody>
 <tr>
-<td> id        </td>
-<td> unique id of the vault item on the <a href="../Classes/ContextHub.html">ContextHub</a> server </td>
+<td> additional_info </td>
+<td> NSDicationary of device specific information (not always present) </td>
 </tr>
 <tr>
-<td> created_on </td>
-<td> the date/time the item was created on the server </td>
+<td> alias </td>
+<td> alias that is set for the device (not always present) </td>
 </tr>
 <tr>
-<td> updated_on </td>
-<td> the date/time that the item was last modified </td>
+<td> device_type </td>
+<td> describes the device, often pulled for the user agent  </td>
+</tr>
+<tr>
+<td> id </td>
+<td> database id for the device </td>
+</tr>
+<tr>
+<td> last_profile </td>
+<td> NSDictionary of contextual information from the last time the device was seen by the server </td>
+</tr>
+<tr>
+<td> push_token </td>
+<td> push token assigned to the device (not always present) </td>
+</tr>
+<tr>
+<td> tag_string </td>
+<td> a comma separated string of the tags associated with the device </td>
 </tr>
 <tr>
 <td> tags </td>
-<td> an array of tags assigned to the item </td>
+<td> NSArray of tags associated with the geofence </td>
 </tr>
 </tbody>
 </table>
-</div>
+
 					</div>
 					
 					
@@ -201,37 +213,37 @@ The value of the vault_info key is used by the Vault Service to manage the data.
 	
 </li><li>
 	<span class="tooltip">
-		<code><a href="#//api/name/createItem:tags:completionHandler:">&ndash;&nbsp;createItem:tags:completionHandler:</a></code>
+		<code><a href="#//api/name/deviceId">&ndash;&nbsp;deviceId</a></code>
 	</span>
 	
 	
 </li><li>
 	<span class="tooltip">
-		<code><a href="#//api/name/getItemWithId:completionHandler:">&ndash;&nbsp;getItemWithId:completionHandler:</a></code>
+		<code><a href="#//api/name/registerDeviceWithCompletionHandler:">&ndash;&nbsp;registerDeviceWithCompletionHandler:</a></code>
 	</span>
 	
 	
 </li><li>
 	<span class="tooltip">
-		<code><a href="#//api/name/getItemsWithTags:completionHandler:">&ndash;&nbsp;getItemsWithTags:completionHandler:</a></code>
+		<code><a href="#//api/name/getDeviceWithId:completionHandler:">&ndash;&nbsp;getDeviceWithId:completionHandler:</a></code>
 	</span>
 	
 	
 </li><li>
 	<span class="tooltip">
-		<code><a href="#//api/name/getItemsWithTags:keyPath:value:completionHandler:">&ndash;&nbsp;getItemsWithTags:keyPath:value:completionHandler:</a></code>
+		<code><a href="#//api/name/getDevicesWithAlias:completionHandler:">&ndash;&nbsp;getDevicesWithAlias:completionHandler:</a></code>
 	</span>
 	
 	
 </li><li>
 	<span class="tooltip">
-		<code><a href="#//api/name/updateItem:completionHandler:">&ndash;&nbsp;updateItem:completionHandler:</a></code>
+		<code><a href="#//api/name/getDevicesWithTags:completionHandler:">&ndash;&nbsp;getDevicesWithTags:completionHandler:</a></code>
 	</span>
 	
 	
 </li><li>
 	<span class="tooltip">
-		<code><a href="#//api/name/deleteItem:completionHandler:">&ndash;&nbsp;deleteItem:completionHandler:</a></code>
+		<code><a href="#//api/name/updateDeviceWithAlias:tags:completionHandler:">&ndash;&nbsp;updateDeviceWithAlias:tags:completionHandler:</a></code>
 	</span>
 	
 	
@@ -257,7 +269,7 @@ The value of the vault_info key is used by the Vault Service to manage the data.
 	
 	
 	<div class="method-subsection brief-description">
-		<p>Returns the singleton instance of the the Vault.</p>
+		<p>The singleton instance of CCHDevice.</p>
 	</div>		
 	
     
@@ -270,7 +282,7 @@ The value of the vault_info key is used by the Vault Service to manage the data.
 	
 	<div class="method-subsection return">
 		<h4 class="method-subtitle parameter-title">Return Value</h4>
-		<p>Returns the singleton instance of the the Vault.</p>
+		<p>The singleton instance of CCHDevice.</p>
 	</div>
 	
 	
@@ -285,7 +297,7 @@ The value of the vault_info key is used by the Vault Service to manage the data.
 	
 	<div class="method-subsection declared-in-section">
 		<h4 class="method-subtitle">Declared In</h4>
-		<code class="declared-in-ref">CCHVault.h</code><br />
+		<code class="declared-in-ref">CCHDevice.h</code><br />
 	</div>				
 	
 	
@@ -300,51 +312,31 @@ The value of the vault_info key is used by the Vault Service to manage the data.
 						<h2 class="subtitle subtitle-methods">Instance Methods</h2>
 						
 						<div class="section-method">
-	<a name="//api/name/createItem:tags:completionHandler:" title="createItem:tags:completionHandler:"></a>
-	<h3 class="subsubtitle method-title">createItem:tags:completionHandler:</h3>
+	<a name="//api/name/deviceId" title="deviceId"></a>
+	<h3 class="subsubtitle method-title">deviceId</h3>
 	
 	
 	
 	<div class="method-subsection brief-description">
-		<p>Creates items in the Vault.</p>
+		<p>The vendor device id as UUIDString.</p>
 	</div>		
 	
     
 
-	<div class="method-subsection method-declaration"><code>- (void)createItem:(id)<em>item</em> tags:(id)<em>tags</em> completionHandler:(id)<em>completionHandler</em></code></div>
+	<div class="method-subsection method-declaration"><code>- (NSString *)deviceId</code></div>
 
     
 	
-	<div class="method-subsection arguments-section parameters">
-		<h4 class="method-subtitle parameter-title">Parameters</h4>
-		
-		<dl class="argument-def parameter-def">
-			<dt><em>item</em></dt>
-			<dd><p>The item you want to persist.  This item must be a valid JSON object. See NSJSONSerialization:isValidJSONObject.</p></dd>
-		</dl>
-		
-		<dl class="argument-def parameter-def">
-			<dt><em>tags</em></dt>
-			<dd><p>(optional) The tags to be applied to the item.</p></dd>
-		</dl>
-		
-		<dl class="argument-def parameter-def">
-			<dt><em>completionHandler</em></dt>
-			<dd><p>(optional) Called when the request completes. The block is passed an NSDictionary representation of the item. If an error occurs, the NSError will be passed to the block.</p></dd>
-		</dl>
-		
+	
+	
+	<div class="method-subsection return">
+		<h4 class="method-subtitle parameter-title">Return Value</h4>
+		<p>The vendor device id as UUIDString.</p>
 	</div>
 	
 	
 	
 	
-	
-	
-	
-	<div class="method-subsection discussion-section">
-		<h4 class="method-subtitle">Discussion</h4>
-		<div class="note"><p><strong>Note:</strong> The dictionary that is returned will have a vault_info key.  This object contains the id, tags, and other metadata that is used to work with the item on the <a href="../Classes/ContextHub.html">ContextHub</a> server.</p></div>
-	</div>
 	
 	
 	
@@ -354,25 +346,25 @@ The value of the vault_info key is used by the Vault Service to manage the data.
 	
 	<div class="method-subsection declared-in-section">
 		<h4 class="method-subtitle">Declared In</h4>
-		<code class="declared-in-ref">CCHVault.h</code><br />
+		<code class="declared-in-ref">CCHDevice.h</code><br />
 	</div>				
 	
 	
 </div>
 						
 						<div class="section-method">
-	<a name="//api/name/deleteItem:completionHandler:" title="deleteItem:completionHandler:"></a>
-	<h3 class="subsubtitle method-title">deleteItem:completionHandler:</h3>
+	<a name="//api/name/getDeviceWithId:completionHandler:" title="getDeviceWithId:completionHandler:"></a>
+	<h3 class="subsubtitle method-title">getDeviceWithId:completionHandler:</h3>
 	
 	
 	
 	<div class="method-subsection brief-description">
-		<p>Deletes an item from the Vault.</p>
+		<p>Gets a device from <a href="../Classes/ContextHub.html">ContextHub</a> using the device Id.</p>
 	</div>		
 	
     
 
-	<div class="method-subsection method-declaration"><code>- (void)deleteItem:(id)<em>item</em> completionHandler:(id)<em>completionHandler</em></code></div>
+	<div class="method-subsection method-declaration"><code>- (void)getDeviceWithId:(id)<em>deviceId</em> completionHandler:(id)<em>completionHandler</em></code></div>
 
     
 	
@@ -380,9 +372,157 @@ The value of the vault_info key is used by the Vault Service to manage the data.
 		<h4 class="method-subtitle parameter-title">Parameters</h4>
 		
 		<dl class="argument-def parameter-def">
-			<dt><em>item</em></dt>
-			<dd><p>The item to be deleted;</p></dd>
+			<dt><em>deviceId</em></dt>
+			<dd><p>The id of the device stored in <a href="../Classes/ContextHub.html">ContextHub</a>.</p></dd>
 		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>completionHandler</em></dt>
+			<dd><p>Called when the request completes. The block is passed an NSDictionary object that represents the device.  If an error occurs, the NSError wil be passed to the block.</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">CCHDevice.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/getDevicesWithAlias:completionHandler:" title="getDevicesWithAlias:completionHandler:"></a>
+	<h3 class="subsubtitle method-title">getDevicesWithAlias:completionHandler:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Gets devices from <a href="../Classes/ContextHub.html">ContextHub</a> using the device alias.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (void)getDevicesWithAlias:(id)<em>alias</em> completionHandler:(id)<em>completionHandler</em></code></div>
+
+    
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>alias</em></dt>
+			<dd><p>The alias associated with the devices that you are interested in.</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>completionHandler</em></dt>
+			<dd><p>Called when the request completes. The block is passed an NSArray of NSDictionary objects that represent the devices.  If an error occurs, the NSError wil be passed to the block.</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">CCHDevice.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/getDevicesWithTags:completionHandler:" title="getDevicesWithTags:completionHandler:"></a>
+	<h3 class="subsubtitle method-title">getDevicesWithTags:completionHandler:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Gets devices from <a href="../Classes/ContextHub.html">ContextHub</a> using tags.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (void)getDevicesWithTags:(id)<em>tags</em> completionHandler:(id)<em>completionHandler</em></code></div>
+
+    
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>tags</em></dt>
+			<dd><p>Tags of the devices that you are interested in.</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>completionHandler</em></dt>
+			<dd><p>Called when the request completes. The block is passed an NSArray of NSDictionary objects that represent the devices.  If an error occurs, the NSError wil be passed to the block.</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">CCHDevice.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/registerDeviceWithCompletionHandler:" title="registerDeviceWithCompletionHandler:"></a>
+	<h3 class="subsubtitle method-title">registerDeviceWithCompletionHandler:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Registers the device with <a href="../Classes/ContextHub.html">ContextHub</a>.  This method gathers meta-data about the device and sends it to <a href="../Classes/ContextHub.html">ContextHub</a>.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (void)registerDeviceWithCompletionHandler:(id)<em>completionHandler</em></code></div>
+
+    
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
 		
 		<dl class="argument-def parameter-def">
 			<dt><em>completionHandler</em></dt>
@@ -397,49 +537,9 @@ The value of the vault_info key is used by the Vault Service to manage the data.
 	
 	
 	
-	
-	
-	
-	
-	
-	
-	<div class="method-subsection declared-in-section">
-		<h4 class="method-subtitle">Declared In</h4>
-		<code class="declared-in-ref">CCHVault.h</code><br />
-	</div>				
-	
-	
-</div>
-						
-						<div class="section-method">
-	<a name="//api/name/getItemWithId:completionHandler:" title="getItemWithId:completionHandler:"></a>
-	<h3 class="subsubtitle method-title">getItemWithId:completionHandler:</h3>
-	
-	
-	
-	<div class="method-subsection brief-description">
-		<p>Gets an item from the Vault.</p>
-	</div>		
-	
-    
-
-	<div class="method-subsection method-declaration"><code>- (void)getItemWithId:(id)<em>vaultId</em> completionHandler:(id)<em>completionHandler</em></code></div>
-
-    
-	
-	<div class="method-subsection arguments-section parameters">
-		<h4 class="method-subtitle parameter-title">Parameters</h4>
-		
-		<dl class="argument-def parameter-def">
-			<dt><em>vaultId</em></dt>
-			<dd><p>The vault id of the item.  The id is found in the key path @&ldquo;vault_info.id&rdquo;.</p></dd>
-		</dl>
-		
-		<dl class="argument-def parameter-def">
-			<dt><em>completionHandler</em></dt>
-			<dd><p>Called when the request completes.</p></dd>
-		</dl>
-		
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<div class="note"><p><strong>Note:</strong> this method can be called multiple times.</p></div>
 	</div>
 	
 	
@@ -448,33 +548,27 @@ The value of the vault_info key is used by the Vault Service to manage the data.
 	
 	
 	
-	
-	
-	
-	
-	
-	
 	<div class="method-subsection declared-in-section">
 		<h4 class="method-subtitle">Declared In</h4>
-		<code class="declared-in-ref">CCHVault.h</code><br />
+		<code class="declared-in-ref">CCHDevice.h</code><br />
 	</div>				
 	
 	
 </div>
 						
 						<div class="section-method">
-	<a name="//api/name/getItemsWithTags:completionHandler:" title="getItemsWithTags:completionHandler:"></a>
-	<h3 class="subsubtitle method-title">getItemsWithTags:completionHandler:</h3>
+	<a name="//api/name/updateDeviceWithAlias:tags:completionHandler:" title="updateDeviceWithAlias:tags:completionHandler:"></a>
+	<h3 class="subsubtitle method-title">updateDeviceWithAlias:tags:completionHandler:</h3>
 	
 	
 	
 	<div class="method-subsection brief-description">
-		<p>Gets items stored in the Vault.</p>
+		<p>Updates the device record on contexthub.</p>
 	</div>		
 	
     
 
-	<div class="method-subsection method-declaration"><code>- (void)getItemsWithTags:(id)<em>tags</em> completionHandler:(id)<em>completionHandler</em></code></div>
+	<div class="method-subsection method-declaration"><code>- (void)updateDeviceWithAlias:(id)<em>alias</em> tags:(id)<em>tags</em> completionHandler:(id)<em>completionHandler</em></code></div>
 
     
 	
@@ -482,74 +576,18 @@ The value of the vault_info key is used by the Vault Service to manage the data.
 		<h4 class="method-subtitle parameter-title">Parameters</h4>
 		
 		<dl class="argument-def parameter-def">
+			<dt><em>alias</em></dt>
+			<dd><p>(optional) The alias associated with the device.</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
 			<dt><em>tags</em></dt>
-			<dd><p>(optional) The tags to be applied to the item.</p></dd>
+			<dd><p>(optional) The tags to be applied to the device.</p></dd>
 		</dl>
 		
 		<dl class="argument-def parameter-def">
 			<dt><em>completionHandler</em></dt>
-			<dd><p>Called when the request completes. The block is passed an NSArray of dictionaries that represent the items.  If an error occurs, the NSError will be passed to the block.</p></dd>
-		</dl>
-		
-	</div>
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	<div class="method-subsection declared-in-section">
-		<h4 class="method-subtitle">Declared In</h4>
-		<code class="declared-in-ref">CCHVault.h</code><br />
-	</div>				
-	
-	
-</div>
-						
-						<div class="section-method">
-	<a name="//api/name/getItemsWithTags:keyPath:value:completionHandler:" title="getItemsWithTags:keyPath:value:completionHandler:"></a>
-	<h3 class="subsubtitle method-title">getItemsWithTags:keyPath:value:completionHandler:</h3>
-	
-	
-	
-	<div class="method-subsection brief-description">
-		<p>Gets items stored in the Vault.</p>
-	</div>		
-	
-    
-
-	<div class="method-subsection method-declaration"><code>- (void)getItemsWithTags:(id)<em>tags</em> keyPath:(id)<em>keyPath</em> value:(id)<em>value</em> completionHandler:(id)<em>completionHandler</em></code></div>
-
-    
-	
-	<div class="method-subsection arguments-section parameters">
-		<h4 class="method-subtitle parameter-title">Parameters</h4>
-		
-		<dl class="argument-def parameter-def">
-			<dt><em>tags</em></dt>
-			<dd><p>(optional) The tags to be applied to the item.</p></dd>
-		</dl>
-		
-		<dl class="argument-def parameter-def">
-			<dt><em>keyPath</em></dt>
-			<dd><p>(optional) The keyPath that you want to look for.</p></dd>
-		</dl>
-		
-		<dl class="argument-def parameter-def">
-			<dt><em>value</em></dt>
-			<dd><p>(optional) The value that you want to find for the keyPath.</p></dd>
-		</dl>
-		
-		<dl class="argument-def parameter-def">
-			<dt><em>completionHandler</em></dt>
-			<dd><p>Called when the request completes. The block is passed an NSArray of dictionaries that represent the items.  If an error occurs, the NSError will be passed to the block.</p></dd>
+			<dd><p>Called when the request completes. The block is passed an NSDictionary object that represents the device.  If an error occurs, the NSError wil be passed to the block.</p></dd>
 		</dl>
 		
 	</div>
@@ -562,8 +600,7 @@ The value of the vault_info key is used by the Vault Service to manage the data.
 	
 	<div class="method-subsection discussion-section">
 		<h4 class="method-subtitle">Discussion</h4>
-		<div class="note"><p><strong>Note:</strong> If you pass a keyPath and a value, it will return all items that have the key path equal to the value.
-If you pass only a keyPath, it will return all items that conatin the keypath.  If you do not pass a keyPath, then both the keypath and value are ignored.</p></div>
+		<div class="note"><p><strong>Note:</strong> This method updates the data for the current device.  The tags and alias that are set here can be used with <a href="../Classes/CCHPush.html">CCHPush</a>.  The tags can also be used with the <a href="../Classes/CCHSubscriptionService.html">CCHSubscriptionService</a>.  This method gathers meta-data about the device and sends it to <a href="../Classes/ContextHub.html">ContextHub</a> along with the alias and tags.  You can call this method multiple times.</p></div>
 	</div>
 	
 	
@@ -574,58 +611,7 @@ If you pass only a keyPath, it will return all items that conatin the keypath.  
 	
 	<div class="method-subsection declared-in-section">
 		<h4 class="method-subtitle">Declared In</h4>
-		<code class="declared-in-ref">CCHVault.h</code><br />
-	</div>				
-	
-	
-</div>
-						
-						<div class="section-method">
-	<a name="//api/name/updateItem:completionHandler:" title="updateItem:completionHandler:"></a>
-	<h3 class="subsubtitle method-title">updateItem:completionHandler:</h3>
-	
-	
-	
-	<div class="method-subsection brief-description">
-		<p>Updates an item in the Vault.</p>
-	</div>		
-	
-    
-
-	<div class="method-subsection method-declaration"><code>- (void)updateItem:(id)<em>item</em> completionHandler:(id)<em>completionHandler</em></code></div>
-
-    
-	
-	<div class="method-subsection arguments-section parameters">
-		<h4 class="method-subtitle parameter-title">Parameters</h4>
-		
-		<dl class="argument-def parameter-def">
-			<dt><em>item</em></dt>
-			<dd><p>The item to be updated.</p></dd>
-		</dl>
-		
-		<dl class="argument-def parameter-def">
-			<dt><em>completionHandler</em></dt>
-			<dd><p>(optional) Called when the request completes. The block is passed an NSDictionary representation of the item. If an error occurs, the NSError will be passed to the block.</p></dd>
-		</dl>
-		
-	</div>
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	<div class="method-subsection declared-in-section">
-		<h4 class="method-subtitle">Declared In</h4>
-		<code class="declared-in-ref">CCHVault.h</code><br />
+		<code class="declared-in-ref">CCHDevice.h</code><br />
 	</div>				
 	
 	

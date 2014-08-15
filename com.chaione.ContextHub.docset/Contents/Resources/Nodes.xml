@@ -19,6 +19,7 @@
 						<NodeRef refid="6"/>
 						<NodeRef refid="7"/>
 						<NodeRef refid="8"/>
+						<NodeRef refid="9"/>
 						
 					</Subnodes>
 				</Node>
@@ -29,8 +30,8 @@
 					<Name>Protocols</Name>
 					<Path>index.html</Path>
 					<Subnodes>
-						<NodeRef refid="9"/>
 						<NodeRef refid="10"/>
+						<NodeRef refid="11"/>
 						
 					</Subnodes>
 				</Node>
@@ -40,16 +41,29 @@
 					<Name>Constants</Name>
 					<Path>index.html</Path>
 					<Subnodes>
-						<NodeRef refid="11"/>
 						<NodeRef refid="12"/>
 						<NodeRef refid="13"/>
 						<NodeRef refid="14"/>
 						<NodeRef refid="15"/>
 						<NodeRef refid="16"/>
+						<NodeRef refid="17"/>
+						<NodeRef refid="18"/>
 						
 					</Subnodes>
 				</Node>
 				
+                
+                <Node>
+                    <Name>Blocks</Name>
+                    <Path>index.html</Path>
+                    <Subnodes>
+                        <NodeRef refid="19"/>
+                        <NodeRef refid="20"/>
+                        <NodeRef refid="21"/>
+                        
+                    </Subnodes>
+                </Node>
+                
 			</Subnodes>
         </Node>
     </TOC>
@@ -89,6 +103,39 @@
             
         </Node>
 		<Node id="2" type="file" documentType="reference">
+            <Name>CCHDevice</Name>
+            <Path>Classes/CCHDevice.html</Path>
+            
+                <Subnodes>
+                <Node type="section">
+                    <Path>Classes/CCHDevice.html</Path>
+                    <Name>Overview</Name>
+                    <Anchor>overview</Anchor>
+                </Node>
+                <Node type="section">
+                    <Path>Classes/CCHDevice.html</Path>
+                    <Name>Tasks</Name>
+                    <Anchor>tasks</Anchor>
+                </Node>
+                
+                
+                <Node type="section">
+                    <Path>Classes/CCHDevice.html</Path>
+                    <Name>Class Methods</Name>
+                    <Anchor>class_methods</Anchor>
+                </Node>
+                
+                
+                <Node type="section">
+                    <Path>Classes/CCHDevice.html</Path>
+                    <Name>Instance Methods</Name>
+                    <Anchor>instance_methods</Anchor>
+                </Node>
+                
+            </Subnodes>
+            
+        </Node>
+		<Node id="3" type="file" documentType="reference">
             <Name>CCHGeofenceService</Name>
             <Path>Classes/CCHGeofenceService.html</Path>
             
@@ -121,7 +168,7 @@
             </Subnodes>
             
         </Node>
-		<Node id="3" type="file" documentType="reference">
+		<Node id="4" type="file" documentType="reference">
             <Name>CCHLog</Name>
             <Path>Classes/CCHLog.html</Path>
             
@@ -154,7 +201,7 @@
             </Subnodes>
             
         </Node>
-		<Node id="4" type="file" documentType="reference">
+		<Node id="5" type="file" documentType="reference">
             <Name>CCHPush</Name>
             <Path>Classes/CCHPush.html</Path>
             
@@ -187,7 +234,7 @@
             </Subnodes>
             
         </Node>
-		<Node id="5" type="file" documentType="reference">
+		<Node id="6" type="file" documentType="reference">
             <Name>CCHSensorPipeline</Name>
             <Path>Classes/CCHSensorPipeline.html</Path>
             
@@ -226,7 +273,7 @@
             </Subnodes>
             
         </Node>
-		<Node id="6" type="file" documentType="reference">
+		<Node id="7" type="file" documentType="reference">
             <Name>CCHSubscriptionService</Name>
             <Path>Classes/CCHSubscriptionService.html</Path>
             
@@ -259,7 +306,7 @@
             </Subnodes>
             
         </Node>
-		<Node id="7" type="file" documentType="reference">
+		<Node id="8" type="file" documentType="reference">
             <Name>CCHVault</Name>
             <Path>Classes/CCHVault.html</Path>
             
@@ -292,7 +339,7 @@
             </Subnodes>
             
         </Node>
-		<Node id="8" type="file" documentType="reference">
+		<Node id="9" type="file" documentType="reference">
             <Name>ContextHub</Name>
             <Path>Classes/ContextHub.html</Path>
             
@@ -327,7 +374,7 @@
         </Node>
 		
 		
-        <Node id="9" type="file" documentType="reference">
+        <Node id="10" type="file" documentType="reference">
             <Name>CCHSensorPipelineDataSource</Name>
             <Path>Protocols/CCHSensorPipelineDataSource.html</Path>
             
@@ -354,7 +401,7 @@
             </Subnodes>
             
         </Node>
-		<Node id="10" type="file" documentType="reference">
+		<Node id="11" type="file" documentType="reference">
             <Name>CCHSensorPipelineDelegate</Name>
             <Path>Protocols/CCHSensorPipelineDelegate.html</Path>
             
@@ -382,36 +429,57 @@
             
         </Node>
 		
-        <Node id="11" type="file" documentType="reference">
+        <Node id="12" type="file" documentType="reference">
             <Name>CCHBeaconServiceErrorCode</Name>
             <Path>Constants/CCHBeaconServiceErrorCode.html</Path>
             
         </Node>
-		<Node id="12" type="file" documentType="reference">
+		<Node id="13" type="file" documentType="reference">
+            <Name>CCHDeviceErrorCode</Name>
+            <Path>Constants/CCHDeviceErrorCode.html</Path>
+            
+        </Node>
+		<Node id="14" type="file" documentType="reference">
             <Name>CCHGeofenceServiceErrorCode</Name>
             <Path>Constants/CCHGeofenceServiceErrorCode.html</Path>
             
         </Node>
-		<Node id="13" type="file" documentType="reference">
+		<Node id="15" type="file" documentType="reference">
             <Name>CCHLogErrorCode</Name>
             <Path>Constants/CCHLogErrorCode.html</Path>
             
         </Node>
-		<Node id="14" type="file" documentType="reference">
+		<Node id="16" type="file" documentType="reference">
             <Name>CCHSensorPipelineErrorCode</Name>
             <Path>Constants/CCHSensorPipelineErrorCode.html</Path>
             
         </Node>
-		<Node id="15" type="file" documentType="reference">
+		<Node id="17" type="file" documentType="reference">
             <Name>CCHSubscriptionErrorCode</Name>
             <Path>Constants/CCHSubscriptionErrorCode.html</Path>
             
         </Node>
-		<Node id="16" type="file" documentType="reference">
+		<Node id="18" type="file" documentType="reference">
             <Name>CCHVaultErrorCode</Name>
             <Path>Constants/CCHVaultErrorCode.html</Path>
             
         </Node>
 		
+        <Node id="19" type="file" documentType="reference">
+            <Name>CCHDataTaskCompletionHandler</Name>
+            <Path>Blocks/CCHDataTaskCompletionHandler.html</Path>
+            
+        </Node>
+        <Node id="20" type="file" documentType="reference">
+            <Name>vaultCompletionBlock</Name>
+            <Path>Blocks/vaultCompletionBlock.html</Path>
+            
+        </Node>
+        <Node id="21" type="file" documentType="reference">
+            <Name>vaultListingCompletionBlock</Name>
+            <Path>Blocks/vaultListingCompletionBlock.html</Path>
+            
+        </Node>
+        
 	</Library>
 </DocSetNodes>

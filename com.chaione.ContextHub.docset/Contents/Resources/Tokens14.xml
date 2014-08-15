@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Tokens version="1.0">
-	<File path="Constants/CCHSensorPipelineErrorCode.html">
+	<File path="Constants/CCHGeofenceServiceErrorCode.html">
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/c/tdef/CCHSensorPipelineErrorCode</TokenIdentifier>
-			<Abstract type="html">ContextHub Pipeline error codes.</Abstract>
-			<DeclaredIn>CCHSensorPipeline.h</DeclaredIn>
+			<TokenIdentifier>//apple_ref/c/tdef/CCHGeofenceServiceErrorCode</TokenIdentifier>
+			<Abstract type="html">ContextHub GeofenceService error codes.</Abstract>
+			<DeclaredIn>CCHGeofenceService.h</DeclaredIn>
             
 			
 			<NodeRef refid="14"/>
@@ -14,37 +14,60 @@
 		
         
         <Token>
-            <TokenIdentifier>//apple_ref/c/econst/CCHSensorPipelineTimeOutError</TokenIdentifier>
-            <Abstract type="html">     Synchronization timeout error code.
+            <TokenIdentifier>//apple_ref/c/econst/CCHInvalidGeofenceDictionary</TokenIdentifier>
+            <Abstract type="html">     Dictionary can&apos;t be used to create a geofence.
      </Abstract>
-            <Declaration>CCHSensorPipelineTimeOutError</Declaration>
+            <Declaration>CCHInvalidGeofenceDictionary</Declaration>
             
-            <DeclaredIn>CCHSensorPipeline.h</DeclaredIn>
+            <DeclaredIn>CCHGeofenceService.h</DeclaredIn>
             
             <NodeRef refid="14"/>
         </Token>
         
         <Token>
-            <TokenIdentifier>//apple_ref/c/econst/CCHSensorPipelineMissingEventError</TokenIdentifier>
-            <Abstract type="html">     The custom event is nil.
-     </Abstract>
-            <Declaration>CCHSensorPipelineMissingEventError</Declaration>
+            <TokenIdentifier>//apple_ref/c/econst/CCHInvalidCenterParameter</TokenIdentifier>
+            <Abstract type="html">    You must pass a center.
+    </Abstract>
+            <Declaration>CCHInvalidCenterParameter</Declaration>
             
-            <DeclaredIn>CCHSensorPipeline.h</DeclaredIn>
+            <DeclaredIn>CCHGeofenceService.h</DeclaredIn>
             
             <NodeRef refid="14"/>
         </Token>
         
         <Token>
-            <TokenIdentifier>//apple_ref/c/econst/CCHSensorPipelineMissingNameKeyError</TokenIdentifier>
-            <Abstract type="html">     The custom event is missing a name key
+            <TokenIdentifier>//apple_ref/c/econst/CCHInvalidRadiusParameter</TokenIdentifier>
+            <Abstract type="html">     Radius cannot be nil.
      </Abstract>
-            <Declaration>CCHSensorPipelineMissingNameKeyError</Declaration>
+            <Declaration>CCHInvalidRadiusParameter</Declaration>
             
-            <DeclaredIn>CCHSensorPipeline.h</DeclaredIn>
+            <DeclaredIn>CCHGeofenceService.h</DeclaredIn>
             
             <NodeRef refid="14"/>
         </Token>
+        
+        <Token>
+            <TokenIdentifier>//apple_ref/c/econst/CCHInvalidNameParameter</TokenIdentifier>
+            <Abstract type="html">     Name cannot be nil.
+     </Abstract>
+            <Declaration>CCHInvalidNameParameter</Declaration>
+            
+            <DeclaredIn>CCHGeofenceService.h</DeclaredIn>
+            
+            <NodeRef refid="14"/>
+        </Token>
+        
+        <Token>
+            <TokenIdentifier>//apple_ref/c/econst/CCHInvalidIdParameter</TokenIdentifier>
+            <Abstract type="html">     Geofence Id cannot be nil.
+     </Abstract>
+            <Declaration>CCHInvalidIdParameter</Declaration>
+            
+            <DeclaredIn>CCHGeofenceService.h</DeclaredIn>
+            
+            <NodeRef refid="14"/>
+        </Token>
+        
         
 	</File>
 </Tokens>
