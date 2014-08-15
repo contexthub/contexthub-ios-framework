@@ -197,7 +197,7 @@ When server changes are made, the device is notified using a background push not
  Subscribes the device to change notifications for the specified tags.
  @note This will turn on background push notifications for all elements that have tags matching the tags array specified.  You must enable push notifications, enbale remote notifications and background fetch capabilites, and you must call application:didReceiveRemoteNotification:completionHandler: on CCHPush.
  @param tags An NSArray of tags
- @param options (optional) an NSArray of the elements that you want to subscribe to. (CCHOptionBeacon, CCHOptionGeofence, CCHOptionVault)
+ @param options (optional) an NSArray of the elements that you want to subscribe to. (CCHOptionBeacon, CCHOptionGeofence, CCHOptionVault, CCHOptionDevice)
  @param completionHandler (optional) Is executed when the request completes.  If an error occurs, the NSError will be passed to the block.
  */
 - (void)addSubscriptionsForTags:(NSArray *)tags options:(NSArray *)options completionHandler:(void(^)(NSError *error))completionHandler;
@@ -205,7 +205,7 @@ When server changes are made, the device is notified using a background push not
 /**
  Unsubscribes the device from change notifications for the specified tags.
  @param tags An NSArray of tags
- @param options (optional) an NSArray of the elements that you want to unsubscribe from. (CCHOptionBeacon, CCHOptionGeofence, CCHOptionVault)
+ @param options (optional) an NSArray of the elements that you want to unsubscribe from. (CCHOptionBeacon, CCHOptionGeofence, CCHOptionVault, CCHOptionDevice)
  @param completionHandler (optional) Is executed when the request completes.  If an error occurs, the NSError will be passed to the block.
  */
 - (void)removeSubscriptionsForTags:(NSArray *)tags options:(NSArray *)options completionHandler:(void(^)(NSError *error))completionHandler;

@@ -134,7 +134,7 @@ When server changes are made, the device is notified using a background push not
 					<Abstract type="html">An NSArray of tags</Abstract>
 				</Parameter><Parameter>
 					<Name>options</Name>
-					<Abstract type="html">(optional) an NSArray of the elements that you want to subscribe to. (CCHOptionBeacon, CCHOptionGeofence, CCHOptionVault)</Abstract>
+					<Abstract type="html">(optional) an NSArray of the elements that you want to subscribe to. (CCHOptionBeacon, CCHOptionGeofence, CCHOptionVault, CCHOptionDevice)</Abstract>
 				</Parameter><Parameter>
 					<Name>completionHandler</Name>
 					<Abstract type="html">(optional) Is executed when the request completes.  If an error occurs, the NSError will be passed to the block.</Abstract>
@@ -157,7 +157,7 @@ When server changes are made, the device is notified using a background push not
 					<Abstract type="html">An NSArray of tags</Abstract>
 				</Parameter><Parameter>
 					<Name>options</Name>
-					<Abstract type="html">(optional) an NSArray of the elements that you want to unsubscribe from. (CCHOptionBeacon, CCHOptionGeofence, CCHOptionVault)</Abstract>
+					<Abstract type="html">(optional) an NSArray of the elements that you want to unsubscribe from. (CCHOptionBeacon, CCHOptionGeofence, CCHOptionVault, CCHOptionDevice)</Abstract>
 				</Parameter><Parameter>
 					<Name>completionHandler</Name>
 					<Abstract type="html">(optional) Is executed when the request completes.  If an error occurs, the NSError will be passed to the block.</Abstract>
