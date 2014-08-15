@@ -2,7 +2,7 @@
 <html>
 	<head>
 		<meta http-equiv="Content-Type" content="html/html; charset=utf-8" />
-		<title>CCHGeofenceServiceErrorCode Constants Reference</title>
+		<title>CCHDeviceErrorCode Constants Reference</title>
 		<meta id="xcode-display" name="xcode-display" content="render"/>
 		<link rel="stylesheet" type="text/css" href="../css/styles.css" media="all" />
 		<link rel="stylesheet" type="text/css" media="print" href="../css/stylesPrint.css" />
@@ -16,7 +16,7 @@
 			</div>
 			
 			<div id="title" role="banner">
-				<h1 class="hideInXcode">CCHGeofenceServiceErrorCode Constants Reference</h1>
+				<h1 class="hideInXcode">CCHDeviceErrorCode Constants Reference</h1>
 			</div>
 			<ul id="headerButtons" role="toolbar">
 				<li id="toc_button">
@@ -45,7 +45,7 @@
 		</nav>
 		<article>
 			<div id="contents" class="isShowingTOC" role="main">
-				<a title="CCHGeofenceServiceErrorCode Constants Reference" name="top"></a>
+				<a title="CCHDeviceErrorCode Constants Reference" name="top"></a>
 				<div class="main-navigation navigation-top">
 					<ul>
 	<li><a href="../index.html">Index</a></li>
@@ -54,7 +54,7 @@
 				</div>
 				<div id="header">
 					<div class="section-header">
-						<h1 class="title title-header">CCHGeofenceServiceErrorCode Constants Reference</h1>
+						<h1 class="title title-header">CCHDeviceErrorCode Constants Reference</h1>
 					</div>		
 				</div>
 				<div id="container">	
@@ -62,7 +62,7 @@
 					<div class="section section-specification"><table cellspacing="0"><tbody>
 						<tr>
 	<td class="specification-title">Declared in</td>
-	<td class="specification-value">CCHGeofenceService.h</td>
+	<td class="specification-value">CCHDevice.h</td>
 </tr>
 						</tbody></table></div>
 					
@@ -74,11 +74,11 @@
 					
                     
                     
-                    <h3 class="subsubtitle method-title">CCHGeofenceServiceErrorCode</h3>
+                    <h3 class="subsubtitle method-title">CCHDeviceErrorCode</h3>
                     
 					
 					<div class="section section-overview">
-                        <p><a href="../Classes/ContextHub.html">ContextHub</a> GeofenceService error codes.</p>
+                        <p><a href="../Classes/ContextHub.html">ContextHub</a> Device error codes.</p>
 					</div>
 					
 					
@@ -86,17 +86,13 @@
                         <!-- display enum values -->
                         
                         <h4 class="method-subtitle">Definition</h4>
-                        <code>typedef NS_ENUM(NSInteger, CCHGeofenceServiceErrorCode ) {<br/>
+                        <code>typedef NS_ENUM(NSInteger, CCHDeviceErrorCode ) {<br/>
                             
-                            &nbsp;&nbsp; <a href="">CCHInvalidGeofenceDictionary</a>,<br/>
+                            &nbsp;&nbsp; <a href="">CCHInvalidDeviceIdParameter</a>,<br/>
                             
-                            &nbsp;&nbsp; <a href="">CCHInvalidCenterParameter</a>,<br/>
+                            &nbsp;&nbsp; <a href="">CCHInvalidDeviceAliasParameter</a>,<br/>
                             
-                            &nbsp;&nbsp; <a href="">CCHInvalidRadiusParameter</a>,<br/>
-                            
-                            &nbsp;&nbsp; <a href="">CCHInvalidNameParameter</a>,<br/>
-                            
-                            &nbsp;&nbsp; <a href="">CCHInvalidIdParameter</a>,<br/>
+                            &nbsp;&nbsp; <a href="">CCHInvalidDeviceTagsParameter</a>,<br/>
                             
                             };</code>
                     
@@ -106,11 +102,11 @@
                         <h4 class="method-subtitle">Constants</h4>
                         <dl class="termdef">
                             
-                            <dt><a name="" title="CCHInvalidGeofenceDictionary"></a><code>CCHInvalidGeofenceDictionary</code></dt>
+                            <dt><a name="" title="CCHInvalidDeviceIdParameter"></a><code>CCHInvalidDeviceIdParameter</code></dt>
 <dd>
 
 
-<pre><code> Dictionary can't be used to create a geofence.
+<pre><code> Device id cannot be nil 
 </code></pre>
 
 
@@ -119,16 +115,16 @@
 
     
 	<p>
-		Declared In <code class="declared-in-ref">CCHGeofenceService.h</code>.
+		Declared In <code class="declared-in-ref">CCHDevice.h</code>.
 	</p>
 	
 </dd>
                             
-                            <dt><a name="" title="CCHInvalidCenterParameter"></a><code>CCHInvalidCenterParameter</code></dt>
+                            <dt><a name="" title="CCHInvalidDeviceAliasParameter"></a><code>CCHInvalidDeviceAliasParameter</code></dt>
 <dd>
 
 
-<pre><code>You must pass a center.
+<pre><code> Alias cannot be nil
 </code></pre>
 
 
@@ -137,16 +133,16 @@
 
     
 	<p>
-		Declared In <code class="declared-in-ref">CCHGeofenceService.h</code>.
+		Declared In <code class="declared-in-ref">CCHDevice.h</code>.
 	</p>
 	
 </dd>
                             
-                            <dt><a name="" title="CCHInvalidRadiusParameter"></a><code>CCHInvalidRadiusParameter</code></dt>
+                            <dt><a name="" title="CCHInvalidDeviceTagsParameter"></a><code>CCHInvalidDeviceTagsParameter</code></dt>
 <dd>
 
 
-<pre><code> Radius cannot be nil.
+<pre><code> Tags cannot be nil
 </code></pre>
 
 
@@ -155,43 +151,7 @@
 
     
 	<p>
-		Declared In <code class="declared-in-ref">CCHGeofenceService.h</code>.
-	</p>
-	
-</dd>
-                            
-                            <dt><a name="" title="CCHInvalidNameParameter"></a><code>CCHInvalidNameParameter</code></dt>
-<dd>
-
-
-<pre><code> Name cannot be nil.
-</code></pre>
-
-
-
-
-
-    
-	<p>
-		Declared In <code class="declared-in-ref">CCHGeofenceService.h</code>.
-	</p>
-	
-</dd>
-                            
-                            <dt><a name="" title="CCHInvalidIdParameter"></a><code>CCHInvalidIdParameter</code></dt>
-<dd>
-
-
-<pre><code> Geofence Id cannot be nil.
-</code></pre>
-
-
-
-
-
-    
-	<p>
-		Declared In <code class="declared-in-ref">CCHGeofenceService.h</code>.
+		Declared In <code class="declared-in-ref">CCHDevice.h</code>.
 	</p>
 	
 </dd>
@@ -208,7 +168,7 @@
                     
                     <div class="method-subsection declared-in-section">
                         <h4 class="method-subtitle">Declared In</h4>
-                        <code class="declared-in-ref">CCHGeofenceService.h</code><br />
+                        <code class="declared-in-ref">CCHDevice.h</code><br />
                     </div>				
                     
                     

@@ -2,7 +2,7 @@
 <html>
 	<head>
 		<meta http-equiv="Content-Type" content="html/html; charset=utf-8" />
-		<title>CCHGeofenceServiceErrorCode Constants Reference</title>
+		<title>vaultListingCompletionBlock Block Reference</title>
 		<meta id="xcode-display" name="xcode-display" content="render"/>
 		<link rel="stylesheet" type="text/css" href="../css/styles.css" media="all" />
 		<link rel="stylesheet" type="text/css" media="print" href="../css/stylesPrint.css" />
@@ -16,7 +16,7 @@
 			</div>
 			
 			<div id="title" role="banner">
-				<h1 class="hideInXcode">CCHGeofenceServiceErrorCode Constants Reference</h1>
+				<h1 class="hideInXcode">vaultListingCompletionBlock Block Reference</h1>
 			</div>
 			<ul id="headerButtons" role="toolbar">
 				<li id="toc_button">
@@ -45,7 +45,7 @@
 		</nav>
 		<article>
 			<div id="contents" class="isShowingTOC" role="main">
-				<a title="CCHGeofenceServiceErrorCode Constants Reference" name="top"></a>
+				<a title="vaultListingCompletionBlock Block Reference" name="top"></a>
 				<div class="main-navigation navigation-top">
 					<ul>
 	<li><a href="../index.html">Index</a></li>
@@ -54,7 +54,7 @@
 				</div>
 				<div id="header">
 					<div class="section-header">
-						<h1 class="title title-header">CCHGeofenceServiceErrorCode Constants Reference</h1>
+						<h1 class="title title-header">vaultListingCompletionBlock Block Reference</h1>
 					</div>		
 				</div>
 				<div id="container">	
@@ -62,7 +62,7 @@
 					<div class="section section-specification"><table cellspacing="0"><tbody>
 						<tr>
 	<td class="specification-title">Declared in</td>
-	<td class="specification-value">CCHGeofenceService.h</td>
+	<td class="specification-value">CCHVault.h</td>
 </tr>
 						</tbody></table></div>
 					
@@ -74,146 +74,18 @@
 					
                     
                     
-                    <h3 class="subsubtitle method-title">CCHGeofenceServiceErrorCode</h3>
-                    
-					
-					<div class="section section-overview">
-                        <p><a href="../Classes/ContextHub.html">ContextHub</a> GeofenceService error codes.</p>
-					</div>
-					
-					
-                    <div class="section">
-                        <!-- display enum values -->
-                        
-                        <h4 class="method-subtitle">Definition</h4>
-                        <code>typedef NS_ENUM(NSInteger, CCHGeofenceServiceErrorCode ) {<br/>
-                            
-                            &nbsp;&nbsp; <a href="">CCHInvalidGeofenceDictionary</a>,<br/>
-                            
-                            &nbsp;&nbsp; <a href="">CCHInvalidCenterParameter</a>,<br/>
-                            
-                            &nbsp;&nbsp; <a href="">CCHInvalidRadiusParameter</a>,<br/>
-                            
-                            &nbsp;&nbsp; <a href="">CCHInvalidNameParameter</a>,<br/>
-                            
-                            &nbsp;&nbsp; <a href="">CCHInvalidIdParameter</a>,<br/>
-                            
-                            };</code>
-                    
-                    </div>
-                    
-                    <div class="section section-methods">
-                        <h4 class="method-subtitle">Constants</h4>
-                        <dl class="termdef">
-                            
-                            <dt><a name="" title="CCHInvalidGeofenceDictionary"></a><code>CCHInvalidGeofenceDictionary</code></dt>
-<dd>
-
-
-<pre><code> Dictionary can't be used to create a geofence.
-</code></pre>
-
-
-
-
-
-    
-	<p>
-		Declared In <code class="declared-in-ref">CCHGeofenceService.h</code>.
-	</p>
-	
-</dd>
-                            
-                            <dt><a name="" title="CCHInvalidCenterParameter"></a><code>CCHInvalidCenterParameter</code></dt>
-<dd>
-
-
-<pre><code>You must pass a center.
-</code></pre>
-
-
-
-
-
-    
-	<p>
-		Declared In <code class="declared-in-ref">CCHGeofenceService.h</code>.
-	</p>
-	
-</dd>
-                            
-                            <dt><a name="" title="CCHInvalidRadiusParameter"></a><code>CCHInvalidRadiusParameter</code></dt>
-<dd>
-
-
-<pre><code> Radius cannot be nil.
-</code></pre>
-
-
-
-
-
-    
-	<p>
-		Declared In <code class="declared-in-ref">CCHGeofenceService.h</code>.
-	</p>
-	
-</dd>
-                            
-                            <dt><a name="" title="CCHInvalidNameParameter"></a><code>CCHInvalidNameParameter</code></dt>
-<dd>
-
-
-<pre><code> Name cannot be nil.
-</code></pre>
-
-
-
-
-
-    
-	<p>
-		Declared In <code class="declared-in-ref">CCHGeofenceService.h</code>.
-	</p>
-	
-</dd>
-                            
-                            <dt><a name="" title="CCHInvalidIdParameter"></a><code>CCHInvalidIdParameter</code></dt>
-<dd>
-
-
-<pre><code> Geofence Id cannot be nil.
-</code></pre>
-
-
-
-
-
-    
-	<p>
-		Declared In <code class="declared-in-ref">CCHGeofenceService.h</code>.
-	</p>
-	
-</dd>
-                            
-                        </dl>
-                    </div>
                     
                     
-                    
-                    
+                    <a title="Block Definition" name="instance_methods"></a>
+                    <h2 class="subtitle subtitle-methods">Block Definition</h2>
+                    <h3 class="subsubtitle method-title">vaultListingCompletionBlock</h3>
 
-                    
-                    
-                    
-                    <div class="method-subsection declared-in-section">
-                        <h4 class="method-subtitle">Declared In</h4>
-                        <code class="declared-in-ref">CCHGeofenceService.h</code><br />
-                    </div>				
-                    
-                    
-                    
-                    
+
+<code>typedef void (^vaultListingCompletionBlock) (NSArray *responses, NSError *error)</code>
+
+
+
+
                     
 
 				</div>
