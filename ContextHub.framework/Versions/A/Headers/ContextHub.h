@@ -5,7 +5,7 @@
 //  Created by Travis Fischer on 9/18/13.
 //  Copyright (c) 2013 ChaiOne. All rights reserved.
 //
-//  Version 1.1.4
+//  Version 1.2.0
 //
 
 #import <Foundation/Foundation.h>
@@ -22,7 +22,7 @@
 //Application Services
 #import "CCHPush.h"
 #import "CCHVault.h"
-
+#import "CCHDevice.h"
 
 /**
  * The primary interface with the ContextHub SDK
