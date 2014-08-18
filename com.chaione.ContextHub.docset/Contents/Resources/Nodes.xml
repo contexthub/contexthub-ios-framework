@@ -59,7 +59,6 @@
                     <Subnodes>
                         <NodeRef refid="19"/>
                         <NodeRef refid="20"/>
-                        <NodeRef refid="21"/>
                         
                     </Subnodes>
                 </Node>
@@ -466,16 +465,11 @@
         </Node>
 		
         <Node id="19" type="file" documentType="reference">
-            <Name>CCHDataTaskCompletionHandler</Name>
-            <Path>Blocks/CCHDataTaskCompletionHandler.html</Path>
-            
-        </Node>
-        <Node id="20" type="file" documentType="reference">
             <Name>vaultCompletionBlock</Name>
             <Path>Blocks/vaultCompletionBlock.html</Path>
             
         </Node>
-        <Node id="21" type="file" documentType="reference">
+        <Node id="20" type="file" documentType="reference">
             <Name>vaultListingCompletionBlock</Name>
             <Path>Blocks/vaultListingCompletionBlock.html</Path>
             
