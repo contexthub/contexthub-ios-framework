@@ -35,14 +35,14 @@ typedef NS_ENUM(NSInteger, CCHDeviceErrorCode) {
  
  | key       | value     |
  | --------- | --------- |
- | additional_info | NSDicationary of device specific information (not always present) |
+ | additional_info | NSDictionary of device specific information (not always present) |
  | alias | alias that is set for the device (not always present) |
  | device_type | describes the device, often pulled for the user agent  |
  | id | database id for the device |
  | last_profile | NSDictionary of contextual information from the last time the device was seen by the server |
  | push_token | push token assigned to the device (not always present) |
  | tag_string | a comma separated string of the tags associated with the device |
- | tags | NSArray of tags associated with the geofence |
+ | tags | NSArray of tags associated with the device |
  */
 @interface CCHDevice : NSObject
 
