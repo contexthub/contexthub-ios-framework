@@ -1,3 +1,8 @@
+## 1.2.0 - August 15, 2014
+- **CCHSubscriptionService - Method Renamed** - renamed 'getSubscriptionsWithCompletion:' to 'getSubscriptionsWithCompletionHandler'
+- CCHSubscriptionService - you can subscribe to device changes in and observe change notifications (CCHDeviceCreatedNotification, CCHDeviceUpdatedNotification, CCHDeviceDeletedNotification)
+- CCHDevice - A new api for working with devices stored on the ContextHub server.
+
 ## 1.1.4 - July 31, 2014
 - CCHSensorPipeline - changed method name `triggerEvent:completionHandler:`
 - CCHVersion - allows you to check the version of the framework.

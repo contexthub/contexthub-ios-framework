@@ -6,7 +6,7 @@
 		<meta id="xcode-display" name="xcode-display" content="render"/>
 		<link rel="stylesheet" type="text/css" href="../css/styles.css" media="all" />
 		<link rel="stylesheet" type="text/css" media="print" href="../css/stylesPrint.css" />
-		<meta name="generator" content="appledoc 2.2 (build 961)" />
+		<meta name="generator" content="appledoc 2.2 (build 963)" />
 	</head>
 	<body>
 		<header id="top_header">
@@ -54,7 +54,7 @@
 	
 	<option value="//api/name/addSubscriptionsForTags:options:completionHandler:">&nbsp;&nbsp;&nbsp;&nbsp;- addSubscriptionsForTags:options:completionHandler:</option>
 	
-	<option value="//api/name/getSubscriptionsWithCompletion:">&nbsp;&nbsp;&nbsp;&nbsp;- getSubscriptionsWithCompletion:</option>
+	<option value="//api/name/getSubscriptionsWithCompletionHandler:">&nbsp;&nbsp;&nbsp;&nbsp;- getSubscriptionsWithCompletionHandler:</option>
 	
 	<option value="//api/name/removeBeaconSubscriptionForTags:completionHandler:">&nbsp;&nbsp;&nbsp;&nbsp;- removeBeaconSubscriptionForTags:completionHandler:</option>
 	
@@ -102,7 +102,7 @@
 	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/addSubscriptionsForTags:options:completionHandler:">addSubscriptionsForTags:options:completionHandler:</a></span></li>
 	
-	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/getSubscriptionsWithCompletion:">getSubscriptionsWithCompletion:</a></span></li>
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/getSubscriptionsWithCompletionHandler:">getSubscriptionsWithCompletionHandler:</a></span></li>
 	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/removeBeaconSubscriptionForTags:completionHandler:">removeBeaconSubscriptionForTags:completionHandler:</a></span></li>
 	
@@ -189,6 +189,18 @@ When server changes are made, the device is notified using a background push not
 <h3>CCHVaultItemDeletedNotification</h3>
 
 <p>the notification object is an id of the vualt item that was deleted.  The userInfo object is not set.</p>
+
+<h3>CCHDeviceCreatedNotification</h3>
+
+<p>the notification object is an NSDictionary representation of the device that was created.  The userInfo object is not set.</p>
+
+<h3>CCHDeviceUpdatedNotification</h3>
+
+<p>the notification object is an NSDictionary of representation of the device that was updated.  The userInfo object is not set.</p>
+
+<h3>CCHDeviceDeletedNotification</h3>
+
+<p>the notification object is an id of the device that was deleted.  The userInfo object is not set.</p>
 					</div>
 					
 					
@@ -212,7 +224,7 @@ When server changes are made, the device is notified using a background push not
 	
 </li><li>
 	<span class="tooltip">
-		<code><a href="#//api/name/getSubscriptionsWithCompletion:">&ndash;&nbsp;getSubscriptionsWithCompletion:</a></code>
+		<code><a href="#//api/name/getSubscriptionsWithCompletionHandler:">&ndash;&nbsp;getSubscriptionsWithCompletionHandler:</a></code>
 	</span>
 	
 	
@@ -328,7 +340,7 @@ When server changes are made, the device is notified using a background push not
 	
     
 
-	<div class="method-subsection method-declaration"><code>- (void)addBeaconSubscriptionForTags:(NSArray *)<em>tags</em> completionHandler:(void ( ^ ) ( NSError *error ))<em>completionHandler</em></code></div>
+	<div class="method-subsection method-declaration"><code>- (void)addBeaconSubscriptionForTags:(id)<em>tags</em> completionHandler:(id)<em>completionHandler</em></code></div>
 
     
 	
@@ -379,7 +391,7 @@ When server changes are made, the device is notified using a background push not
 	
     
 
-	<div class="method-subsection method-declaration"><code>- (void)addGeofenceSubscriptionForTags:(NSArray *)<em>tags</em> completionHandler:(void ( ^ ) ( NSError *error ))<em>completionHandler</em></code></div>
+	<div class="method-subsection method-declaration"><code>- (void)addGeofenceSubscriptionForTags:(id)<em>tags</em> completionHandler:(id)<em>completionHandler</em></code></div>
 
     
 	
@@ -430,7 +442,7 @@ When server changes are made, the device is notified using a background push not
 	
     
 
-	<div class="method-subsection method-declaration"><code>- (void)addSubscriptionsForTags:(NSArray *)<em>tags</em> options:(NSArray *)<em>options</em> completionHandler:(void ( ^ ) ( NSError *error ))<em>completionHandler</em></code></div>
+	<div class="method-subsection method-declaration"><code>- (void)addSubscriptionsForTags:(id)<em>tags</em> options:(id)<em>options</em> completionHandler:(id)<em>completionHandler</em></code></div>
 
     
 	
@@ -444,7 +456,7 @@ When server changes are made, the device is notified using a background push not
 		
 		<dl class="argument-def parameter-def">
 			<dt><em>options</em></dt>
-			<dd><p>(optional) an NSArray of the elements that you want to subscribe to. (CCHOptionBeacon, CCHOptionGeofence, CCHOptionVault)</p></dd>
+			<dd><p>(optional) an NSArray of the elements that you want to subscribe to. (CCHOptionBeacon, CCHOptionGeofence, CCHOptionVault, CCHOptionDevice)</p></dd>
 		</dl>
 		
 		<dl class="argument-def parameter-def">
@@ -480,8 +492,8 @@ When server changes are made, the device is notified using a background push not
 </div>
 						
 						<div class="section-method">
-	<a name="//api/name/getSubscriptionsWithCompletion:" title="getSubscriptionsWithCompletion:"></a>
-	<h3 class="subsubtitle method-title">getSubscriptionsWithCompletion:</h3>
+	<a name="//api/name/getSubscriptionsWithCompletionHandler:" title="getSubscriptionsWithCompletionHandler:"></a>
+	<h3 class="subsubtitle method-title">getSubscriptionsWithCompletionHandler:</h3>
 	
 	
 	
@@ -491,7 +503,7 @@ When server changes are made, the device is notified using a background push not
 	
     
 
-	<div class="method-subsection method-declaration"><code>- (void)getSubscriptionsWithCompletion:(void ( ^ ) ( NSDictionary *subscriptions , NSError *error ))<em>completion</em></code></div>
+	<div class="method-subsection method-declaration"><code>- (void)getSubscriptionsWithCompletionHandler:(id)<em>completionHandler</em></code></div>
 
     
 	
@@ -499,7 +511,7 @@ When server changes are made, the device is notified using a background push not
 		<h4 class="method-subtitle parameter-title">Parameters</h4>
 		
 		<dl class="argument-def parameter-def">
-			<dt><em>completion</em></dt>
+			<dt><em>completionHandler</em></dt>
 			<dd><p>executed when the request completes.  The block is passed an NSDictionary of subscriptions.  If an error occurs, the NSError will be passed to the block.</p></dd>
 		</dl>
 		
@@ -542,7 +554,7 @@ When server changes are made, the device is notified using a background push not
 	
     
 
-	<div class="method-subsection method-declaration"><code>- (void)removeBeaconSubscriptionForTags:(NSArray *)<em>tags</em> completionHandler:(void ( ^ ) ( NSError *error ))<em>completionHandler</em></code></div>
+	<div class="method-subsection method-declaration"><code>- (void)removeBeaconSubscriptionForTags:(id)<em>tags</em> completionHandler:(id)<em>completionHandler</em></code></div>
 
     
 	
@@ -593,7 +605,7 @@ When server changes are made, the device is notified using a background push not
 	
     
 
-	<div class="method-subsection method-declaration"><code>- (void)removeGeofenceSubscriptionForTags:(NSArray *)<em>tags</em> completionHandler:(void ( ^ ) ( NSError *error ))<em>completionHandler</em></code></div>
+	<div class="method-subsection method-declaration"><code>- (void)removeGeofenceSubscriptionForTags:(id)<em>tags</em> completionHandler:(id)<em>completionHandler</em></code></div>
 
     
 	
@@ -644,7 +656,7 @@ When server changes are made, the device is notified using a background push not
 	
     
 
-	<div class="method-subsection method-declaration"><code>- (void)removeSubscriptionsForTags:(NSArray *)<em>tags</em> options:(NSArray *)<em>options</em> completionHandler:(void ( ^ ) ( NSError *error ))<em>completionHandler</em></code></div>
+	<div class="method-subsection method-declaration"><code>- (void)removeSubscriptionsForTags:(id)<em>tags</em> options:(id)<em>options</em> completionHandler:(id)<em>completionHandler</em></code></div>
 
     
 	
@@ -658,7 +670,7 @@ When server changes are made, the device is notified using a background push not
 		
 		<dl class="argument-def parameter-def">
 			<dt><em>options</em></dt>
-			<dd><p>(optional) an NSArray of the elements that you want to unsubscribe from. (CCHOptionBeacon, CCHOptionGeofence, CCHOptionVault)</p></dd>
+			<dd><p>(optional) an NSArray of the elements that you want to unsubscribe from. (CCHOptionBeacon, CCHOptionGeofence, CCHOptionVault, CCHOptionDevice)</p></dd>
 		</dl>
 		
 		<dl class="argument-def parameter-def">
@@ -693,6 +705,9 @@ When server changes are made, the device is notified using a background push not
 					
                     
                     
+                    
+                    
+
 				</div>
 				<div class="main-navigation navigation-bottom">
 					<ul>
@@ -703,9 +718,9 @@ When server changes are made, the device is notified using a background push not
 				<div id="footer">
 					<hr />
 					<div class="footer-copyright">
-						<p><span class="copyright">&copy; 2014 ContextHub. All rights reserved. (Last updated: 2014-08-01)</span><br />
+						<p><span class="copyright">&copy; 2014 ContextHub. All rights reserved. (Last updated: 2014-08-18)</span><br />
 						
-						<span class="generator">Generated by <a href="http://appledoc.gentlebytes.com">appledoc 2.2 (build 961)</a>.</span></p>
+						<span class="generator">Generated by <a href="http://appledoc.gentlebytes.com">appledoc 2.2 (build 963)</a>.</span></p>
 						
 					</div>
 				</div>
