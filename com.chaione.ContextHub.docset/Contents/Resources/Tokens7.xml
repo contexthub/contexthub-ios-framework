@@ -30,7 +30,7 @@ When server changes are made, the device is notified using a background push not
 			<Abstract type="html">Gets all subscriptions for the current device.</Abstract>
 			<DeclaredIn>CCHSubscriptionService.h</DeclaredIn>
 			
-			<Declaration>- (void)getSubscriptionsWithCompletionHandler:(id)completionHandler</Declaration>
+			<Declaration>- (void)getSubscriptionsWithCompletionHandler:(void ( ^ ) ( NSDictionary *subscriptions , NSError *error ))completionHandler</Declaration>
 			<Parameters>
 				<Parameter>
 					<Name>completionHandler</Name>
@@ -47,7 +47,7 @@ When server changes are made, the device is notified using a background push not
 			<Abstract type="html">Subscribes the device to beacon change notifications for the specified tags.</Abstract>
 			<DeclaredIn>CCHSubscriptionService.h</DeclaredIn>
 			
-			<Declaration>- (void)addBeaconSubscriptionForTags:(id)tags completionHandler:(id)completionHandler</Declaration>
+			<Declaration>- (void)addBeaconSubscriptionForTags:(NSArray *)tags completionHandler:(void ( ^ ) ( NSError *error ))completionHandler</Declaration>
 			<Parameters>
 				<Parameter>
 					<Name>tags</Name>
@@ -67,7 +67,7 @@ When server changes are made, the device is notified using a background push not
 			<Abstract type="html">Unsubscribes the device from beacon change notifications for the specified tags.</Abstract>
 			<DeclaredIn>CCHSubscriptionService.h</DeclaredIn>
 			
-			<Declaration>- (void)removeBeaconSubscriptionForTags:(id)tags completionHandler:(id)completionHandler</Declaration>
+			<Declaration>- (void)removeBeaconSubscriptionForTags:(NSArray *)tags completionHandler:(void ( ^ ) ( NSError *error ))completionHandler</Declaration>
 			<Parameters>
 				<Parameter>
 					<Name>tags</Name>
@@ -87,7 +87,7 @@ When server changes are made, the device is notified using a background push not
 			<Abstract type="html">Subscribes the device to geofence change notifications for the specified tags.</Abstract>
 			<DeclaredIn>CCHSubscriptionService.h</DeclaredIn>
 			
-			<Declaration>- (void)addGeofenceSubscriptionForTags:(id)tags completionHandler:(id)completionHandler</Declaration>
+			<Declaration>- (void)addGeofenceSubscriptionForTags:(NSArray *)tags completionHandler:(void ( ^ ) ( NSError *error ))completionHandler</Declaration>
 			<Parameters>
 				<Parameter>
 					<Name>tags</Name>
@@ -107,7 +107,7 @@ When server changes are made, the device is notified using a background push not
 			<Abstract type="html">Unubscribes the device from geofence change notifications for the specified tags.</Abstract>
 			<DeclaredIn>CCHSubscriptionService.h</DeclaredIn>
 			
-			<Declaration>- (void)removeGeofenceSubscriptionForTags:(id)tags completionHandler:(id)completionHandler</Declaration>
+			<Declaration>- (void)removeGeofenceSubscriptionForTags:(NSArray *)tags completionHandler:(void ( ^ ) ( NSError *error ))completionHandler</Declaration>
 			<Parameters>
 				<Parameter>
 					<Name>tags</Name>
@@ -127,7 +127,7 @@ When server changes are made, the device is notified using a background push not
 			<Abstract type="html">Subscribes the device to change notifications for the specified tags.</Abstract>
 			<DeclaredIn>CCHSubscriptionService.h</DeclaredIn>
 			
-			<Declaration>- (void)addSubscriptionsForTags:(id)tags options:(id)options completionHandler:(id)completionHandler</Declaration>
+			<Declaration>- (void)addSubscriptionsForTags:(NSArray *)tags options:(NSArray *)options completionHandler:(void ( ^ ) ( NSError *error ))completionHandler</Declaration>
 			<Parameters>
 				<Parameter>
 					<Name>tags</Name>
@@ -150,7 +150,7 @@ When server changes are made, the device is notified using a background push not
 			<Abstract type="html">Unsubscribes the device from change notifications for the specified tags.</Abstract>
 			<DeclaredIn>CCHSubscriptionService.h</DeclaredIn>
 			
-			<Declaration>- (void)removeSubscriptionsForTags:(id)tags options:(id)options completionHandler:(id)completionHandler</Declaration>
+			<Declaration>- (void)removeSubscriptionsForTags:(NSArray *)tags options:(NSArray *)options completionHandler:(void ( ^ ) ( NSError *error ))completionHandler</Declaration>
 			<Parameters>
 				<Parameter>
 					<Name>tags</Name>
@@ -168,7 +168,6 @@ When server changes are made, the device is notified using a background push not
             <NodeRef refid="7"/>
 		</Token>
 		
-        
         
 	</File>
 </Tokens>

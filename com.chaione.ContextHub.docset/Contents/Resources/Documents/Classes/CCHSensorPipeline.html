@@ -55,11 +55,11 @@
 	
 	<option value="instance_methods">Instance Methods</option>
 	
-	<option value="//api/name/addSubscriptionForTags:">&nbsp;&nbsp;&nbsp;&nbsp;- addSubscriptionForTags:</option>
+	<option value="//api/name/addElementsWithTags:">&nbsp;&nbsp;&nbsp;&nbsp;- addElementsWithTags:</option>
 	
-	<option value="//api/name/removeSubscriptionForTags:">&nbsp;&nbsp;&nbsp;&nbsp;- removeSubscriptionForTags:</option>
+	<option value="//api/name/elementTags">&nbsp;&nbsp;&nbsp;&nbsp;- elementTags</option>
 	
-	<option value="//api/name/subscriptions">&nbsp;&nbsp;&nbsp;&nbsp;- subscriptions</option>
+	<option value="//api/name/removeElementsWithTags:">&nbsp;&nbsp;&nbsp;&nbsp;- removeElementsWithTags:</option>
 	
 	<option value="//api/name/synchronize:">&nbsp;&nbsp;&nbsp;&nbsp;- synchronize:</option>
 	
@@ -107,11 +107,11 @@
 
 <li role="treeitem" class="children"><span class="disclosure"></span><span class="sectionName"><a href="#instance_methods">Instance Methods</a></span><ul>
 	
-	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/addSubscriptionForTags:">addSubscriptionForTags:</a></span></li>
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/addElementsWithTags:">addElementsWithTags:</a></span></li>
 	
-	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/removeSubscriptionForTags:">removeSubscriptionForTags:</a></span></li>
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/elementTags">elementTags</a></span></li>
 	
-	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/subscriptions">subscriptions</a></span></li>
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/removeElementsWithTags:">removeElementsWithTags:</a></span></li>
 	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/synchronize:">synchronize:</a></span></li>
 	
@@ -154,13 +154,17 @@
 					<div class="section section-overview">
 						<a title="Overview" name="overview"></a>
 						<h2 class="subtitle subtitle-overview">Overview</h2>
-						<p>The CCHSensorPipeline monitors events as they are triggered.  You can use the CCHSensorPipline to gain access to the events before and after they are sent to the server, and gives you the ability to filter events and add custom data to events before they are sent to the <a href="../Classes/ContextHub.html">ContextHub</a> server.
-As events are triggered on the device, the framework will take assemble a dictionary of that includes data about the event.
+						<p>The CCHSensorPipeline monitors events as they are triggered.  You can use the CCHSensorPipline to gain access to the events before and after they are sent to the server.  The <a href="../Protocols/CCHSensorPipelineDelegate.html">CCHSensorPipelineDelegate</a> and <a href="../Protocols/CCHSensorPipelineDataSource.html">CCHSensorPipelineDataSource</a> give you the ability to filter events and add custom data to events before they are sent to the <a href="../Classes/ContextHub.html">ContextHub</a> server.
+As events are triggered on the device, the framework will assemble a context dictionary that includes data about the event.
 The CCHSensorPipeline will call datasource and <a href="#//api/name/delegate">delegate</a> lifecycle methods and post lifecycle notifications.</p>
 
 <h2>Notifications</h2>
 
 <p>The following life-cycle notifications are posted.  The notifications are called before the associated <a href="#//api/name/delegate">delegate</a> methods are called.</p>
+
+<h3>CCHSensorPipelineDidDetectEvent</h3>
+
+<p>The object is the assembled context event.  The userInfo object is not set.</p>
 
 <h3>CCHSensorPipelineWillPostEvent</h3>
 
@@ -208,19 +212,19 @@ The CCHSensorPipeline will call datasource and <a href="#//api/name/delegate">de
 	
 </li><li>
 	<span class="tooltip">
-		<code><a href="#//api/name/addSubscriptionForTags:">&ndash;&nbsp;addSubscriptionForTags:</a></code>
+		<code><a href="#//api/name/addElementsWithTags:">&ndash;&nbsp;addElementsWithTags:</a></code>
 	</span>
 	
 	
 </li><li>
 	<span class="tooltip">
-		<code><a href="#//api/name/removeSubscriptionForTags:">&ndash;&nbsp;removeSubscriptionForTags:</a></code>
+		<code><a href="#//api/name/removeElementsWithTags:">&ndash;&nbsp;removeElementsWithTags:</a></code>
 	</span>
 	
 	
 </li><li>
 	<span class="tooltip">
-		<code><a href="#//api/name/subscriptions">&ndash;&nbsp;subscriptions</a></code>
+		<code><a href="#//api/name/elementTags">&ndash;&nbsp;elementTags</a></code>
 	</span>
 	
 	
@@ -374,18 +378,18 @@ The CCHSensorPipeline will call datasource and <a href="#//api/name/delegate">de
 						<h2 class="subtitle subtitle-methods">Instance Methods</h2>
 						
 						<div class="section-method">
-	<a name="//api/name/addSubscriptionForTags:" title="addSubscriptionForTags:"></a>
-	<h3 class="subsubtitle method-title">addSubscriptionForTags:</h3>
+	<a name="//api/name/addElementsWithTags:" title="addElementsWithTags:"></a>
+	<h3 class="subsubtitle method-title">addElementsWithTags:</h3>
 	
 	
 	
 	<div class="method-subsection brief-description">
-		<p>To enable automatic region monitoring for geofences and iBeacons you must subscribe to their <a href="#//api/name/tags">tags</a>.</p>
+		<p>To enable automatic region monitoring for geofences and iBeacons you must add the <a href="#//api/name/tags">tags</a> of the elements to the sensor pipeline.</p>
 	</div>		
 	
     
 
-	<div class="method-subsection method-declaration"><code>- (BOOL)addSubscriptionForTags:(id)<em>tags</em></code></div>
+	<div class="method-subsection method-declaration"><code>- (BOOL)addElementsWithTags:(NSArray *)<em>tags</em></code></div>
 
     
 	
@@ -425,18 +429,59 @@ The CCHSensorPipeline will call datasource and <a href="#//api/name/delegate">de
 </div>
 						
 						<div class="section-method">
-	<a name="//api/name/removeSubscriptionForTags:" title="removeSubscriptionForTags:"></a>
-	<h3 class="subsubtitle method-title">removeSubscriptionForTags:</h3>
+	<a name="//api/name/elementTags" title="elementTags"></a>
+	<h3 class="subsubtitle method-title">elementTags</h3>
 	
 	
 	
 	<div class="method-subsection brief-description">
-		<p>To disable automatic region monitoring for geofences and beacons, you must remove <a href="#//api/name/subscriptions">subscriptions</a>.</p>
+		<p>Returns an array of the <a href="#//api/name/tags">tags</a> that the pipline is tracking.</p>
 	</div>		
 	
     
 
-	<div class="method-subsection method-declaration"><code>- (BOOL)removeSubscriptionForTags:(id)<em>tags</em></code></div>
+	<div class="method-subsection method-declaration"><code>- (NSArray *)elementTags</code></div>
+
+    
+	
+	
+	
+	<div class="method-subsection return">
+		<h4 class="method-subtitle parameter-title">Return Value</h4>
+		<p>Returns an array of the <a href="#//api/name/tags">tags</a> that the pipline is tracking.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">CCHSensorPipeline.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/removeElementsWithTags:" title="removeElementsWithTags:"></a>
+	<h3 class="subsubtitle method-title">removeElementsWithTags:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>To disable automatic region monitoring for geofences and beacons, you must remove the <a href="#//api/name/tags">tags</a> from the sensor pipeline.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (BOOL)removeElementsWithTags:(NSArray *)<em>tags</em></code></div>
 
     
 	
@@ -476,47 +521,6 @@ The CCHSensorPipeline will call datasource and <a href="#//api/name/delegate">de
 </div>
 						
 						<div class="section-method">
-	<a name="//api/name/subscriptions" title="subscriptions"></a>
-	<h3 class="subsubtitle method-title">subscriptions</h3>
-	
-	
-	
-	<div class="method-subsection brief-description">
-		<p>Returns an array of the <a href="#//api/name/tags">tags</a> that you have subscribed to.</p>
-	</div>		
-	
-    
-
-	<div class="method-subsection method-declaration"><code>- (NSArray *)subscriptions</code></div>
-
-    
-	
-	
-	
-	<div class="method-subsection return">
-		<h4 class="method-subtitle parameter-title">Return Value</h4>
-		<p>Returns an array of the <a href="#//api/name/tags">tags</a> that you have subscribed to.</p>
-	</div>
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	<div class="method-subsection declared-in-section">
-		<h4 class="method-subtitle">Declared In</h4>
-		<code class="declared-in-ref">CCHSensorPipeline.h</code><br />
-	</div>				
-	
-	
-</div>
-						
-						<div class="section-method">
 	<a name="//api/name/synchronize:" title="synchronize:"></a>
 	<h3 class="subsubtitle method-title">synchronize:</h3>
 	
@@ -529,7 +533,7 @@ The method gives you a way to load new context information if you are not using 
 	
     
 
-	<div class="method-subsection method-declaration"><code>- (void)synchronize:(id)<em>completionHandler</em></code></div>
+	<div class="method-subsection method-declaration"><code>- (void)synchronize:(void ( ^ ) ( NSError *error ))<em>completionHandler</em></code></div>
 
     
 	
@@ -575,7 +579,7 @@ The method gives you a way to load new context information if you are not using 
 	
     
 
-	<div class="method-subsection method-declaration"><code>- (void)triggerEvent:(id)<em>event</em> completionHandler:(id)<em>completionHandler</em></code></div>
+	<div class="method-subsection method-declaration"><code>- (void)triggerEvent:(NSDictionary *)<em>event</em> completionHandler:(void ( ^ ) ( NSError *error ))<em>completionHandler</em></code></div>
 
     
 	
@@ -624,9 +628,6 @@ The method gives you a way to load new context information if you are not using 
 					
                     
                     
-                    
-                    
-
 				</div>
 				<div class="main-navigation navigation-bottom">
 					<ul>
@@ -637,7 +638,7 @@ The method gives you a way to load new context information if you are not using 
 				<div id="footer">
 					<hr />
 					<div class="footer-copyright">
-						<p><span class="copyright">&copy; 2014 ContextHub. All rights reserved. (Last updated: 2014-08-18)</span><br />
+						<p><span class="copyright">&copy; 2014 ContextHub. All rights reserved. (Last updated: 2014-09-08)</span><br />
 						
 						<span class="generator">Generated by <a href="http://appledoc.gentlebytes.com">appledoc 2.2 (build 963)</a>.</span></p>
 						

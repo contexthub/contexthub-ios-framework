@@ -29,7 +29,7 @@
 			<Abstract type="html">Creates a new beacon on the ContextHub server.</Abstract>
 			<DeclaredIn>CCHBeaconService.h</DeclaredIn>
 			
-			<Declaration>- (void)createBeaconWithProximityUUID:(id)proximityUUID major:(id)major minor:(id)minor name:(id)name tags:(id)tags completionHandler:(id)completionHandler</Declaration>
+			<Declaration>- (void)createBeaconWithProximityUUID:(NSUUID *)proximityUUID major:(CLBeaconMajorValue)major minor:(CLBeaconMinorValue)minor name:(NSString *)name tags:(NSArray *)tags completionHandler:(void ( ^ ) ( NSDictionary *beacon , NSError *error ))completionHandler</Declaration>
 			<Parameters>
 				<Parameter>
 					<Name>proximityUUID</Name>
@@ -61,7 +61,7 @@
 			<Abstract type="html">Gets a beacon from ContextHub using the beacon Id.</Abstract>
 			<DeclaredIn>CCHBeaconService.h</DeclaredIn>
 			
-			<Declaration>- (void)getBeaconWithId:(id)beaconId completionHandler:(id)completionHandler</Declaration>
+			<Declaration>- (void)getBeaconWithId:(NSString *)beaconId completionHandler:(void ( ^ ) ( NSDictionary *beacon , NSError *error ))completionHandler</Declaration>
 			<Parameters>
 				<Parameter>
 					<Name>beaconId</Name>
@@ -81,7 +81,7 @@
 			<Abstract type="html">Gets beacons from the ContextHub server.</Abstract>
 			<DeclaredIn>CCHBeaconService.h</DeclaredIn>
 			
-			<Declaration>- (void)getBeaconsWithTags:(id)tags completionHandler:(id)completionHandler</Declaration>
+			<Declaration>- (void)getBeaconsWithTags:(NSArray *)tags completionHandler:(void ( ^ ) ( NSArray *beacons , NSError *error ))completionHandler</Declaration>
 			<Parameters>
 				<Parameter>
 					<Name>tags</Name>
@@ -101,7 +101,7 @@
 			<Abstract type="html">Updates a beacon on the ContextHub server.</Abstract>
 			<DeclaredIn>CCHBeaconService.h</DeclaredIn>
 			
-			<Declaration>- (void)updateBeacon:(id)beacon completionHandler:(id)completionHandler</Declaration>
+			<Declaration>- (void)updateBeacon:(NSDictionary *)beacon completionHandler:(void ( ^ ) ( NSError *error ))completionHandler</Declaration>
 			<Parameters>
 				<Parameter>
 					<Name>beacon</Name>
@@ -121,7 +121,7 @@
 			<Abstract type="html">Deletes an existing beacon from ContextHub.</Abstract>
 			<DeclaredIn>CCHBeaconService.h</DeclaredIn>
 			
-			<Declaration>- (void)deleteBeacon:(id)beacon completionHandler:(id)completionHandler</Declaration>
+			<Declaration>- (void)deleteBeacon:(NSDictionary *)beacon completionHandler:(void ( ^ ) ( NSError *error ))completionHandler</Declaration>
 			<Parameters>
 				<Parameter>
 					<Name>beacon</Name>
@@ -141,7 +141,7 @@
 			<Abstract type="html">Creates a CLBeaconRegion from a beacon dictionary.</Abstract>
 			<DeclaredIn>CCHBeaconService.h</DeclaredIn>
 			
-			<Declaration>+ (CLBeaconRegion *)regionForBeacon:(id)beacon</Declaration>
+			<Declaration>+ (CLBeaconRegion *)regionForBeacon:(NSDictionary *)beacon</Declaration>
 			<Parameters>
 				<Parameter>
 					<Name>beacon</Name>
@@ -153,7 +153,6 @@
             <NodeRef refid="1"/>
 		</Token>
 		
-        
         
 	</File>
 </Tokens>

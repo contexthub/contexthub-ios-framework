@@ -56,9 +56,7 @@
 	
 	<option value="//api/name/getDevicesWithTags:completionHandler:">&nbsp;&nbsp;&nbsp;&nbsp;- getDevicesWithTags:completionHandler:</option>
 	
-	<option value="//api/name/registerDeviceWithCompletionHandler:">&nbsp;&nbsp;&nbsp;&nbsp;- registerDeviceWithCompletionHandler:</option>
-	
-	<option value="//api/name/updateDeviceWithAlias:tags:completionHandler:">&nbsp;&nbsp;&nbsp;&nbsp;- updateDeviceWithAlias:tags:completionHandler:</option>
+	<option value="//api/name/setDeviceAlias:tags:completionHandler:">&nbsp;&nbsp;&nbsp;&nbsp;- setDeviceAlias:tags:completionHandler:</option>
 	
 	
 	
@@ -102,9 +100,7 @@
 	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/getDevicesWithTags:completionHandler:">getDevicesWithTags:completionHandler:</a></span></li>
 	
-	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/registerDeviceWithCompletionHandler:">registerDeviceWithCompletionHandler:</a></span></li>
-	
-	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/updateDeviceWithAlias:tags:completionHandler:">updateDeviceWithAlias:tags:completionHandler:</a></span></li>
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/setDeviceAlias:tags:completionHandler:">setDeviceAlias:tags:completionHandler:</a></span></li>
 	
 </ul></li>
 
@@ -219,12 +215,6 @@
 	
 </li><li>
 	<span class="tooltip">
-		<code><a href="#//api/name/registerDeviceWithCompletionHandler:">&ndash;&nbsp;registerDeviceWithCompletionHandler:</a></code>
-	</span>
-	
-	
-</li><li>
-	<span class="tooltip">
 		<code><a href="#//api/name/getDeviceWithId:completionHandler:">&ndash;&nbsp;getDeviceWithId:completionHandler:</a></code>
 	</span>
 	
@@ -243,7 +233,7 @@
 	
 </li><li>
 	<span class="tooltip">
-		<code><a href="#//api/name/updateDeviceWithAlias:tags:completionHandler:">&ndash;&nbsp;updateDeviceWithAlias:tags:completionHandler:</a></code>
+		<code><a href="#//api/name/setDeviceAlias:tags:completionHandler:">&ndash;&nbsp;setDeviceAlias:tags:completionHandler:</a></code>
 	</span>
 	
 	
@@ -364,7 +354,7 @@
 	
     
 
-	<div class="method-subsection method-declaration"><code>- (void)getDeviceWithId:(id)<em>deviceId</em> completionHandler:(id)<em>completionHandler</em></code></div>
+	<div class="method-subsection method-declaration"><code>- (void)getDeviceWithId:(NSString *)<em>deviceId</em> completionHandler:(void ( ^ ) ( NSDictionary *device , NSError *error ))<em>completionHandler</em></code></div>
 
     
 	
@@ -415,7 +405,7 @@
 	
     
 
-	<div class="method-subsection method-declaration"><code>- (void)getDevicesWithAlias:(id)<em>alias</em> completionHandler:(id)<em>completionHandler</em></code></div>
+	<div class="method-subsection method-declaration"><code>- (void)getDevicesWithAlias:(NSString *)<em>alias</em> completionHandler:(void ( ^ ) ( NSArray *devices , NSError *error ))<em>completionHandler</em></code></div>
 
     
 	
@@ -466,7 +456,7 @@
 	
     
 
-	<div class="method-subsection method-declaration"><code>- (void)getDevicesWithTags:(id)<em>tags</em> completionHandler:(id)<em>completionHandler</em></code></div>
+	<div class="method-subsection method-declaration"><code>- (void)getDevicesWithTags:(NSArray *)<em>tags</em> completionHandler:(void ( ^ ) ( NSArray *devices , NSError *error ))<em>completionHandler</em></code></div>
 
     
 	
@@ -506,59 +496,8 @@
 </div>
 						
 						<div class="section-method">
-	<a name="//api/name/registerDeviceWithCompletionHandler:" title="registerDeviceWithCompletionHandler:"></a>
-	<h3 class="subsubtitle method-title">registerDeviceWithCompletionHandler:</h3>
-	
-	
-	
-	<div class="method-subsection brief-description">
-		<p>Registers the device with <a href="../Classes/ContextHub.html">ContextHub</a>.  This method gathers meta-data about the device and sends it to <a href="../Classes/ContextHub.html">ContextHub</a>.</p>
-	</div>		
-	
-    
-
-	<div class="method-subsection method-declaration"><code>- (void)registerDeviceWithCompletionHandler:(id)<em>completionHandler</em></code></div>
-
-    
-	
-	<div class="method-subsection arguments-section parameters">
-		<h4 class="method-subtitle parameter-title">Parameters</h4>
-		
-		<dl class="argument-def parameter-def">
-			<dt><em>completionHandler</em></dt>
-			<dd><p>(optional) Called when the request completes. If an error occurs, the NSError will be passed to the block.</p></dd>
-		</dl>
-		
-	</div>
-	
-	
-	
-	
-	
-	
-	
-	<div class="method-subsection discussion-section">
-		<h4 class="method-subtitle">Discussion</h4>
-		<div class="note"><p><strong>Note:</strong> this method can be called multiple times.</p></div>
-	</div>
-	
-	
-	
-	
-	
-	
-	
-	<div class="method-subsection declared-in-section">
-		<h4 class="method-subtitle">Declared In</h4>
-		<code class="declared-in-ref">CCHDevice.h</code><br />
-	</div>				
-	
-	
-</div>
-						
-						<div class="section-method">
-	<a name="//api/name/updateDeviceWithAlias:tags:completionHandler:" title="updateDeviceWithAlias:tags:completionHandler:"></a>
-	<h3 class="subsubtitle method-title">updateDeviceWithAlias:tags:completionHandler:</h3>
+	<a name="//api/name/setDeviceAlias:tags:completionHandler:" title="setDeviceAlias:tags:completionHandler:"></a>
+	<h3 class="subsubtitle method-title">setDeviceAlias:tags:completionHandler:</h3>
 	
 	
 	
@@ -568,7 +507,7 @@
 	
     
 
-	<div class="method-subsection method-declaration"><code>- (void)updateDeviceWithAlias:(id)<em>alias</em> tags:(id)<em>tags</em> completionHandler:(id)<em>completionHandler</em></code></div>
+	<div class="method-subsection method-declaration"><code>- (void)setDeviceAlias:(NSString *)<em>alias</em> tags:(NSArray *)<em>tags</em> completionHandler:(void ( ^ ) ( NSDictionary *device , NSError *error ))<em>completionHandler</em></code></div>
 
     
 	
@@ -622,9 +561,6 @@
 					
                     
                     
-                    
-                    
-
 				</div>
 				<div class="main-navigation navigation-bottom">
 					<ul>
@@ -635,7 +571,7 @@
 				<div id="footer">
 					<hr />
 					<div class="footer-copyright">
-						<p><span class="copyright">&copy; 2014 ContextHub. All rights reserved. (Last updated: 2014-08-18)</span><br />
+						<p><span class="copyright">&copy; 2014 ContextHub. All rights reserved. (Last updated: 2014-09-08)</span><br />
 						
 						<span class="generator">Generated by <a href="http://appledoc.gentlebytes.com">appledoc 2.2 (build 963)</a>.</span></p>
 						

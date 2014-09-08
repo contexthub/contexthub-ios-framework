@@ -17,7 +17,7 @@
 			<Abstract type="html">Return a serializable dictionary that will get added to context event payload property.</Abstract>
 			<DeclaredIn>CCHSensorPipeline.h</DeclaredIn>
 			
-			<Declaration>- (NSDictionary *)sensorPipeline:(id)sensorPipeline payloadForEvent:(id)event</Declaration>
+			<Declaration>- (NSDictionary *)sensorPipeline:(CCHSensorPipeline *)sensorPipeline payloadForEvent:(NSDictionary *)event</Declaration>
 			<Parameters>
 				<Parameter>
 					<Name>sensorPipeline</Name>
@@ -32,7 +32,6 @@
             <NodeRef refid="10"/>
 		</Token>
 		
-        
         
 	</File>
 </Tokens>

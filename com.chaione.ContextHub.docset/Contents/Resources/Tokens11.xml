@@ -13,12 +13,11 @@
 		
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/intfm/CCHSensorPipelineDelegate/sensorPipeline:shouldPostEvent:</TokenIdentifier>
-			<Abstract type="html">Sometimes you may want to keep an event from posting to the ContextHub service.  This method gives you the opportunity to stop the call.
-If you return NO, none of the other delegate methods will git called, and the event will be discarded.</Abstract>
+			<TokenIdentifier>//apple_ref/occ/intfm/CCHSensorPipelineDelegate/sensorPipeline:didDetectEvent:</TokenIdentifier>
+			<Abstract type="html">Called when events are detected on the device.</Abstract>
 			<DeclaredIn>CCHSensorPipeline.h</DeclaredIn>
 			
-			<Declaration>- (BOOL)sensorPipeline:(id)sensorPipeline shouldPostEvent:(id)event</Declaration>
+			<Declaration>- (void)sensorPipeline:(CCHSensorPipeline *)sensorPipeline didDetectEvent:(NSDictionary *)event</Declaration>
 			<Parameters>
 				<Parameter>
 					<Name>sensorPipeline</Name>
@@ -29,6 +28,27 @@ If you return NO, none of the other delegate methods will git called, and the ev
 				</Parameter>
 			</Parameters>
 			
+			<Anchor>//api/name/sensorPipeline:didDetectEvent:</Anchor>
+            <NodeRef refid="11"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/intfm/CCHSensorPipelineDelegate/sensorPipeline:shouldPostEvent:</TokenIdentifier>
+			<Abstract type="html">Sometimes you may want to keep an event from posting to the ContextHub service.  This method gives you the opportunity to stop the call.
+If you return NO, none of the other delegate methods will git called, and the event will be discarded.</Abstract>
+			<DeclaredIn>CCHSensorPipeline.h</DeclaredIn>
+			
+			<Declaration>- (BOOL)sensorPipeline:(CCHSensorPipeline *)sensorPipeline shouldPostEvent:(NSDictionary *)event</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>sensorPipeline</Name>
+					<Abstract type="html">The CCHSensorPipeline.</Abstract>
+				</Parameter><Parameter>
+					<Name>event</Name>
+					<Abstract type="html">The event that was triggered.</Abstract>
+				</Parameter>
+			</Parameters>
+			<ReturnValue><Abstract type="html">boolean indicating if the event should be posted to ContextHUB</Abstract></ReturnValue>
 			<Anchor>//api/name/sensorPipeline:shouldPostEvent:</Anchor>
             <NodeRef refid="11"/>
 		</Token>
@@ -38,7 +58,7 @@ If you return NO, none of the other delegate methods will git called, and the ev
 			<Abstract type="html">Called before an event was sent to ContextHub.</Abstract>
 			<DeclaredIn>CCHSensorPipeline.h</DeclaredIn>
 			
-			<Declaration>- (void)sensorPipeline:(id)sensorPipeline willPostEvent:(id)event</Declaration>
+			<Declaration>- (void)sensorPipeline:(CCHSensorPipeline *)sensorPipeline willPostEvent:(NSDictionary *)event</Declaration>
 			<Parameters>
 				<Parameter>
 					<Name>sensorPipeline</Name>
@@ -58,7 +78,7 @@ If you return NO, none of the other delegate methods will git called, and the ev
 			<Abstract type="html">Called after an event was sent to ContextHub.</Abstract>
 			<DeclaredIn>CCHSensorPipeline.h</DeclaredIn>
 			
-			<Declaration>- (void)sensorPipeline:(id)sensorPipeline didPostEvent:(id)event</Declaration>
+			<Declaration>- (void)sensorPipeline:(CCHSensorPipeline *)sensorPipeline didPostEvent:(NSDictionary *)event</Declaration>
 			<Parameters>
 				<Parameter>
 					<Name>sensorPipeline</Name>
@@ -73,7 +93,6 @@ If you return NO, none of the other delegate methods will git called, and the ev
             <NodeRef refid="11"/>
 		</Token>
 		
-        
         
 	</File>
 </Tokens>
