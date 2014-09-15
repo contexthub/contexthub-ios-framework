@@ -1,8 +1,8 @@
-## 1.3.0 - September 8, 2014
+## 1.3.1 - September 8, 2014
 - CCHPush - **Method signature changed**: added CCHContextHubPush boolean to remote notification handler.
 - CCHSensorPipeline - added new delegate method `sensorPipeline:didDetectEvent`
-- CCHSensorPipeline - **Method renamed**: renamed `addSubscriptionsForTags:` `removeSubscriptionsForTags` to `addElementsWithTags:` and `removeElementsWithTags:`
-- CCHDevice - **Method renamed**: renamed update method to `setDeviceAlias:tags:completionHandler`
+- CCHSensorPipeline - **Method renamed**: renamed `addSubscriptionsForTags:`, `removeSubscriptionsForTags` to `addElementsWithTags:`, `removeElementsWithTags:`
+- CCHDevice - **Method renamed**: renamed `updateDeviceAlias:tags:completionHandler` to `setDeviceAlias:tags:completionHandler`
 - Updated the structure of the `context` in the event dictionary.
 - added optimizations to the way HTTP sessions are queued.
 
