@@ -1,3 +1,6 @@
+## 1.3.1 - September 16, 2014
+- updated the way geofences are reported in the location context.
+
 ## 1.3.1 - September 8, 2014
 - iOS 8.0 tested.
 - CCHPush - **Method signature changed**: added CCHContextHubPush boolean to remote notification handler.
