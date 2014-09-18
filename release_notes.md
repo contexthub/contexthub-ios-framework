@@ -1,7 +1,5 @@
-## 1.3.1 - September 16, 2014
-- updated the way geofences are reported in the location context.
+## 1.3.3 - September 16, 2014
 
-## 1.3.1 - September 8, 2014
 - iOS 8.0 tested.
 - CCHPush - **Method signature changed**: added CCHContextHubPush boolean to remote notification handler.
 - CCHSensorPipeline - added new delegate method `sensorPipeline:didDetectEvent`
@@ -9,6 +7,7 @@
 - CCHDevice - **Method renamed**: renamed `updateDeviceAlias:tags:completionHandler` to `setDeviceAlias:tags:completionHandler`
 - Updated the structure of the `context` in the event dictionary.
 - added optimizations to the way HTTP sessions are queued.
+- updated the way geofences are reported in the location context.
 
 ## 1.2.0 - August 15, 2014
 - **CCHSubscriptionService - Method Renamed** - renamed 'getSubscriptionsWithCompletion:' to 'getSubscriptionsWithCompletionHandler'
