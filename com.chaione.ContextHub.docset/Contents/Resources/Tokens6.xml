@@ -4,9 +4,9 @@
 		
 		<Token>
 			<TokenIdentifier>//apple_ref/occ/cl/CCHSensorPipeline</TokenIdentifier>
-			<Abstract type="html">The CCHSensorPipeline monitors events as they are triggered.  You can use the CCHSensorPipline to gain access to the events before and after they are sent to the server, and gives you the ability to filter events and add custom data to events before they are sent to the ContextHub server.
-As events are triggered on the device, the framework will take assemble a dictionary of that includes data about the event.
-The CCHSensorPipeline will call datasource and delegate lifecycle methods and post lifecycle notifications.</Abstract>
+			<Abstract type="html">The CCHSensorPipeline monitors events as they are triggered.  You can use the CCHSensorPipeline to gain access to the events before and after they are sent to the server.  The CCHSensorPipelineDelegate and CCHSensorPipelineDataSource give you the ability to filter events and add custom data to events before they are sent to the ContextHub server.
+As events are triggered on the device, the framework will assemble a context dictionary that includes data about the event.
+The CCHSensorPipeline will call datasource and delegate life cycle methods and post lifecycle notifications.</Abstract>
 			<DeclaredIn>CCHSensorPipeline.h</DeclaredIn>
             
 			
@@ -16,7 +16,7 @@ The CCHSensorPipeline will call datasource and delegate lifecycle methods and po
 		
 		<Token>
 			<TokenIdentifier>//apple_ref/occ/clm/CCHSensorPipeline/sharedInstance</TokenIdentifier>
-			<Abstract type="html">Returns the singleton instnace of the CCHSensorPipeline</Abstract>
+			<Abstract type="html">Returns the singleton instanace of the CCHSensorPipeline</Abstract>
 			<DeclaredIn>CCHSensorPipeline.h</DeclaredIn>
 			
 			<Declaration>+ (instancetype)sharedInstance</Declaration>
@@ -31,14 +31,14 @@ The CCHSensorPipeline will call datasource and delegate lifecycle methods and po
 			<Abstract type="html">This method give you the ability to trigger custom events on the ContextHub sensor pipeline</Abstract>
 			<DeclaredIn>CCHSensorPipeline.h</DeclaredIn>
 			
-			<Declaration>- (void)triggerEvent:(id)event completionHandler:(id)completionHandler</Declaration>
+			<Declaration>- (void)triggerEvent:(NSDictionary *)event completionHandler:(void ( ^ ) ( NSError *error ))completionHandler</Declaration>
 			<Parameters>
 				<Parameter>
 					<Name>event</Name>
 					<Abstract type="html">The event that you want to send to the server.</Abstract>
 				</Parameter><Parameter>
 					<Name>completionHandler</Name>
-					<Abstract type="html">(optional) Called when the event is created.  If an error occurs, the NSError wil be passed to the block.</Abstract>
+					<Abstract type="html">(optional) Called when the event is created.  If an error occurs, the NSError will be passed to the block.</Abstract>
 				</Parameter>
 			</Parameters>
 			
@@ -49,14 +49,14 @@ The CCHSensorPipeline will call datasource and delegate lifecycle methods and po
 		<Token>
 			<TokenIdentifier>//apple_ref/occ/instm/CCHSensorPipeline/synchronize:</TokenIdentifier>
 			<Abstract type="html">Calling synchronize will tell the SDK to check for server-side context changes and will update monitored regions.
-The method gives you a way to load new context information if you are not using background push notifictions.</Abstract>
+The method gives you a way to load new context information if you are not using background push notifications.</Abstract>
 			<DeclaredIn>CCHSensorPipeline.h</DeclaredIn>
 			
-			<Declaration>- (void)synchronize:(id)completionHandler</Declaration>
+			<Declaration>- (void)synchronize:(void ( ^ ) ( NSError *error ))completionHandler</Declaration>
 			<Parameters>
 				<Parameter>
 					<Name>completionHandler</Name>
-					<Abstract type="html">(optional) Called when the synchronization completes.  If an error occurs, the NSError wil be passed to the block.</Abstract>
+					<Abstract type="html">(optional) Called when the synchronization completes.  If an error occurs, the NSError will be passed to the block.</Abstract>
 				</Parameter>
 			</Parameters>
 			
@@ -65,11 +65,11 @@ The method gives you a way to load new context information if you are not using 
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/CCHSensorPipeline/addSubscriptionForTags:</TokenIdentifier>
-			<Abstract type="html">To enable automatic region monitoring for geofences and iBeacons you must subscribe to their tags.</Abstract>
+			<TokenIdentifier>//apple_ref/occ/instm/CCHSensorPipeline/addElementsWithTags:</TokenIdentifier>
+			<Abstract type="html">To enable automatic region monitoring for geofences and iBeacons you must add the tags of the elements to the sensor pipeline.</Abstract>
 			<DeclaredIn>CCHSensorPipeline.h</DeclaredIn>
 			
-			<Declaration>- (BOOL)addSubscriptionForTags:(id)tags</Declaration>
+			<Declaration>- (BOOL)addElementsWithTags:(NSArray *)tags</Declaration>
 			<Parameters>
 				<Parameter>
 					<Name>tags</Name>
@@ -77,16 +77,16 @@ The method gives you a way to load new context information if you are not using 
 				</Parameter>
 			</Parameters>
 			<ReturnValue><Abstract type="html">Returns A boolean indicating that the tags were added successfully.</Abstract></ReturnValue>
-			<Anchor>//api/name/addSubscriptionForTags:</Anchor>
+			<Anchor>//api/name/addElementsWithTags:</Anchor>
             <NodeRef refid="6"/>
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/CCHSensorPipeline/removeSubscriptionForTags:</TokenIdentifier>
-			<Abstract type="html">To disable automatic region monitoring for geofences and beacons, you must remove subscriptions.</Abstract>
+			<TokenIdentifier>//apple_ref/occ/instm/CCHSensorPipeline/removeElementsWithTags:</TokenIdentifier>
+			<Abstract type="html">To disable automatic region monitoring for geofences and beacons, you must remove the tags from the sensor pipeline.</Abstract>
 			<DeclaredIn>CCHSensorPipeline.h</DeclaredIn>
 			
-			<Declaration>- (BOOL)removeSubscriptionForTags:(id)tags</Declaration>
+			<Declaration>- (BOOL)removeElementsWithTags:(NSArray *)tags</Declaration>
 			<Parameters>
 				<Parameter>
 					<Name>tags</Name>
@@ -94,19 +94,19 @@ The method gives you a way to load new context information if you are not using 
 				</Parameter>
 			</Parameters>
 			<ReturnValue><Abstract type="html">Returns A boolean indicating that the tags were removed successfully.</Abstract></ReturnValue>
-			<Anchor>//api/name/removeSubscriptionForTags:</Anchor>
+			<Anchor>//api/name/removeElementsWithTags:</Anchor>
             <NodeRef refid="6"/>
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/CCHSensorPipeline/subscriptions</TokenIdentifier>
-			<Abstract type="html">Returns an array of the tags that you have subscribed to.</Abstract>
+			<TokenIdentifier>//apple_ref/occ/instm/CCHSensorPipeline/elementTags</TokenIdentifier>
+			<Abstract type="html">Returns an array of the tags that the pipeline is tracking.</Abstract>
 			<DeclaredIn>CCHSensorPipeline.h</DeclaredIn>
 			
-			<Declaration>- (NSArray *)subscriptions</Declaration>
+			<Declaration>- (NSArray *)elementTags</Declaration>
 			
-			<ReturnValue><Abstract type="html">Returns an array of the tags that you have subscribed to.</Abstract></ReturnValue>
-			<Anchor>//api/name/subscriptions</Anchor>
+			<ReturnValue><Abstract type="html">Returns an array of the tags that the pipeline is tracking.</Abstract></ReturnValue>
+			<Anchor>//api/name/elementTags</Anchor>
             <NodeRef refid="6"/>
 		</Token>
 		
@@ -182,7 +182,6 @@ The method gives you a way to load new context information if you are not using 
             <NodeRef refid="6"/>
 		</Token>
 		
-        
         
 	</File>
 </Tokens>

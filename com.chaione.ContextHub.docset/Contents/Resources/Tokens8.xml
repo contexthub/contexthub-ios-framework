@@ -30,7 +30,7 @@ Once you persist data, you can retrieve it by Tag or id.</Abstract>
 			<Abstract type="html">Creates items in the Vault.</Abstract>
 			<DeclaredIn>CCHVault.h</DeclaredIn>
 			
-			<Declaration>- (void)createItem:(id)item tags:(id)tags completionHandler:(id)completionHandler</Declaration>
+			<Declaration>- (void)createItem:(id)item tags:(NSArray *)tags completionHandler:(void ( ^ ) ( NSDictionary *response , NSError *error ))completionHandler</Declaration>
 			<Parameters>
 				<Parameter>
 					<Name>item</Name>
@@ -53,7 +53,7 @@ Once you persist data, you can retrieve it by Tag or id.</Abstract>
 			<Abstract type="html">Gets an item from the Vault.</Abstract>
 			<DeclaredIn>CCHVault.h</DeclaredIn>
 			
-			<Declaration>- (void)getItemWithId:(id)vaultId completionHandler:(id)completionHandler</Declaration>
+			<Declaration>- (void)getItemWithId:(NSString *)vaultId completionHandler:(void ( ^ ) ( NSDictionary *response , NSError *error ))completionHandler</Declaration>
 			<Parameters>
 				<Parameter>
 					<Name>vaultId</Name>
@@ -73,7 +73,7 @@ Once you persist data, you can retrieve it by Tag or id.</Abstract>
 			<Abstract type="html">Gets items stored in the Vault.</Abstract>
 			<DeclaredIn>CCHVault.h</DeclaredIn>
 			
-			<Declaration>- (void)getItemsWithTags:(id)tags completionHandler:(id)completionHandler</Declaration>
+			<Declaration>- (void)getItemsWithTags:(NSArray *)tags completionHandler:(void ( ^ ) ( NSArray *responses , NSError *error ))completionHandler</Declaration>
 			<Parameters>
 				<Parameter>
 					<Name>tags</Name>
@@ -93,7 +93,7 @@ Once you persist data, you can retrieve it by Tag or id.</Abstract>
 			<Abstract type="html">Gets items stored in the Vault.</Abstract>
 			<DeclaredIn>CCHVault.h</DeclaredIn>
 			
-			<Declaration>- (void)getItemsWithTags:(id)tags keyPath:(id)keyPath value:(id)value completionHandler:(id)completionHandler</Declaration>
+			<Declaration>- (void)getItemsWithTags:(NSArray *)tags keyPath:(NSString *)keyPath value:(NSString *)value completionHandler:(vaultListingCompletionBlock)completionHandler</Declaration>
 			<Parameters>
 				<Parameter>
 					<Name>tags</Name>
@@ -119,7 +119,7 @@ Once you persist data, you can retrieve it by Tag or id.</Abstract>
 			<Abstract type="html">Updates an item in the Vault.</Abstract>
 			<DeclaredIn>CCHVault.h</DeclaredIn>
 			
-			<Declaration>- (void)updateItem:(id)item completionHandler:(id)completionHandler</Declaration>
+			<Declaration>- (void)updateItem:(NSDictionary *)item completionHandler:(void ( ^ ) ( NSDictionary *response , NSError *error ))completionHandler</Declaration>
 			<Parameters>
 				<Parameter>
 					<Name>item</Name>
@@ -139,7 +139,7 @@ Once you persist data, you can retrieve it by Tag or id.</Abstract>
 			<Abstract type="html">Deletes an item from the Vault.</Abstract>
 			<DeclaredIn>CCHVault.h</DeclaredIn>
 			
-			<Declaration>- (void)deleteItem:(id)item completionHandler:(id)completionHandler</Declaration>
+			<Declaration>- (void)deleteItem:(NSDictionary *)item completionHandler:(void ( ^ ) ( NSDictionary *response , NSError *error ))completionHandler</Declaration>
 			<Parameters>
 				<Parameter>
 					<Name>item</Name>
@@ -154,7 +154,6 @@ Once you persist data, you can retrieve it by Tag or id.</Abstract>
             <NodeRef refid="8"/>
 		</Token>
 		
-        
         
 	</File>
 </Tokens>

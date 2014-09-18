@@ -30,7 +30,7 @@
 You must register your app with the ContextHub SDK before you use any of the other API&apos;s provided in this SDK.</Abstract>
 			<DeclaredIn>ContextHub.h</DeclaredIn>
 			
-			<Declaration>+ (void)registerWithAppId:(id)appId</Declaration>
+			<Declaration>+ (void)registerWithAppId:(NSString *)appId</Declaration>
 			<Parameters>
 				<Parameter>
 					<Name>appId</Name>
@@ -102,7 +102,6 @@ You must register your app with the ContextHub SDK before you use any of the oth
             <NodeRef refid="9"/>
 		</Token>
 		
-        
         
 	</File>
 </Tokens>

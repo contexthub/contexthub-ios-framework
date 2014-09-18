@@ -29,7 +29,7 @@
 			<Abstract type="html">Creates a new geofence on the ContextHub server.</Abstract>
 			<DeclaredIn>CCHGeofenceService.h</DeclaredIn>
 			
-			<Declaration>- (void)createGeofenceWithCenter:(id)center radius:(id)radius name:(id)name tags:(id)tags completionHandler:(id)completionHandler</Declaration>
+			<Declaration>- (void)createGeofenceWithCenter:(CLLocationCoordinate2D)center radius:(CLLocationDistance)radius name:(NSString *)name tags:(NSArray *)tags completionHandler:(void ( ^ ) ( NSDictionary *geofence , NSError *error ))completionHandler</Declaration>
 			<Parameters>
 				<Parameter>
 					<Name>center</Name>
@@ -45,7 +45,7 @@
 					<Abstract type="html">(optional) The tags to be applied to the geofence.</Abstract>
 				</Parameter><Parameter>
 					<Name>completionHandler</Name>
-					<Abstract type="html">(optional) Called when the request completes.  The block is passed an NSDictionary object that represents the geofence.  If an error occurs, the NSError wil be passed to the block.</Abstract>
+					<Abstract type="html">(optional) Called when the request completes.  The block is passed an NSDictionary object that represents the geofence.  If an error occurs, the NSError will be passed to the block.</Abstract>
 				</Parameter>
 			</Parameters>
 			
@@ -58,14 +58,14 @@
 			<Abstract type="html">Gets a geofence from ContextHub using the geofence Id.</Abstract>
 			<DeclaredIn>CCHGeofenceService.h</DeclaredIn>
 			
-			<Declaration>- (void)getGeofenceWithId:(id)geofenceId completionHandler:(id)completionHandler</Declaration>
+			<Declaration>- (void)getGeofenceWithId:(NSString *)geofenceId completionHandler:(void ( ^ ) ( NSDictionary *geofence , NSError *error ))completionHandler</Declaration>
 			<Parameters>
 				<Parameter>
 					<Name>geofenceId</Name>
 					<Abstract type="html">The id of the geofence stored in ContextHub.</Abstract>
 				</Parameter><Parameter>
 					<Name>completionHandler</Name>
-					<Abstract type="html">Called when the request completes. The block is passed an NSDictionary object that represents the geofence.  If an error occurs, the NSError wil be passed to the block.</Abstract>
+					<Abstract type="html">Called when the request completes. The block is passed an NSDictionary object that represents the geofence.  If an error occurs, the NSError will be passed to the block.</Abstract>
 				</Parameter>
 			</Parameters>
 			
@@ -78,7 +78,7 @@
 			<Abstract type="html">Gets geofences from ContextHub server.</Abstract>
 			<DeclaredIn>CCHGeofenceService.h</DeclaredIn>
 			
-			<Declaration>- (void)getGeofencesWithTags:(id)tags location:(id)location radius:(id)radius completionHandler:(id)completionHandler</Declaration>
+			<Declaration>- (void)getGeofencesWithTags:(NSArray *)tags location:(CLLocation *)location radius:(CLLocationDistance)radius completionHandler:(void ( ^ ) ( NSArray *geofences , NSError *error ))completionHandler</Declaration>
 			<Parameters>
 				<Parameter>
 					<Name>tags</Name>
@@ -104,7 +104,7 @@
 			<Abstract type="html">Updates a geofence on the ContextHub server.</Abstract>
 			<DeclaredIn>CCHGeofenceService.h</DeclaredIn>
 			
-			<Declaration>- (void)updateGeofence:(id)geofence completionHandler:(id)completionHandler</Declaration>
+			<Declaration>- (void)updateGeofence:(NSDictionary *)geofence completionHandler:(void ( ^ ) ( NSError *error ))completionHandler</Declaration>
 			<Parameters>
 				<Parameter>
 					<Name>geofence</Name>
@@ -124,7 +124,7 @@
 			<Abstract type="html">Deletes an existing geofence from ContextHub.</Abstract>
 			<DeclaredIn>CCHGeofenceService.h</DeclaredIn>
 			
-			<Declaration>- (void)deleteGeofence:(id)geofence completionHandler:(id)completionHandler</Declaration>
+			<Declaration>- (void)deleteGeofence:(NSDictionary *)geofence completionHandler:(void ( ^ ) ( NSError *error ))completionHandler</Declaration>
 			<Parameters>
 				<Parameter>
 					<Name>geofence</Name>
@@ -144,7 +144,7 @@
 			<Abstract type="html">Creates a CLCircularRegion from a geofence dictionary.</Abstract>
 			<DeclaredIn>CCHGeofenceService.h</DeclaredIn>
 			
-			<Declaration>+ (CLCircularRegion *)regionForGeofence:(id)geofence</Declaration>
+			<Declaration>+ (CLCircularRegion *)regionForGeofence:(NSDictionary *)geofence</Declaration>
 			<Parameters>
 				<Parameter>
 					<Name>geofence</Name>
@@ -156,7 +156,6 @@
             <NodeRef refid="3"/>
 		</Token>
 		
-        
         
 	</File>
 </Tokens>

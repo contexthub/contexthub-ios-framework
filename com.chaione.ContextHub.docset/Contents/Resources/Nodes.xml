@@ -52,17 +52,6 @@
 					</Subnodes>
 				</Node>
 				
-                
-                <Node>
-                    <Name>Blocks</Name>
-                    <Path>index.html</Path>
-                    <Subnodes>
-                        <NodeRef refid="19"/>
-                        <NodeRef refid="20"/>
-                        
-                    </Subnodes>
-                </Node>
-                
 			</Subnodes>
         </Node>
     </TOC>
@@ -464,16 +453,5 @@
             
         </Node>
 		
-        <Node id="19" type="file" documentType="reference">
-            <Name>vaultCompletionBlock</Name>
-            <Path>Blocks/vaultCompletionBlock.html</Path>
-            
-        </Node>
-        <Node id="20" type="file" documentType="reference">
-            <Name>vaultListingCompletionBlock</Name>
-            <Path>Blocks/vaultListingCompletionBlock.html</Path>
-            
-        </Node>
-        
 	</Library>
 </DocSetNodes>

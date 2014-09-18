@@ -37,35 +37,18 @@
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/CCHDevice/registerDeviceWithCompletionHandler:</TokenIdentifier>
-			<Abstract type="html">Registers the device with ContextHub.  This method gathers meta-data about the device and sends it to ContextHub.</Abstract>
-			<DeclaredIn>CCHDevice.h</DeclaredIn>
-			
-			<Declaration>- (void)registerDeviceWithCompletionHandler:(id)completionHandler</Declaration>
-			<Parameters>
-				<Parameter>
-					<Name>completionHandler</Name>
-					<Abstract type="html">(optional) Called when the request completes. If an error occurs, the NSError will be passed to the block.</Abstract>
-				</Parameter>
-			</Parameters>
-			
-			<Anchor>//api/name/registerDeviceWithCompletionHandler:</Anchor>
-            <NodeRef refid="2"/>
-		</Token>
-		
-		<Token>
 			<TokenIdentifier>//apple_ref/occ/instm/CCHDevice/getDeviceWithId:completionHandler:</TokenIdentifier>
 			<Abstract type="html">Gets a device from ContextHub using the device Id.</Abstract>
 			<DeclaredIn>CCHDevice.h</DeclaredIn>
 			
-			<Declaration>- (void)getDeviceWithId:(id)deviceId completionHandler:(id)completionHandler</Declaration>
+			<Declaration>- (void)getDeviceWithId:(NSString *)deviceId completionHandler:(void ( ^ ) ( NSDictionary *device , NSError *error ))completionHandler</Declaration>
 			<Parameters>
 				<Parameter>
 					<Name>deviceId</Name>
 					<Abstract type="html">The id of the device stored in ContextHub.</Abstract>
 				</Parameter><Parameter>
 					<Name>completionHandler</Name>
-					<Abstract type="html">Called when the request completes. The block is passed an NSDictionary object that represents the device.  If an error occurs, the NSError wil be passed to the block.</Abstract>
+					<Abstract type="html">Called when the request completes. The block is passed an NSDictionary object that represents the device.  If an error occurs, the NSError will be passed to the block.</Abstract>
 				</Parameter>
 			</Parameters>
 			
@@ -78,14 +61,14 @@
 			<Abstract type="html">Gets devices from ContextHub using the device alias.</Abstract>
 			<DeclaredIn>CCHDevice.h</DeclaredIn>
 			
-			<Declaration>- (void)getDevicesWithAlias:(id)alias completionHandler:(id)completionHandler</Declaration>
+			<Declaration>- (void)getDevicesWithAlias:(NSString *)alias completionHandler:(void ( ^ ) ( NSArray *devices , NSError *error ))completionHandler</Declaration>
 			<Parameters>
 				<Parameter>
 					<Name>alias</Name>
 					<Abstract type="html">The alias associated with the devices that you are interested in.</Abstract>
 				</Parameter><Parameter>
 					<Name>completionHandler</Name>
-					<Abstract type="html">Called when the request completes. The block is passed an NSArray of NSDictionary objects that represent the devices.  If an error occurs, the NSError wil be passed to the block.</Abstract>
+					<Abstract type="html">Called when the request completes. The block is passed an NSArray of NSDictionary objects that represent the devices.  If an error occurs, the NSError will be passed to the block.</Abstract>
 				</Parameter>
 			</Parameters>
 			
@@ -98,14 +81,14 @@
 			<Abstract type="html">Gets devices from ContextHub using tags.</Abstract>
 			<DeclaredIn>CCHDevice.h</DeclaredIn>
 			
-			<Declaration>- (void)getDevicesWithTags:(id)tags completionHandler:(id)completionHandler</Declaration>
+			<Declaration>- (void)getDevicesWithTags:(NSArray *)tags completionHandler:(void ( ^ ) ( NSArray *devices , NSError *error ))completionHandler</Declaration>
 			<Parameters>
 				<Parameter>
 					<Name>tags</Name>
 					<Abstract type="html">Tags of the devices that you are interested in.</Abstract>
 				</Parameter><Parameter>
 					<Name>completionHandler</Name>
-					<Abstract type="html">Called when the request completes. The block is passed an NSArray of NSDictionary objects that represent the devices.  If an error occurs, the NSError wil be passed to the block.</Abstract>
+					<Abstract type="html">Called when the request completes. The block is passed an NSArray of NSDictionary objects that represent the devices.  If an error occurs, the NSError will be passed to the block.</Abstract>
 				</Parameter>
 			</Parameters>
 			
@@ -114,11 +97,11 @@
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/CCHDevice/updateDeviceWithAlias:tags:completionHandler:</TokenIdentifier>
+			<TokenIdentifier>//apple_ref/occ/instm/CCHDevice/setDeviceAlias:tags:completionHandler:</TokenIdentifier>
 			<Abstract type="html">Updates the device record on contexthub.</Abstract>
 			<DeclaredIn>CCHDevice.h</DeclaredIn>
 			
-			<Declaration>- (void)updateDeviceWithAlias:(id)alias tags:(id)tags completionHandler:(id)completionHandler</Declaration>
+			<Declaration>- (void)setDeviceAlias:(NSString *)alias tags:(NSArray *)tags completionHandler:(void ( ^ ) ( NSDictionary *device , NSError *error ))completionHandler</Declaration>
 			<Parameters>
 				<Parameter>
 					<Name>alias</Name>
@@ -128,15 +111,14 @@
 					<Abstract type="html">(optional) The tags to be applied to the device.</Abstract>
 				</Parameter><Parameter>
 					<Name>completionHandler</Name>
-					<Abstract type="html">Called when the request completes. The block is passed an NSDictionary object that represents the device.  If an error occurs, the NSError wil be passed to the block.</Abstract>
+					<Abstract type="html">Called when the request completes. The block is passed an NSDictionary object that represents the device.  If an error occurs, the NSError will be passed to the block.</Abstract>
 				</Parameter>
 			</Parameters>
 			
-			<Anchor>//api/name/updateDeviceWithAlias:tags:completionHandler:</Anchor>
+			<Anchor>//api/name/setDeviceAlias:tags:completionHandler:</Anchor>
             <NodeRef refid="2"/>
 		</Token>
 		
-        
         
 	</File>
 </Tokens>

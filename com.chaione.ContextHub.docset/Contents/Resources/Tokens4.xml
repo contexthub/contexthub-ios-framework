@@ -29,7 +29,7 @@
 			<Abstract type="html">Creates a log on the ContextHub server.</Abstract>
 			<DeclaredIn>CCHLog.h</DeclaredIn>
 			
-			<Declaration>- (void)log:(id)message userInfo:(id)userInfo completionHandler:(id)completionHandler</Declaration>
+			<Declaration>- (void)log:(NSString *)message userInfo:(NSDictionary *)userInfo completionHandler:(void ( ^ ) ( NSError *error ))completionHandler</Declaration>
 			<Parameters>
 				<Parameter>
 					<Name>message</Name>
@@ -47,7 +47,6 @@
             <NodeRef refid="4"/>
 		</Token>
 		
-        
         
 	</File>
 </Tokens>
