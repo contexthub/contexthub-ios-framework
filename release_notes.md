@@ -1,5 +1,4 @@
-## 1.3.3 - September 16, 2014
-
+## 1.3.2 - September 18, 2014
 - iOS 8.0 tested.
 - CCHPush - **Method signature changed**: added CCHContextHubPush boolean to remote notification handler.
 - CCHSensorPipeline - added new delegate method `sensorPipeline:didDetectEvent`
