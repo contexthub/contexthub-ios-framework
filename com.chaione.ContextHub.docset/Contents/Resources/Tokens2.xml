@@ -48,7 +48,7 @@
 					<Abstract type="html">The id of the device stored in ContextHub.</Abstract>
 				</Parameter><Parameter>
 					<Name>completionHandler</Name>
-					<Abstract type="html">Called when the request completes. The block is passed an NSDictionary object that represents the device.  If an error occurs, the NSError wil be passed to the block.</Abstract>
+					<Abstract type="html">Called when the request completes. The block is passed an NSDictionary object that represents the device.  If an error occurs, the NSError will be passed to the block.</Abstract>
 				</Parameter>
 			</Parameters>
 			
@@ -68,7 +68,7 @@
 					<Abstract type="html">The alias associated with the devices that you are interested in.</Abstract>
 				</Parameter><Parameter>
 					<Name>completionHandler</Name>
-					<Abstract type="html">Called when the request completes. The block is passed an NSArray of NSDictionary objects that represent the devices.  If an error occurs, the NSError wil be passed to the block.</Abstract>
+					<Abstract type="html">Called when the request completes. The block is passed an NSArray of NSDictionary objects that represent the devices.  If an error occurs, the NSError will be passed to the block.</Abstract>
 				</Parameter>
 			</Parameters>
 			
@@ -88,7 +88,7 @@
 					<Abstract type="html">Tags of the devices that you are interested in.</Abstract>
 				</Parameter><Parameter>
 					<Name>completionHandler</Name>
-					<Abstract type="html">Called when the request completes. The block is passed an NSArray of NSDictionary objects that represent the devices.  If an error occurs, the NSError wil be passed to the block.</Abstract>
+					<Abstract type="html">Called when the request completes. The block is passed an NSArray of NSDictionary objects that represent the devices.  If an error occurs, the NSError will be passed to the block.</Abstract>
 				</Parameter>
 			</Parameters>
 			
@@ -111,7 +111,7 @@
 					<Abstract type="html">(optional) The tags to be applied to the device.</Abstract>
 				</Parameter><Parameter>
 					<Name>completionHandler</Name>
-					<Abstract type="html">Called when the request completes. The block is passed an NSDictionary object that represents the device.  If an error occurs, the NSError wil be passed to the block.</Abstract>
+					<Abstract type="html">Called when the request completes. The block is passed an NSDictionary object that represents the device.  If an error occurs, the NSError will be passed to the block.</Abstract>
 				</Parameter>
 			</Parameters>
 			

@@ -35,7 +35,7 @@
 		<Token>
 			<TokenIdentifier>//apple_ref/occ/intfm/CCHSensorPipelineDelegate/sensorPipeline:shouldPostEvent:</TokenIdentifier>
 			<Abstract type="html">Sometimes you may want to keep an event from posting to the ContextHub service.  This method gives you the opportunity to stop the call.
-If you return NO, none of the other delegate methods will git called, and the event will be discarded.</Abstract>
+If you return NO, none of the other delegate methods will get called, and the event will be discarded.</Abstract>
 			<DeclaredIn>CCHSensorPipeline.h</DeclaredIn>
 			
 			<Declaration>- (BOOL)sensorPipeline:(CCHSensorPipeline *)sensorPipeline shouldPostEvent:(NSDictionary *)event</Declaration>

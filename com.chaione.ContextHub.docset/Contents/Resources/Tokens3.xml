@@ -45,7 +45,7 @@
 					<Abstract type="html">(optional) The tags to be applied to the geofence.</Abstract>
 				</Parameter><Parameter>
 					<Name>completionHandler</Name>
-					<Abstract type="html">(optional) Called when the request completes.  The block is passed an NSDictionary object that represents the geofence.  If an error occurs, the NSError wil be passed to the block.</Abstract>
+					<Abstract type="html">(optional) Called when the request completes.  The block is passed an NSDictionary object that represents the geofence.  If an error occurs, the NSError will be passed to the block.</Abstract>
 				</Parameter>
 			</Parameters>
 			
@@ -65,7 +65,7 @@
 					<Abstract type="html">The id of the geofence stored in ContextHub.</Abstract>
 				</Parameter><Parameter>
 					<Name>completionHandler</Name>
-					<Abstract type="html">Called when the request completes. The block is passed an NSDictionary object that represents the geofence.  If an error occurs, the NSError wil be passed to the block.</Abstract>
+					<Abstract type="html">Called when the request completes. The block is passed an NSDictionary object that represents the geofence.  If an error occurs, the NSError will be passed to the block.</Abstract>
 				</Parameter>
 			</Parameters>
 			

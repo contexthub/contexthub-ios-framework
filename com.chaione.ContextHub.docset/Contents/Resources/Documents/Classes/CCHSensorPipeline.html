@@ -154,13 +154,13 @@
 					<div class="section section-overview">
 						<a title="Overview" name="overview"></a>
 						<h2 class="subtitle subtitle-overview">Overview</h2>
-						<p>The CCHSensorPipeline monitors events as they are triggered.  You can use the CCHSensorPipline to gain access to the events before and after they are sent to the server.  The <a href="../Protocols/CCHSensorPipelineDelegate.html">CCHSensorPipelineDelegate</a> and <a href="../Protocols/CCHSensorPipelineDataSource.html">CCHSensorPipelineDataSource</a> give you the ability to filter events and add custom data to events before they are sent to the <a href="../Classes/ContextHub.html">ContextHub</a> server.
+						<p>The CCHSensorPipeline monitors events as they are triggered.  You can use the CCHSensorPipeline to gain access to the events before and after they are sent to the server.  The <a href="../Protocols/CCHSensorPipelineDelegate.html">CCHSensorPipelineDelegate</a> and <a href="../Protocols/CCHSensorPipelineDataSource.html">CCHSensorPipelineDataSource</a> give you the ability to filter events and add custom data to events before they are sent to the <a href="../Classes/ContextHub.html">ContextHub</a> server.
 As events are triggered on the device, the framework will assemble a context dictionary that includes data about the event.
-The CCHSensorPipeline will call datasource and <a href="#//api/name/delegate">delegate</a> lifecycle methods and post lifecycle notifications.</p>
+The CCHSensorPipeline will call datasource and <a href="#//api/name/delegate">delegate</a> life cycle methods and post lifecycle notifications.</p>
 
 <h2>Notifications</h2>
 
-<p>The following life-cycle notifications are posted.  The notifications are called before the associated <a href="#//api/name/delegate">delegate</a> methods are called.</p>
+<p>The following life cycle notifications are posted.  The notifications are called before the associated <a href="#//api/name/delegate">delegate</a> methods are called.</p>
 
 <h3>CCHSensorPipelineDidDetectEvent</h3>
 
@@ -340,7 +340,7 @@ The CCHSensorPipeline will call datasource and <a href="#//api/name/delegate">de
 	
 	
 	<div class="method-subsection brief-description">
-		<p>Returns the singleton instnace of the CCHSensorPipeline</p>
+		<p>Returns the singleton instanace of the CCHSensorPipeline</p>
 	</div>		
 	
     
@@ -435,7 +435,7 @@ The CCHSensorPipeline will call datasource and <a href="#//api/name/delegate">de
 	
 	
 	<div class="method-subsection brief-description">
-		<p>Returns an array of the <a href="#//api/name/tags">tags</a> that the pipline is tracking.</p>
+		<p>Returns an array of the <a href="#//api/name/tags">tags</a> that the pipeline is tracking.</p>
 	</div>		
 	
     
@@ -448,7 +448,7 @@ The CCHSensorPipeline will call datasource and <a href="#//api/name/delegate">de
 	
 	<div class="method-subsection return">
 		<h4 class="method-subtitle parameter-title">Return Value</h4>
-		<p>Returns an array of the <a href="#//api/name/tags">tags</a> that the pipline is tracking.</p>
+		<p>Returns an array of the <a href="#//api/name/tags">tags</a> that the pipeline is tracking.</p>
 	</div>
 	
 	
@@ -528,7 +528,7 @@ The CCHSensorPipeline will call datasource and <a href="#//api/name/delegate">de
 	
 	<div class="method-subsection brief-description">
 		<p>Calling synchronize will tell the SDK to check for server-side context changes and will update monitored regions.
-The method gives you a way to load new context information if you are not using background push notifictions.</p>
+The method gives you a way to load new context information if you are not using background push notifications.</p>
 	</div>		
 	
     
@@ -542,7 +542,7 @@ The method gives you a way to load new context information if you are not using 
 		
 		<dl class="argument-def parameter-def">
 			<dt><em>completionHandler</em></dt>
-			<dd><p>(optional) Called when the synchronization completes.  If an error occurs, the NSError wil be passed to the block.</p></dd>
+			<dd><p>(optional) Called when the synchronization completes.  If an error occurs, the NSError will be passed to the block.</p></dd>
 		</dl>
 		
 	</div>
@@ -593,7 +593,7 @@ The method gives you a way to load new context information if you are not using 
 		
 		<dl class="argument-def parameter-def">
 			<dt><em>completionHandler</em></dt>
-			<dd><p>(optional) Called when the event is created.  If an error occurs, the NSError wil be passed to the block.</p></dd>
+			<dd><p>(optional) Called when the event is created.  If an error occurs, the NSError will be passed to the block.</p></dd>
 		</dl>
 		
 	</div>
@@ -638,7 +638,7 @@ The method gives you a way to load new context information if you are not using 
 				<div id="footer">
 					<hr />
 					<div class="footer-copyright">
-						<p><span class="copyright">&copy; 2014 ContextHub. All rights reserved. (Last updated: 2014-09-08)</span><br />
+						<p><span class="copyright">&copy; 2014 ContextHub. All rights reserved. (Last updated: 2014-09-18)</span><br />
 						
 						<span class="generator">Generated by <a href="http://appledoc.gentlebytes.com">appledoc 2.2 (build 963)</a>.</span></p>
 						

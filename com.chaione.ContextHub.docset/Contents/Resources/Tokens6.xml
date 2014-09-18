@@ -4,9 +4,9 @@
 		
 		<Token>
 			<TokenIdentifier>//apple_ref/occ/cl/CCHSensorPipeline</TokenIdentifier>
-			<Abstract type="html">The CCHSensorPipeline monitors events as they are triggered.  You can use the CCHSensorPipline to gain access to the events before and after they are sent to the server.  The CCHSensorPipelineDelegate and CCHSensorPipelineDataSource give you the ability to filter events and add custom data to events before they are sent to the ContextHub server.
+			<Abstract type="html">The CCHSensorPipeline monitors events as they are triggered.  You can use the CCHSensorPipeline to gain access to the events before and after they are sent to the server.  The CCHSensorPipelineDelegate and CCHSensorPipelineDataSource give you the ability to filter events and add custom data to events before they are sent to the ContextHub server.
 As events are triggered on the device, the framework will assemble a context dictionary that includes data about the event.
-The CCHSensorPipeline will call datasource and delegate lifecycle methods and post lifecycle notifications.</Abstract>
+The CCHSensorPipeline will call datasource and delegate life cycle methods and post lifecycle notifications.</Abstract>
 			<DeclaredIn>CCHSensorPipeline.h</DeclaredIn>
             
 			
@@ -16,7 +16,7 @@ The CCHSensorPipeline will call datasource and delegate lifecycle methods and po
 		
 		<Token>
 			<TokenIdentifier>//apple_ref/occ/clm/CCHSensorPipeline/sharedInstance</TokenIdentifier>
-			<Abstract type="html">Returns the singleton instnace of the CCHSensorPipeline</Abstract>
+			<Abstract type="html">Returns the singleton instanace of the CCHSensorPipeline</Abstract>
 			<DeclaredIn>CCHSensorPipeline.h</DeclaredIn>
 			
 			<Declaration>+ (instancetype)sharedInstance</Declaration>
@@ -38,7 +38,7 @@ The CCHSensorPipeline will call datasource and delegate lifecycle methods and po
 					<Abstract type="html">The event that you want to send to the server.</Abstract>
 				</Parameter><Parameter>
 					<Name>completionHandler</Name>
-					<Abstract type="html">(optional) Called when the event is created.  If an error occurs, the NSError wil be passed to the block.</Abstract>
+					<Abstract type="html">(optional) Called when the event is created.  If an error occurs, the NSError will be passed to the block.</Abstract>
 				</Parameter>
 			</Parameters>
 			
@@ -49,14 +49,14 @@ The CCHSensorPipeline will call datasource and delegate lifecycle methods and po
 		<Token>
 			<TokenIdentifier>//apple_ref/occ/instm/CCHSensorPipeline/synchronize:</TokenIdentifier>
 			<Abstract type="html">Calling synchronize will tell the SDK to check for server-side context changes and will update monitored regions.
-The method gives you a way to load new context information if you are not using background push notifictions.</Abstract>
+The method gives you a way to load new context information if you are not using background push notifications.</Abstract>
 			<DeclaredIn>CCHSensorPipeline.h</DeclaredIn>
 			
 			<Declaration>- (void)synchronize:(void ( ^ ) ( NSError *error ))completionHandler</Declaration>
 			<Parameters>
 				<Parameter>
 					<Name>completionHandler</Name>
-					<Abstract type="html">(optional) Called when the synchronization completes.  If an error occurs, the NSError wil be passed to the block.</Abstract>
+					<Abstract type="html">(optional) Called when the synchronization completes.  If an error occurs, the NSError will be passed to the block.</Abstract>
 				</Parameter>
 			</Parameters>
 			
@@ -100,12 +100,12 @@ The method gives you a way to load new context information if you are not using 
 		
 		<Token>
 			<TokenIdentifier>//apple_ref/occ/instm/CCHSensorPipeline/elementTags</TokenIdentifier>
-			<Abstract type="html">Returns an array of the tags that the pipline is tracking.</Abstract>
+			<Abstract type="html">Returns an array of the tags that the pipeline is tracking.</Abstract>
 			<DeclaredIn>CCHSensorPipeline.h</DeclaredIn>
 			
 			<Declaration>- (NSArray *)elementTags</Declaration>
 			
-			<ReturnValue><Abstract type="html">Returns an array of the tags that the pipline is tracking.</Abstract></ReturnValue>
+			<ReturnValue><Abstract type="html">Returns an array of the tags that the pipeline is tracking.</Abstract></ReturnValue>
 			<Anchor>//api/name/elementTags</Anchor>
             <NodeRef refid="6"/>
 		</Token>
