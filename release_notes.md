@@ -1,3 +1,7 @@
+## 1.3.3 - October 3, 2014
+- Improvements to network performance
+- Updated the way nil tags and empty tags are processed.
+
 ## 1.3.2 - September 18, 2014
 - iOS 8.0 tested.
 - CCHPush - **Method signature changed**: added CCHContextHubPush boolean to remote notification handler.
