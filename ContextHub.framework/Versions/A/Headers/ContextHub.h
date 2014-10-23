@@ -5,7 +5,7 @@
 //  Created by Travis Fischer on 9/18/13.
 //  Copyright (c) 2013 ChaiOne. All rights reserved.
 //
-//  Version 1.3.3
+//  Version 1.3.4
 //
 
 #import <Foundation/Foundation.h>
@@ -60,4 +60,5 @@
  build version
  */
 extern NSString * const CCHVersion;
+
 @end

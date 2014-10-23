@@ -110,5 +110,4 @@ typedef void (^vaultListingCompletionBlock)(NSArray *responses, NSError *error);
  */
 - (void)deleteItem:(NSDictionary *)item completionHandler:(void(^)(NSDictionary *response, NSError *error))completionHandler;
 
-
 @end

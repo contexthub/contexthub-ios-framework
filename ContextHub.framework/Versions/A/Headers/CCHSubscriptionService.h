@@ -209,4 +209,5 @@ When server changes are made, the device is notified using a background push not
  @param completionHandler (optional) Is executed when the request completes.  If an error occurs, the NSError will be passed to the block.
  */
 - (void)removeSubscriptionsForTags:(NSArray *)tags options:(NSArray *)options completionHandler:(void(^)(NSError *error))completionHandler;
+
 @end

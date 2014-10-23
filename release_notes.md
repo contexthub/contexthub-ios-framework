@@ -1,3 +1,6 @@
+## 1.3.4 - October 23, 2014
+- 
+
 ## 1.3.3 - October 7, 2014
 - Improvements to network performance
 - Updated the way nil tags and empty tags are processed.

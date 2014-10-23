@@ -112,4 +112,5 @@ typedef NS_ENUM(NSInteger, CCHGeofenceServiceErrorCode) {
  @return A CLCircularRegion from a geofence dictionary.
  */
 + (CLCircularRegion *)regionForGeofence:(NSDictionary *)geofence;
+
 @end
