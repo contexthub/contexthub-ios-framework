@@ -13,6 +13,7 @@
 - Updated the structure of the `context` in the event dictionary.
 - added optimizations to the way HTTP sessions are queued.
 - updated the way geofences are reported in the location context.
+- added `triggered_at` to the event dictionary.
 
 ## 1.2.0 - August 15, 2014
 - **CCHSubscriptionService - Method Renamed** - renamed 'getSubscriptionsWithCompletion:' to 'getSubscriptionsWithCompletionHandler'
