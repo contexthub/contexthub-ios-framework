@@ -1,5 +1,6 @@
 ## 1.3.4 - October 23, 2014
-- 
+- fixed a bug in the way some iBeacons were handled.
+- added CCHSubscriptionResourceChangeNotification.
 
 ## 1.3.3 - October 7, 2014
 - Improvements to network performance
