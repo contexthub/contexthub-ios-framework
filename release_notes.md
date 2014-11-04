@@ -1,3 +1,7 @@
+## 1.3.4 - October 23, 2014
+- fixed a bug in the way some iBeacons were handled.
+- added CCHSubscriptionResourceChangeNotification.
+
 ## 1.3.3 - October 7, 2014
 - Improvements to network performance
 - Updated the way nil tags and empty tags are processed.
@@ -13,6 +17,7 @@
 - Updated the structure of the `context` in the event dictionary.
 - added optimizations to the way HTTP sessions are queued.
 - updated the way geofences are reported in the location context.
+- added `triggered_at` to the event dictionary.
 
 ## 1.2.0 - August 15, 2014
 - **CCHSubscriptionService - Method Renamed** - renamed 'getSubscriptionsWithCompletion:' to 'getSubscriptionsWithCompletionHandler'

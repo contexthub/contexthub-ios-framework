@@ -105,5 +105,4 @@ typedef NS_ENUM(NSInteger, CCHBeaconServiceErrorCode) {
  */
 + (CLBeaconRegion *)regionForBeacon:(NSDictionary *)beacon;
 
-
 @end
