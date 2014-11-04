@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Tokens version="1.0">
-	<File path="Constants/CCHDeviceErrorCode.html">
+	<File path="Constants/CCHBeaconServiceErrorCode.html">
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/c/tdef/CCHDeviceErrorCode</TokenIdentifier>
-			<Abstract type="html">ContextHub Device error codes.</Abstract>
-			<DeclaredIn>CCHDevice.h</DeclaredIn>
+			<TokenIdentifier>//apple_ref/c/tdef/CCHBeaconServiceErrorCode</TokenIdentifier>
+			<Abstract type="html">ContextHub BeaconService error codes.</Abstract>
+			<DeclaredIn>CCHBeaconService.h</DeclaredIn>
             
 			
 			<NodeRef refid="13"/>
@@ -14,34 +14,45 @@
 		
         
         <Token>
-            <TokenIdentifier>//apple_ref/c/econst/CCHInvalidDeviceIdParameter</TokenIdentifier>
-            <Abstract type="html">     Device id cannot be nil 
+            <TokenIdentifier>//apple_ref/c/econst/CCHInvalidBeaconDictionary</TokenIdentifier>
+            <Abstract type="html">     The Dictionary can&apos;t be used to create a beacon.
      </Abstract>
-            <Declaration>CCHInvalidDeviceIdParameter</Declaration>
+            <Declaration>CCHInvalidBeaconDictionary</Declaration>
             
-            <DeclaredIn>CCHDevice.h</DeclaredIn>
+            <DeclaredIn>CCHBeaconService.h</DeclaredIn>
             
             <NodeRef refid="13"/>
         </Token>
         
         <Token>
-            <TokenIdentifier>//apple_ref/c/econst/CCHInvalidDeviceAliasParameter</TokenIdentifier>
-            <Abstract type="html">     Alias cannot be nil
+            <TokenIdentifier>//apple_ref/c/econst/CCHInvalidBeaconUUIDParameter</TokenIdentifier>
+            <Abstract type="html">     UUID cannot be nil and must be  a valid NSUUID.
      </Abstract>
-            <Declaration>CCHInvalidDeviceAliasParameter</Declaration>
+            <Declaration>CCHInvalidBeaconUUIDParameter</Declaration>
             
-            <DeclaredIn>CCHDevice.h</DeclaredIn>
+            <DeclaredIn>CCHBeaconService.h</DeclaredIn>
             
             <NodeRef refid="13"/>
         </Token>
         
         <Token>
-            <TokenIdentifier>//apple_ref/c/econst/CCHInvalidDeviceTagsParameter</TokenIdentifier>
-            <Abstract type="html">     Tags cannot be nil
+            <TokenIdentifier>//apple_ref/c/econst/CCHInvalidBeaconNameParameter</TokenIdentifier>
+            <Abstract type="html">     Name cannot be nil.
      </Abstract>
-            <Declaration>CCHInvalidDeviceTagsParameter</Declaration>
+            <Declaration>CCHInvalidBeaconNameParameter</Declaration>
             
-            <DeclaredIn>CCHDevice.h</DeclaredIn>
+            <DeclaredIn>CCHBeaconService.h</DeclaredIn>
+            
+            <NodeRef refid="13"/>
+        </Token>
+        
+        <Token>
+            <TokenIdentifier>//apple_ref/c/econst/CCHInvalidBeaconIdParameter</TokenIdentifier>
+            <Abstract type="html">     Beacon id cannot be nil.
+     </Abstract>
+            <Declaration>CCHInvalidBeaconIdParameter</Declaration>
+            
+            <DeclaredIn>CCHBeaconService.h</DeclaredIn>
             
             <NodeRef refid="13"/>
         </Token>

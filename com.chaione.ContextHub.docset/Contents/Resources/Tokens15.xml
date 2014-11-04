@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Tokens version="1.0">
-	<File path="Constants/CCHLogErrorCode.html">
+	<File path="Constants/CCHGeofenceServiceErrorCode.html">
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/c/tdef/CCHLogErrorCode</TokenIdentifier>
-			<Abstract type="html">ContextHub CCHLog error codes.</Abstract>
-			<DeclaredIn>CCHLog.h</DeclaredIn>
+			<TokenIdentifier>//apple_ref/c/tdef/CCHGeofenceServiceErrorCode</TokenIdentifier>
+			<Abstract type="html">ContextHub GeofenceService error codes.</Abstract>
+			<DeclaredIn>CCHGeofenceService.h</DeclaredIn>
             
 			
 			<NodeRef refid="15"/>
@@ -14,23 +14,56 @@
 		
         
         <Token>
-            <TokenIdentifier>//apple_ref/c/econst/CCHInvalidLogJSONObject</TokenIdentifier>
-            <Abstract type="html">     Invalid JSON object.
+            <TokenIdentifier>//apple_ref/c/econst/CCHInvalidGeofenceDictionary</TokenIdentifier>
+            <Abstract type="html">     Dictionary can&apos;t be used to create a geofence.
      </Abstract>
-            <Declaration>CCHInvalidLogJSONObject</Declaration>
+            <Declaration>CCHInvalidGeofenceDictionary</Declaration>
             
-            <DeclaredIn>CCHLog.h</DeclaredIn>
+            <DeclaredIn>CCHGeofenceService.h</DeclaredIn>
             
             <NodeRef refid="15"/>
         </Token>
         
         <Token>
-            <TokenIdentifier>//apple_ref/c/econst/CCHMissingMessage</TokenIdentifier>
-            <Abstract type="html">     Missing message.
-     </Abstract>
-            <Declaration>CCHMissingMessage</Declaration>
+            <TokenIdentifier>//apple_ref/c/econst/CCHInvalidCenterParameter</TokenIdentifier>
+            <Abstract type="html">    You must pass a center.
+    </Abstract>
+            <Declaration>CCHInvalidCenterParameter</Declaration>
             
-            <DeclaredIn>CCHLog.h</DeclaredIn>
+            <DeclaredIn>CCHGeofenceService.h</DeclaredIn>
+            
+            <NodeRef refid="15"/>
+        </Token>
+        
+        <Token>
+            <TokenIdentifier>//apple_ref/c/econst/CCHInvalidRadiusParameter</TokenIdentifier>
+            <Abstract type="html">     Radius cannot be nil.
+     </Abstract>
+            <Declaration>CCHInvalidRadiusParameter</Declaration>
+            
+            <DeclaredIn>CCHGeofenceService.h</DeclaredIn>
+            
+            <NodeRef refid="15"/>
+        </Token>
+        
+        <Token>
+            <TokenIdentifier>//apple_ref/c/econst/CCHInvalidNameParameter</TokenIdentifier>
+            <Abstract type="html">     Name cannot be nil.
+     </Abstract>
+            <Declaration>CCHInvalidNameParameter</Declaration>
+            
+            <DeclaredIn>CCHGeofenceService.h</DeclaredIn>
+            
+            <NodeRef refid="15"/>
+        </Token>
+        
+        <Token>
+            <TokenIdentifier>//apple_ref/c/econst/CCHInvalidIdParameter</TokenIdentifier>
+            <Abstract type="html">     Geofence Id cannot be nil.
+     </Abstract>
+            <Declaration>CCHInvalidIdParameter</Declaration>
+            
+            <DeclaredIn>CCHGeofenceService.h</DeclaredIn>
             
             <NodeRef refid="15"/>
         </Token>

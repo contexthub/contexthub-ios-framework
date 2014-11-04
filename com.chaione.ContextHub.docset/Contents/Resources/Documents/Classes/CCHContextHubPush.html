@@ -2,7 +2,7 @@
 <html>
 	<head>
 		<meta http-equiv="Content-Type" content="html/html; charset=utf-8" />
-		<title>CCHSensorPipelineDataSource Protocol Reference</title>
+		<title>CCHContextHubPush Class Reference</title>
 		<meta id="xcode-display" name="xcode-display" content="render"/>
 		<link rel="stylesheet" type="text/css" href="../css/styles.css" media="all" />
 		<link rel="stylesheet" type="text/css" media="print" href="../css/stylesPrint.css" />
@@ -16,7 +16,7 @@
 			</div>
 			
 			<div id="title" role="banner">
-				<h1 class="hideInXcode">CCHSensorPipelineDataSource Protocol Reference</h1>
+				<h1 class="hideInXcode">CCHContextHubPush Class Reference</h1>
 			</div>
 			<ul id="headerButtons" role="toolbar">
 				<li id="toc_button">
@@ -37,13 +37,22 @@
 	
 	
 	
+	<option value="properties">Properties</option>
+	
+	<option value="//api/name/name">&nbsp;&nbsp;&nbsp;&nbsp;name</option>
+	
+	<option value="//api/name/object">&nbsp;&nbsp;&nbsp;&nbsp;object</option>
+	
+	<option value="//api/name/userInfo">&nbsp;&nbsp;&nbsp;&nbsp;userInfo</option>
+	
+	
 	
 	
 	
 	
 	<option value="instance_methods">Instance Methods</option>
 	
-	<option value="//api/name/sensorPipeline:payloadForEvent:">&nbsp;&nbsp;&nbsp;&nbsp;- sensorPipeline:payloadForEvent:</option>
+	<option value="//api/name/initWithObject:userInfo:name:">&nbsp;&nbsp;&nbsp;&nbsp;- initWithObject:userInfo:name:</option>
 	
 	
 	
@@ -67,13 +76,23 @@
 
 
 
+<li role="treeitem" class="children"><span class="disclosure"></span><span class="sectionName"><a href="#properties">Properties</a></span><ul>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/name">name</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/object">object</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/userInfo">userInfo</a></span></li>
+	
+</ul></li>
+
 
 
 
 
 <li role="treeitem" class="children"><span class="disclosure"></span><span class="sectionName"><a href="#instance_methods">Instance Methods</a></span><ul>
 	
-	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/sensorPipeline:payloadForEvent:">sensorPipeline:payloadForEvent:</a></span></li>
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/initWithObject:userInfo:name:">initWithObject:userInfo:name:</a></span></li>
 	
 </ul></li>
 
@@ -82,7 +101,7 @@
 		</nav>
 		<article>
 			<div id="contents" class="isShowingTOC" role="main">
-				<a title="CCHSensorPipelineDataSource Protocol Reference" name="top"></a>
+				<a title="CCHContextHubPush Class Reference" name="top"></a>
 				<div class="main-navigation navigation-top">
 					<ul>
 	<li><a href="../index.html">Index</a></li>
@@ -91,18 +110,18 @@
 				</div>
 				<div id="header">
 					<div class="section-header">
-						<h1 class="title title-header">CCHSensorPipelineDataSource Protocol Reference</h1>
+						<h1 class="title title-header">CCHContextHubPush Class Reference</h1>
 					</div>		
 				</div>
 				<div id="container">	
 					
 					<div class="section section-specification"><table cellspacing="0"><tbody>
 						<tr>
-	<td class="specification-title">Conforms to</td>
+	<td class="specification-title">Inherits from</td>
 	<td class="specification-value">NSObject</td>
 </tr><tr>
 	<td class="specification-title">Declared in</td>
-	<td class="specification-value">CCHSensorPipeline.h</td>
+	<td class="specification-value">CCHContextHubPush.h<br />CCHContextHubPush.m</td>
 </tr>
 						</tbody></table></div>
 					
@@ -112,7 +131,7 @@
 					<div class="section section-overview">
 						<a title="Overview" name="overview"></a>
 						<h2 class="subtitle subtitle-overview">Overview</h2>
-						<p>Implement the data source when you want to add custom data to the context event.</p>
+						<p>The CCHContextHubPush <a href="#//api/name/object">object</a></p>
 					</div>
 					
 					
@@ -130,7 +149,25 @@
 						<ul class="task-list">
 							<li>
 	<span class="tooltip">
-		<code><a href="#//api/name/sensorPipeline:payloadForEvent:">&ndash;&nbsp;sensorPipeline:payloadForEvent:</a></code>
+		<code><a href="#//api/name/object">&nbsp;&nbsp;object</a></code>
+	</span>
+	<span class="task-item-suffix">property</span>
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/userInfo">&nbsp;&nbsp;userInfo</a></code>
+	</span>
+	<span class="task-item-suffix">property</span>
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/name">&nbsp;&nbsp;name</a></code>
+	</span>
+	<span class="task-item-suffix">property</span>
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/initWithObject:userInfo:name:">&ndash;&nbsp;initWithObject:userInfo:name:</a></code>
 	</span>
 	
 	
@@ -143,6 +180,120 @@
 					
 					
 					
+					<div class="section section-methods">
+						<a title="Properties" name="properties"></a>
+						<h2 class="subtitle subtitle-methods">Properties</h2>
+						
+						<div class="section-method">
+	<a name="//api/name/name" title="name"></a>
+	<h3 class="subsubtitle method-title">name</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>The name of the NSNotification that is posted to the defualt NSNotificationCenter for the action and resource.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>@property (nonatomic, strong) NSString *name</code></div>
+
+    
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">CCHContextHubPush.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/object" title="object"></a>
+	<h3 class="subsubtitle method-title">object</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>The NSDictionary representation of the resource that triggered the push.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>@property (nonatomic, strong) NSDictionary *object</code></div>
+
+    
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">CCHContextHubPush.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/userInfo" title="userInfo"></a>
+	<h3 class="subsubtitle method-title">userInfo</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>The userInfo dictionary that contains the &lsquo;action&rsquo; and &lsquo;resource&rsquo; that triggered the push.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>@property (nonatomic, strong) NSDictionary *userInfo</code></div>
+
+    
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">CCHContextHubPush.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+					</div>
+					
 					
 					
 					
@@ -152,18 +303,18 @@
 						<h2 class="subtitle subtitle-methods">Instance Methods</h2>
 						
 						<div class="section-method">
-	<a name="//api/name/sensorPipeline:payloadForEvent:" title="sensorPipeline:payloadForEvent:"></a>
-	<h3 class="subsubtitle method-title">sensorPipeline:payloadForEvent:</h3>
+	<a name="//api/name/initWithObject:userInfo:name:" title="initWithObject:userInfo:name:"></a>
+	<h3 class="subsubtitle method-title">initWithObject:userInfo:name:</h3>
 	
 	
 	
 	<div class="method-subsection brief-description">
-		<p>Return a serializable dictionary that will get added to context event payload property.</p>
+		<p>Initializes the CCHContextHubPush <a href="#//api/name/object">object</a>.</p>
 	</div>		
 	
     
 
-	<div class="method-subsection method-declaration"><code>- (NSDictionary *)sensorPipeline:(CCHSensorPipeline *)<em>sensorPipeline</em> payloadForEvent:(NSDictionary *)<em>event</em></code></div>
+	<div class="method-subsection method-declaration"><code>- (instancetype)initWithObject:(NSDictionary *)<em>object</em> userInfo:(NSDictionary *)<em>userInfo</em> name:(NSString *)<em>name</em></code></div>
 
     
 	
@@ -171,13 +322,18 @@
 		<h4 class="method-subtitle parameter-title">Parameters</h4>
 		
 		<dl class="argument-def parameter-def">
-			<dt><em>sensorPipeline</em></dt>
-			<dd><p>The <a href="../Classes/CCHSensorPipeline.html">CCHSensorPipeline</a>.</p></dd>
+			<dt><em>object</em></dt>
+			<dd><p>The NSDictionary representation of the resource that triggered the push.</p></dd>
 		</dl>
 		
 		<dl class="argument-def parameter-def">
-			<dt><em>event</em></dt>
-			<dd><p>The event that was triggered.</p></dd>
+			<dt><em>userInfo</em></dt>
+			<dd><p>The <a href="#//api/name/userInfo">userInfo</a> dictionary that contains the &lsquo;action&rsquo; and &lsquo;resource&rsquo; that triggered the push.</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>name</em></dt>
+			<dd><p>The <a href="#//api/name/name">name</a> of the NSNotification that is posted to the defualt NSNotificationCenter for the action and resource.</p></dd>
 		</dl>
 		
 	</div>
@@ -196,7 +352,7 @@
 	
 	<div class="method-subsection declared-in-section">
 		<h4 class="method-subtitle">Declared In</h4>
-		<code class="declared-in-ref">CCHSensorPipeline.h</code><br />
+		<code class="declared-in-ref">CCHContextHubPush.h</code><br />
 	</div>				
 	
 	

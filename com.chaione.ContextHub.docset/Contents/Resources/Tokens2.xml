@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Tokens version="1.0">
-	<File path="Classes/CCHDevice.html">
+	<File path="Classes/CCHContextHubPush.html">
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/cl/CCHDevice</TokenIdentifier>
-			<Abstract type="html">The CCHDevice class is used work with devices.</Abstract>
-			<DeclaredIn>CCHDevice.h</DeclaredIn>
+			<TokenIdentifier>//apple_ref/occ/cl/CCHContextHubPush</TokenIdentifier>
+			<Abstract type="html">The CCHContextHubPush object</Abstract>
+			<DeclaredIn>CCHContextHubPush.h</DeclaredIn>
             
 			
 			<NodeRef refid="2"/>
@@ -13,109 +13,133 @@
 		
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/clm/CCHDevice/sharedInstance</TokenIdentifier>
-			<Abstract type="html">The singleton instance of CCHDevice.</Abstract>
-			<DeclaredIn>CCHDevice.h</DeclaredIn>
+			<TokenIdentifier>//apple_ref/occ/instm/CCHContextHubPush/setObject:</TokenIdentifier>
+			<Abstract type="html">The NSDictionary representation of the resource that triggered the push.</Abstract>
+			<DeclaredIn>CCHContextHubPush.h</DeclaredIn>
 			
-			<Declaration>+ (instancetype)sharedInstance</Declaration>
+			<Declaration>@property (nonatomic, strong) NSDictionary *object</Declaration>
 			
-			<ReturnValue><Abstract type="html">The singleton instance of CCHDevice.</Abstract></ReturnValue>
-			<Anchor>//api/name/sharedInstance</Anchor>
+			
+			<Anchor>//api/name/object</Anchor>
             <NodeRef refid="2"/>
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/CCHDevice/deviceId</TokenIdentifier>
-			<Abstract type="html">The vendor device id as UUIDString.</Abstract>
-			<DeclaredIn>CCHDevice.h</DeclaredIn>
+			<TokenIdentifier>//apple_ref/occ/instm/CCHContextHubPush/object</TokenIdentifier>
+			<Abstract type="html">The NSDictionary representation of the resource that triggered the push.</Abstract>
+			<DeclaredIn>CCHContextHubPush.h</DeclaredIn>
 			
-			<Declaration>- (NSString *)deviceId</Declaration>
+			<Declaration>@property (nonatomic, strong) NSDictionary *object</Declaration>
 			
-			<ReturnValue><Abstract type="html">The vendor device id as UUIDString.</Abstract></ReturnValue>
-			<Anchor>//api/name/deviceId</Anchor>
+			
+			<Anchor>//api/name/object</Anchor>
             <NodeRef refid="2"/>
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/CCHDevice/getDeviceWithId:completionHandler:</TokenIdentifier>
-			<Abstract type="html">Gets a device from ContextHub using the device Id.</Abstract>
-			<DeclaredIn>CCHDevice.h</DeclaredIn>
+			<TokenIdentifier>//apple_ref/occ/instp/CCHContextHubPush/object</TokenIdentifier>
+			<Abstract type="html">The NSDictionary representation of the resource that triggered the push.</Abstract>
+			<DeclaredIn>CCHContextHubPush.h</DeclaredIn>
 			
-			<Declaration>- (void)getDeviceWithId:(NSString *)deviceId completionHandler:(void ( ^ ) ( NSDictionary *device , NSError *error ))completionHandler</Declaration>
+			<Declaration>@property (nonatomic, strong) NSDictionary *object</Declaration>
+			
+			
+			<Anchor>//api/name/object</Anchor>
+            <NodeRef refid="2"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/CCHContextHubPush/setUserInfo:</TokenIdentifier>
+			<Abstract type="html">The userInfo dictionary that contains the &apos;action&apos; and &apos;resource&apos; that triggered the push.</Abstract>
+			<DeclaredIn>CCHContextHubPush.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, strong) NSDictionary *userInfo</Declaration>
+			
+			
+			<Anchor>//api/name/userInfo</Anchor>
+            <NodeRef refid="2"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/CCHContextHubPush/userInfo</TokenIdentifier>
+			<Abstract type="html">The userInfo dictionary that contains the &apos;action&apos; and &apos;resource&apos; that triggered the push.</Abstract>
+			<DeclaredIn>CCHContextHubPush.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, strong) NSDictionary *userInfo</Declaration>
+			
+			
+			<Anchor>//api/name/userInfo</Anchor>
+            <NodeRef refid="2"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/CCHContextHubPush/userInfo</TokenIdentifier>
+			<Abstract type="html">The userInfo dictionary that contains the &apos;action&apos; and &apos;resource&apos; that triggered the push.</Abstract>
+			<DeclaredIn>CCHContextHubPush.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, strong) NSDictionary *userInfo</Declaration>
+			
+			
+			<Anchor>//api/name/userInfo</Anchor>
+            <NodeRef refid="2"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/CCHContextHubPush/setName:</TokenIdentifier>
+			<Abstract type="html">The name of the NSNotification that is posted to the defualt NSNotificationCenter for the action and resource.</Abstract>
+			<DeclaredIn>CCHContextHubPush.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, strong) NSString *name</Declaration>
+			
+			
+			<Anchor>//api/name/name</Anchor>
+            <NodeRef refid="2"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/CCHContextHubPush/name</TokenIdentifier>
+			<Abstract type="html">The name of the NSNotification that is posted to the defualt NSNotificationCenter for the action and resource.</Abstract>
+			<DeclaredIn>CCHContextHubPush.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, strong) NSString *name</Declaration>
+			
+			
+			<Anchor>//api/name/name</Anchor>
+            <NodeRef refid="2"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/CCHContextHubPush/name</TokenIdentifier>
+			<Abstract type="html">The name of the NSNotification that is posted to the defualt NSNotificationCenter for the action and resource.</Abstract>
+			<DeclaredIn>CCHContextHubPush.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, strong) NSString *name</Declaration>
+			
+			
+			<Anchor>//api/name/name</Anchor>
+            <NodeRef refid="2"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/CCHContextHubPush/initWithObject:userInfo:name:</TokenIdentifier>
+			<Abstract type="html">Initializes the CCHContextHubPush object.</Abstract>
+			<DeclaredIn>CCHContextHubPush.h</DeclaredIn>
+			
+			<Declaration>- (instancetype)initWithObject:(NSDictionary *)object userInfo:(NSDictionary *)userInfo name:(NSString *)name</Declaration>
 			<Parameters>
 				<Parameter>
-					<Name>deviceId</Name>
-					<Abstract type="html">The id of the device stored in ContextHub.</Abstract>
+					<Name>object</Name>
+					<Abstract type="html">The NSDictionary representation of the resource that triggered the push.</Abstract>
 				</Parameter><Parameter>
-					<Name>completionHandler</Name>
-					<Abstract type="html">Called when the request completes. The block is passed an NSDictionary object that represents the device.  If an error occurs, the NSError will be passed to the block.</Abstract>
+					<Name>userInfo</Name>
+					<Abstract type="html">The userInfo dictionary that contains the &apos;action&apos; and &apos;resource&apos; that triggered the push.</Abstract>
+				</Parameter><Parameter>
+					<Name>name</Name>
+					<Abstract type="html">The name of the NSNotification that is posted to the defualt NSNotificationCenter for the action and resource.</Abstract>
 				</Parameter>
 			</Parameters>
 			
-			<Anchor>//api/name/getDeviceWithId:completionHandler:</Anchor>
-            <NodeRef refid="2"/>
-		</Token>
-		
-		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/CCHDevice/getDevicesWithAlias:completionHandler:</TokenIdentifier>
-			<Abstract type="html">Gets devices from ContextHub using the device alias.</Abstract>
-			<DeclaredIn>CCHDevice.h</DeclaredIn>
-			
-			<Declaration>- (void)getDevicesWithAlias:(NSString *)alias completionHandler:(void ( ^ ) ( NSArray *devices , NSError *error ))completionHandler</Declaration>
-			<Parameters>
-				<Parameter>
-					<Name>alias</Name>
-					<Abstract type="html">The alias associated with the devices that you are interested in.</Abstract>
-				</Parameter><Parameter>
-					<Name>completionHandler</Name>
-					<Abstract type="html">Called when the request completes. The block is passed an NSArray of NSDictionary objects that represent the devices.  If an error occurs, the NSError will be passed to the block.</Abstract>
-				</Parameter>
-			</Parameters>
-			
-			<Anchor>//api/name/getDevicesWithAlias:completionHandler:</Anchor>
-            <NodeRef refid="2"/>
-		</Token>
-		
-		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/CCHDevice/getDevicesWithTags:completionHandler:</TokenIdentifier>
-			<Abstract type="html">Gets devices from ContextHub using tags.</Abstract>
-			<DeclaredIn>CCHDevice.h</DeclaredIn>
-			
-			<Declaration>- (void)getDevicesWithTags:(NSArray *)tags completionHandler:(void ( ^ ) ( NSArray *devices , NSError *error ))completionHandler</Declaration>
-			<Parameters>
-				<Parameter>
-					<Name>tags</Name>
-					<Abstract type="html">Tags of the devices that you are interested in.</Abstract>
-				</Parameter><Parameter>
-					<Name>completionHandler</Name>
-					<Abstract type="html">Called when the request completes. The block is passed an NSArray of NSDictionary objects that represent the devices.  If an error occurs, the NSError will be passed to the block.</Abstract>
-				</Parameter>
-			</Parameters>
-			
-			<Anchor>//api/name/getDevicesWithTags:completionHandler:</Anchor>
-            <NodeRef refid="2"/>
-		</Token>
-		
-		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/CCHDevice/setDeviceAlias:tags:completionHandler:</TokenIdentifier>
-			<Abstract type="html">Updates the device record on contexthub.</Abstract>
-			<DeclaredIn>CCHDevice.h</DeclaredIn>
-			
-			<Declaration>- (void)setDeviceAlias:(NSString *)alias tags:(NSArray *)tags completionHandler:(void ( ^ ) ( NSDictionary *device , NSError *error ))completionHandler</Declaration>
-			<Parameters>
-				<Parameter>
-					<Name>alias</Name>
-					<Abstract type="html">(optional) The alias associated with the device.</Abstract>
-				</Parameter><Parameter>
-					<Name>tags</Name>
-					<Abstract type="html">(optional) The tags to be applied to the device.</Abstract>
-				</Parameter><Parameter>
-					<Name>completionHandler</Name>
-					<Abstract type="html">Called when the request completes. The block is passed an NSDictionary object that represents the device.  If an error occurs, the NSError will be passed to the block.</Abstract>
-				</Parameter>
-			</Parameters>
-			
-			<Anchor>//api/name/setDeviceAlias:tags:completionHandler:</Anchor>
+			<Anchor>//api/name/initWithObject:userInfo:name:</Anchor>
             <NodeRef refid="2"/>
 		</Token>
 		

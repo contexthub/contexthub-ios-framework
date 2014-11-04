@@ -97,6 +97,29 @@
 		</Token>
 		
 		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/CCHBeaconService/getBeaconsWithTags:operator:completionHandler:</TokenIdentifier>
+			<Abstract type="html">Gets beacons from the ContextHub server.</Abstract>
+			<DeclaredIn>CCHBeaconService.h</DeclaredIn>
+			
+			<Declaration>- (void)getBeaconsWithTags:(NSArray *)tags operator:(NSString *)tagOperator completionHandler:(void ( ^ ) ( NSArray *beacons , NSError *error ))completionHandler</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>tags</Name>
+					<Abstract type="html">(optional) Tags of the beacons that you are interested in.  Passing nil will return beacons without tags.</Abstract>
+				</Parameter><Parameter>
+					<Name>tagOperator</Name>
+					<Abstract type="html">(optional) Operator used to build the query with the tags.  Passing ANY will find all geofences that match any of the tags. Passing ALL will find geofences that have all of the tags provided.  Passing nil will use the default ALL operator.</Abstract>
+				</Parameter><Parameter>
+					<Name>completionHandler</Name>
+					<Abstract type="html">Called when the request completes.  The block is passed an NSArray of NSDictionary objects that represent iBeacons.  If an error occurs, the NSError will be passed to the block.</Abstract>
+				</Parameter>
+			</Parameters>
+			
+			<Anchor>//api/name/getBeaconsWithTags:operator:completionHandler:</Anchor>
+            <NodeRef refid="1"/>
+		</Token>
+		
+		<Token>
 			<TokenIdentifier>//apple_ref/occ/instm/CCHBeaconService/updateBeacon:completionHandler:</TokenIdentifier>
 			<Abstract type="html">Updates a beacon on the ContextHub server.</Abstract>
 			<DeclaredIn>CCHBeaconService.h</DeclaredIn>
