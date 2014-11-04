@@ -1,3 +1,9 @@
+## 1.3.3 - October 7, 2014
+- Improvements to network performance
+- Updated the way nil tags and empty tags are processed.
+- added `horizontal_accuracy` and `vertical_accuracy` to the location context dictionary.
+- updated date format to `yyyy-MM-dd'T'HH:mm:ssZZZZZ`
+
 ## 1.3.2 - September 18, 2014
 - iOS 8.0 tested.
 - CCHPush - **Method signature changed**: added CCHContextHubPush boolean to remote notification handler.
