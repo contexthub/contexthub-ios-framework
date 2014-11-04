@@ -72,6 +72,7 @@ typedef NS_ENUM(NSInteger, CCHSensorPipelineErrorCode) {
 - (void)sensorPipeline:(CCHSensorPipeline *)sensorPipeline
                didPostEvent:(NSDictionary *)event;
 
+
 @end
 
 
@@ -91,6 +92,8 @@ typedef NS_ENUM(NSInteger, CCHSensorPipelineErrorCode) {
 - (NSDictionary *)sensorPipeline:(CCHSensorPipeline *)sensorPipeline payloadForEvent:(NSDictionary *)event;
 
 @end
+
+
 
 ///--------------------
 /// @name Notifications
