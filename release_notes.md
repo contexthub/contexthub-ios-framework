@@ -1,6 +1,15 @@
+## 1.3.5 - November 4, 2014
+- updated the way tags are querired.  Tags are now retrieved using an AND operator rather than an OR.  So if you have a resource that is tagged [a, b, c] and query for [a, c], it will return the resource.  If you query [a, d] it will not return the resource.
+- added a new object `CCHContextHubPush` that is used when resources changes are pushed to the device
+- CCHPush **method signature changed** Changed the signature of the completion handler in `application:didReceiveRemoteNotification:completionHandler:` from `(void (^) (enum UIBackgroundFetchResult result, BOOL CCHContextHubPush))` to `(void (^) (enum UIBackgroundFetchResult result, CCHContextHubPush contextHubPush))`  Note that it now passes the new CCHContextHubPush object to the completion handler.
+
+## 1.3.4 - October 23, 2014
+- fixed a bug in the way some iBeacons were handled.
+- added CCHSubscriptionResourceChangeNotification.
+
 ## 1.3.3 - October 7, 2014
 - Improvements to network performance
-- Updated the way nil tags and empty tags are processed.
+- updated the way nil tags and empty tags are processed.
 - added `horizontal_accuracy` and `vertical_accuracy` to the location context dictionary.
 - updated date format to `yyyy-MM-dd'T'HH:mm:ssZZZZZ`
 
@@ -10,9 +19,10 @@
 - CCHSensorPipeline - added new delegate method `sensorPipeline:didDetectEvent`
 - CCHSensorPipeline - **Method renamed**: renamed `addSubscriptionsForTags:`, `removeSubscriptionsForTags` to `addElementsWithTags:`, `removeElementsWithTags:`
 - CCHDevice - **Method renamed**: renamed `updateDeviceAlias:tags:completionHandler` to `setDeviceAlias:tags:completionHandler`
-- Updated the structure of the `context` in the event dictionary.
+- updated the structure of the `context` in the event dictionary.
 - added optimizations to the way HTTP sessions are queued.
 - updated the way geofences are reported in the location context.
+- added `triggered_at` to the event dictionary.
 
 ## 1.2.0 - August 15, 2014
 - **CCHSubscriptionService - Method Renamed** - renamed 'getSubscriptionsWithCompletion:' to 'getSubscriptionsWithCompletionHandler'

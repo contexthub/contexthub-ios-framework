@@ -1,13 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Tokens version="1.0">
-	<File path="Classes/CCHSensorPipeline.html">
+	<File path="Classes/CCHPush.html">
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/cl/CCHSensorPipeline</TokenIdentifier>
-			<Abstract type="html">The CCHSensorPipeline monitors events as they are triggered.  You can use the CCHSensorPipeline to gain access to the events before and after they are sent to the server.  The CCHSensorPipelineDelegate and CCHSensorPipelineDataSource give you the ability to filter events and add custom data to events before they are sent to the ContextHub server.
-As events are triggered on the device, the framework will assemble a context dictionary that includes data about the event.
-The CCHSensorPipeline will call datasource and delegate life cycle methods and post lifecycle notifications.</Abstract>
-			<DeclaredIn>CCHSensorPipeline.h</DeclaredIn>
+			<TokenIdentifier>//apple_ref/occ/cl/CCHPush</TokenIdentifier>
+			<Abstract type="html">The push service is used to register devices and to send push notifications with the ContextHub Push service.</Abstract>
+			<DeclaredIn>CCHPush.h</DeclaredIn>
             
 			
 			<NodeRef refid="6"/>
@@ -15,9 +13,9 @@ The CCHSensorPipeline will call datasource and delegate life cycle methods and p
 		
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/clm/CCHSensorPipeline/sharedInstance</TokenIdentifier>
-			<Abstract type="html">Returns the singleton instanace of the CCHSensorPipeline</Abstract>
-			<DeclaredIn>CCHSensorPipeline.h</DeclaredIn>
+			<TokenIdentifier>//apple_ref/occ/clm/CCHPush/sharedInstance</TokenIdentifier>
+			<Abstract type="html">@ return The singleton instance of the CCHPush service.</Abstract>
+			<DeclaredIn>CCHPush.h</DeclaredIn>
 			
 			<Declaration>+ (instancetype)sharedInstance</Declaration>
 			
@@ -27,158 +25,121 @@ The CCHSensorPipeline will call datasource and delegate life cycle methods and p
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/CCHSensorPipeline/triggerEvent:completionHandler:</TokenIdentifier>
-			<Abstract type="html">This method give you the ability to trigger custom events on the ContextHub sensor pipeline</Abstract>
-			<DeclaredIn>CCHSensorPipeline.h</DeclaredIn>
+			<TokenIdentifier>//apple_ref/occ/instm/CCHPush/registerDeviceToken:alias:tags:completionHandler:</TokenIdentifier>
+			<Abstract type="html">  Register a device for push notifications.</Abstract>
+			<DeclaredIn>CCHPush.h</DeclaredIn>
 			
-			<Declaration>- (void)triggerEvent:(NSDictionary *)event completionHandler:(void ( ^ ) ( NSError *error ))completionHandler</Declaration>
+			<Declaration>- (void)registerDeviceToken:(id)token alias:(NSString *)alias tags:(NSArray *)tags completionHandler:(void ( ^ ) ( NSError *error ))completionHandler</Declaration>
 			<Parameters>
 				<Parameter>
-					<Name>event</Name>
-					<Abstract type="html">The event that you want to send to the server.</Abstract>
+					<Name>token</Name>
+					<Abstract type="html">The device token.</Abstract>
+				</Parameter><Parameter>
+					<Name>alias</Name>
+					<Abstract type="html">(optional) A string alias to associate with the device token.</Abstract>
+				</Parameter><Parameter>
+					<Name>tags</Name>
+					<Abstract type="html">(optional) An array of tags to associate with the token.</Abstract>
 				</Parameter><Parameter>
 					<Name>completionHandler</Name>
-					<Abstract type="html">(optional) Called when the event is created.  If an error occurs, the NSError will be passed to the block.</Abstract>
+					<Abstract type="html">(optional) returns nil if succeeded otherwise includes an error object.</Abstract>
 				</Parameter>
 			</Parameters>
 			
-			<Anchor>//api/name/triggerEvent:completionHandler:</Anchor>
+			<Anchor>//api/name/registerDeviceToken:alias:tags:completionHandler:</Anchor>
             <NodeRef refid="6"/>
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/CCHSensorPipeline/synchronize:</TokenIdentifier>
-			<Abstract type="html">Calling synchronize will tell the SDK to check for server-side context changes and will update monitored regions.
-The method gives you a way to load new context information if you are not using background push notifications.</Abstract>
-			<DeclaredIn>CCHSensorPipeline.h</DeclaredIn>
+			<TokenIdentifier>//apple_ref/occ/instm/CCHPush/sendNotificationToDevices:userInfo:completionHandler:</TokenIdentifier>
+			<Abstract type="html">Send Push Notifications to devices.</Abstract>
+			<DeclaredIn>CCHPush.h</DeclaredIn>
 			
-			<Declaration>- (void)synchronize:(void ( ^ ) ( NSError *error ))completionHandler</Declaration>
+			<Declaration>- (void)sendNotificationToDevices:(NSArray *)devices userInfo:(NSDictionary *)userInfo completionHandler:(void ( ^ ) ( NSError *error ))completionHandler</Declaration>
 			<Parameters>
 				<Parameter>
+					<Name>devices</Name>
+					<Abstract type="html">The device Id&apos;s to notify.</Abstract>
+				</Parameter><Parameter>
+					<Name>userInfo</Name>
+					<Abstract type="html">Other data to be sent in the notification</Abstract>
+				</Parameter><Parameter>
 					<Name>completionHandler</Name>
-					<Abstract type="html">(optional) Called when the synchronization completes.  If an error occurs, the NSError will be passed to the block.</Abstract>
+					<Abstract type="html">Completion block.  If an error occurs an NSError will be passed to the block.</Abstract>
 				</Parameter>
 			</Parameters>
 			
-			<Anchor>//api/name/synchronize:</Anchor>
+			<Anchor>//api/name/sendNotificationToDevices:userInfo:completionHandler:</Anchor>
             <NodeRef refid="6"/>
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/CCHSensorPipeline/addElementsWithTags:</TokenIdentifier>
-			<Abstract type="html">To enable automatic region monitoring for geofences and iBeacons you must add the tags of the elements to the sensor pipeline.</Abstract>
-			<DeclaredIn>CCHSensorPipeline.h</DeclaredIn>
+			<TokenIdentifier>//apple_ref/occ/instm/CCHPush/sendNotificationToAliases:userInfo:completionHandler:</TokenIdentifier>
+			<Abstract type="html">Send Push Notification to aliases.</Abstract>
+			<DeclaredIn>CCHPush.h</DeclaredIn>
 			
-			<Declaration>- (BOOL)addElementsWithTags:(NSArray *)tags</Declaration>
+			<Declaration>- (void)sendNotificationToAliases:(NSArray *)aliases userInfo:(NSDictionary *)userInfo completionHandler:(void ( ^ ) ( NSError *error ))completionHandler</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>aliases</Name>
+					<Abstract type="html">The aliases to notify.</Abstract>
+				</Parameter><Parameter>
+					<Name>userInfo</Name>
+					<Abstract type="html">Other data to be sent in the notification.</Abstract>
+				</Parameter><Parameter>
+					<Name>completionHandler</Name>
+					<Abstract type="html">Completion block.  If an error occurs an NSError will be passed to the block.</Abstract>
+				</Parameter>
+			</Parameters>
+			
+			<Anchor>//api/name/sendNotificationToAliases:userInfo:completionHandler:</Anchor>
+            <NodeRef refid="6"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/CCHPush/sendNotificationToTags:userInfo:completionHandler:</TokenIdentifier>
+			<Abstract type="html">Send Push Notification to tags.</Abstract>
+			<DeclaredIn>CCHPush.h</DeclaredIn>
+			
+			<Declaration>- (void)sendNotificationToTags:(NSArray *)tags userInfo:(NSDictionary *)userInfo completionHandler:(void ( ^ ) ( NSError *error ))completionHandler</Declaration>
 			<Parameters>
 				<Parameter>
 					<Name>tags</Name>
-					<Abstract type="html">The tags of the elements that you want to monitor.</Abstract>
+					<Abstract type="html">The tags to notify.</Abstract>
+				</Parameter><Parameter>
+					<Name>userInfo</Name>
+					<Abstract type="html">Other data to be sent in the notification.</Abstract>
+				</Parameter><Parameter>
+					<Name>completionHandler</Name>
+					<Abstract type="html">Completion block.  If an error occurs an NSError will be passed to the block.</Abstract>
 				</Parameter>
 			</Parameters>
-			<ReturnValue><Abstract type="html">Returns A boolean indicating that the tags were added successfully.</Abstract></ReturnValue>
-			<Anchor>//api/name/addElementsWithTags:</Anchor>
+			
+			<Anchor>//api/name/sendNotificationToTags:userInfo:completionHandler:</Anchor>
             <NodeRef refid="6"/>
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/CCHSensorPipeline/removeElementsWithTags:</TokenIdentifier>
-			<Abstract type="html">To disable automatic region monitoring for geofences and beacons, you must remove the tags from the sensor pipeline.</Abstract>
-			<DeclaredIn>CCHSensorPipeline.h</DeclaredIn>
+			<TokenIdentifier>//apple_ref/occ/instm/CCHPush/application:didReceiveRemoteNotification:completionHandler:</TokenIdentifier>
+			<Abstract type="html">When contextual elements are changed, ContextHub will send background push notifications to the application letting you know that new content is available.
+This will allow the context events to update and stay in sync with the server.</Abstract>
+			<DeclaredIn>CCHPush.h</DeclaredIn>
 			
-			<Declaration>- (BOOL)removeElementsWithTags:(NSArray *)tags</Declaration>
+			<Declaration>- (void)application:(UIApplication *)application didReceiveRemoteNotification:(NSDictionary *)userInfo completionHandler:(void ( ^ ) ( enum UIBackgroundFetchResult result , CCHContextHubPush *contextHubPush ))completionHandler</Declaration>
 			<Parameters>
 				<Parameter>
-					<Name>tags</Name>
-					<Abstract type="html">The tags of the elements that you want to stop monitoring.</Abstract>
+					<Name>application</Name>
+					<Abstract type="html">The UIApplication that received the remote notification.</Abstract>
+				</Parameter><Parameter>
+					<Name>userInfo</Name>
+					<Abstract type="html">The NSDictionary that was delivered with the remote notification.</Abstract>
+				</Parameter><Parameter>
+					<Name>completionHandler</Name>
+					<Abstract type="html">A completion block that is executed when the context sync is completed.  The CCHContextHubPush BOOL indicates if the push notification was generated by ContextHub.</Abstract>
 				</Parameter>
 			</Parameters>
-			<ReturnValue><Abstract type="html">Returns A boolean indicating that the tags were removed successfully.</Abstract></ReturnValue>
-			<Anchor>//api/name/removeElementsWithTags:</Anchor>
-            <NodeRef refid="6"/>
-		</Token>
-		
-		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/CCHSensorPipeline/elementTags</TokenIdentifier>
-			<Abstract type="html">Returns an array of the tags that the pipeline is tracking.</Abstract>
-			<DeclaredIn>CCHSensorPipeline.h</DeclaredIn>
 			
-			<Declaration>- (NSArray *)elementTags</Declaration>
-			
-			<ReturnValue><Abstract type="html">Returns an array of the tags that the pipeline is tracking.</Abstract></ReturnValue>
-			<Anchor>//api/name/elementTags</Anchor>
-            <NodeRef refid="6"/>
-		</Token>
-		
-		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/CCHSensorPipeline/setDelegate:</TokenIdentifier>
-			<Abstract type="html">The CCHSensorPipelineDelegate</Abstract>
-			<DeclaredIn>CCHSensorPipeline.h</DeclaredIn>
-			
-			<Declaration>@property (nonatomic, strong) id&lt;CCHSensorPipelineDelegate&gt; delegate</Declaration>
-			
-			
-			<Anchor>//api/name/delegate</Anchor>
-            <NodeRef refid="6"/>
-		</Token>
-		
-		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/CCHSensorPipeline/delegate</TokenIdentifier>
-			<Abstract type="html">The CCHSensorPipelineDelegate</Abstract>
-			<DeclaredIn>CCHSensorPipeline.h</DeclaredIn>
-			
-			<Declaration>@property (nonatomic, strong) id&lt;CCHSensorPipelineDelegate&gt; delegate</Declaration>
-			
-			
-			<Anchor>//api/name/delegate</Anchor>
-            <NodeRef refid="6"/>
-		</Token>
-		
-		<Token>
-			<TokenIdentifier>//apple_ref/occ/instp/CCHSensorPipeline/delegate</TokenIdentifier>
-			<Abstract type="html">The CCHSensorPipelineDelegate</Abstract>
-			<DeclaredIn>CCHSensorPipeline.h</DeclaredIn>
-			
-			<Declaration>@property (nonatomic, strong) id&lt;CCHSensorPipelineDelegate&gt; delegate</Declaration>
-			
-			
-			<Anchor>//api/name/delegate</Anchor>
-            <NodeRef refid="6"/>
-		</Token>
-		
-		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/CCHSensorPipeline/setDataSource:</TokenIdentifier>
-			<Abstract type="html">The CCHSensorPipelineDataSource</Abstract>
-			<DeclaredIn>CCHSensorPipeline.h</DeclaredIn>
-			
-			<Declaration>@property (nonatomic, strong) id&lt;CCHSensorPipelineDataSource&gt; dataSource</Declaration>
-			
-			
-			<Anchor>//api/name/dataSource</Anchor>
-            <NodeRef refid="6"/>
-		</Token>
-		
-		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/CCHSensorPipeline/dataSource</TokenIdentifier>
-			<Abstract type="html">The CCHSensorPipelineDataSource</Abstract>
-			<DeclaredIn>CCHSensorPipeline.h</DeclaredIn>
-			
-			<Declaration>@property (nonatomic, strong) id&lt;CCHSensorPipelineDataSource&gt; dataSource</Declaration>
-			
-			
-			<Anchor>//api/name/dataSource</Anchor>
-            <NodeRef refid="6"/>
-		</Token>
-		
-		<Token>
-			<TokenIdentifier>//apple_ref/occ/instp/CCHSensorPipeline/dataSource</TokenIdentifier>
-			<Abstract type="html">The CCHSensorPipelineDataSource</Abstract>
-			<DeclaredIn>CCHSensorPipeline.h</DeclaredIn>
-			
-			<Declaration>@property (nonatomic, strong) id&lt;CCHSensorPipelineDataSource&gt; dataSource</Declaration>
-			
-			
-			<Anchor>//api/name/dataSource</Anchor>
+			<Anchor>//api/name/application:didReceiveRemoteNotification:completionHandler:</Anchor>
             <NodeRef refid="6"/>
 		</Token>
 		
