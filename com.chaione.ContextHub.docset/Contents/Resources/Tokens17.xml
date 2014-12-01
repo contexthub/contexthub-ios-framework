@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Tokens version="1.0">
-	<File path="Constants/CCHSensorPipelineErrorCode.html">
+	<File path="Constants/CCHLogErrorCode.html">
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/c/tdef/CCHSensorPipelineErrorCode</TokenIdentifier>
-			<Abstract type="html">ContextHub Pipeline error codes.</Abstract>
-			<DeclaredIn>CCHSensorPipeline.h</DeclaredIn>
+			<TokenIdentifier>//apple_ref/c/tdef/CCHLogErrorCode</TokenIdentifier>
+			<Abstract type="html">ContextHub CCHLog error codes.</Abstract>
+			<DeclaredIn>CCHLog.h</DeclaredIn>
             
 			
 			<NodeRef refid="17"/>
@@ -14,34 +14,23 @@
 		
         
         <Token>
-            <TokenIdentifier>//apple_ref/c/econst/CCHSensorPipelineTimeOutError</TokenIdentifier>
-            <Abstract type="html">     Synchronization timeout error code.
+            <TokenIdentifier>//apple_ref/c/econst/CCHInvalidLogJSONObject</TokenIdentifier>
+            <Abstract type="html">     Invalid JSON object.
      </Abstract>
-            <Declaration>CCHSensorPipelineTimeOutError</Declaration>
+            <Declaration>CCHInvalidLogJSONObject</Declaration>
             
-            <DeclaredIn>CCHSensorPipeline.h</DeclaredIn>
+            <DeclaredIn>CCHLog.h</DeclaredIn>
             
             <NodeRef refid="17"/>
         </Token>
         
         <Token>
-            <TokenIdentifier>//apple_ref/c/econst/CCHSensorPipelineMissingEventError</TokenIdentifier>
-            <Abstract type="html">     The custom event is nil.
+            <TokenIdentifier>//apple_ref/c/econst/CCHMissingMessage</TokenIdentifier>
+            <Abstract type="html">     Missing message.
      </Abstract>
-            <Declaration>CCHSensorPipelineMissingEventError</Declaration>
+            <Declaration>CCHMissingMessage</Declaration>
             
-            <DeclaredIn>CCHSensorPipeline.h</DeclaredIn>
-            
-            <NodeRef refid="17"/>
-        </Token>
-        
-        <Token>
-            <TokenIdentifier>//apple_ref/c/econst/CCHSensorPipelineMissingNameKeyError</TokenIdentifier>
-            <Abstract type="html">     The custom event is missing a name key
-     </Abstract>
-            <Declaration>CCHSensorPipelineMissingNameKeyError</Declaration>
-            
-            <DeclaredIn>CCHSensorPipeline.h</DeclaredIn>
+            <DeclaredIn>CCHLog.h</DeclaredIn>
             
             <NodeRef refid="17"/>
         </Token>

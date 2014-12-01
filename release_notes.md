@@ -1,3 +1,6 @@
+## 1.4.1 - December 1, 2014
+- Coming Soon
+
 ## 1.3.5 - November 4, 2014
 - updated the way tags are querired.  Tags are now retrieved using an AND operator rather than an OR.  So if you have a resource that is tagged [a, b, c] and query for [a, c], it will return the resource.  If you query [a, d] it will not return the resource.
 - added a new object `CCHContextHubPush` that is used when resources changes are pushed to the device

@@ -97,6 +97,29 @@
 		</Token>
 		
 		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/CCHDevice/getDevicesWithTags:operator:completionHandler:</TokenIdentifier>
+			<Abstract type="html">Gets devices from ContextHub using tags.</Abstract>
+			<DeclaredIn>CCHDevice.h</DeclaredIn>
+			
+			<Declaration>- (void)getDevicesWithTags:(NSArray *)tags operator:(NSString *)tagOperator completionHandler:(void ( ^ ) ( NSArray *devices , NSError *error ))completionHandler</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>tags</Name>
+					<Abstract type="html">Tags of the devices that you are interested in.</Abstract>
+				</Parameter><Parameter>
+					<Name>tagOperator</Name>
+					<Abstract type="html">(optional) Operator used to build the query with the tags.  Passing ANY will find all devices that match any of the tags. Passing ALL will find devices that have all of the tags provided.  Passing nil will use the default ALL operator.</Abstract>
+				</Parameter><Parameter>
+					<Name>completionHandler</Name>
+					<Abstract type="html">Called when the request completes. The block is passed an NSArray of NSDictionary objects that represent the devices.  If an error occurs, the NSError will be passed to the block.</Abstract>
+				</Parameter>
+			</Parameters>
+			
+			<Anchor>//api/name/getDevicesWithTags:operator:completionHandler:</Anchor>
+            <NodeRef refid="3"/>
+		</Token>
+		
+		<Token>
 			<TokenIdentifier>//apple_ref/occ/instm/CCHDevice/setDeviceAlias:tags:completionHandler:</TokenIdentifier>
 			<Abstract type="html">Updates the device record on contexthub.</Abstract>
 			<DeclaredIn>CCHDevice.h</DeclaredIn>
