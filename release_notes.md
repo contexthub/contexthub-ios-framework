@@ -9,6 +9,7 @@ GET API's have new methods that accept a Tag Operator.  The operator is used to 
 
 ### Push ###
 `CCHPush` supports the Unified Push service provided by the ContextHub API.  The following Keys are suported in the userInfo dictionary that is used in `CCHPush`.
+
 | key   | value |
 | ----- | ----- |
 | alert | the message you want sent |
@@ -29,7 +30,7 @@ GET API's have new methods that accept a Tag Operator.  The operator is used to 
 
 ## 1.3.5 - November 4, 2014
 - updated the way tags are querired.  Tags are now retrieved using an AND operator rather than an OR.  So if you have a resource that is tagged [a, b, c] and query for [a, c], it will return the resource.  If you query [a, d] it will not return the resource.
-- added a new object `CCHContextHubPush` that is used when resources changes are pushed to the device
+- added a new object `CCHContextHubPush` that is used when resource changes are pushed to the device
 - CCHPush **method signature changed** Changed the signature of the completion handler in `application:didReceiveRemoteNotification:completionHandler:` from `(void (^) (enum UIBackgroundFetchResult result, BOOL CCHContextHubPush))` to `(void (^) (enum UIBackgroundFetchResult result, CCHContextHubPush contextHubPush))`  Note that it now passes the new CCHContextHubPush object to the completion handler.
 
 ## 1.3.4 - October 23, 2014
