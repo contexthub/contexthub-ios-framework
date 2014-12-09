@@ -37,7 +37,11 @@ GET API's have new methods that accept a Tag Operator.  The operator is used to 
 | url_args | sets the url arguments |
 | collapse_key | used to group messages on the Google Cloud Messaging service |
 
-**CCHPush Method Change**: the tag operator has been added to the send method. `- (void)sendNotificationToTags:(NSArray *)tags operator:(NSString *)tagOperator userInfo:(NSDictionary *)userInfo completionHandler:(void (^)(NSError *error))completionHandler;`
+**CCHPush Method Change**: the tag operator has been added to the send method. 
+
+```objective-c
+- (void)sendNotificationToTags:(NSArray *)tags operator:(NSString *)tagOperator userInfo:(NSDictionary *)userInfo completionHandler:(void (^)(NSError *error))completionHandler;
+```
 
 
 ## 1.3.5 - November 4, 2014
