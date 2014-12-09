@@ -1,6 +1,6 @@
 ## 1.4.1 - December 1, 2014
 
-### Tag Operator###
+#### Tag Operator ####
 GET API's have new methods that accept a Tag Operator.  The operator is used to build the query with the tags.  Passing ANY will find all geofences that match any of the tags. Passing ALL will find geofences that have all of the tags provided.  Passing nil will use the default ALL operator.
 - CCHBeaconService: 
 ```objective-c
@@ -19,7 +19,7 @@ GET API's have new methods that accept a Tag Operator.  The operator is used to 
 - (void)getItemsWithTags:(NSArray *)tags operator:(NSString *)tagOperator keyPath:(NSString *)keyPath value:(NSString *)value completionHandler:(vaultListingCompletionBlock)completionHandler;
 ```
 
-### Push ###
+#### Push ####
 `CCHPush` supports the Unified Push service provided by the ContextHub API.  The following Keys are suported in the userInfo dictionary that is used in `CCHPush`.
 
 | key   | value |
