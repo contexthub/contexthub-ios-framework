@@ -2,10 +2,22 @@
 
 ### Tag Operator###
 GET API's have new methods that accept a Tag Operator.  The operator is used to build the query with the tags.  Passing ANY will find all geofences that match any of the tags. Passing ALL will find geofences that have all of the tags provided.  Passing nil will use the default ALL operator.
-- CCHBeaconService: `- (void)getBeaconsWithTags:(NSArray *)tags operator:(NSString *)tagOperator completionHandler:(void (^)(NSArray *beacons, NSError *error))completionHandler;`
-- CCHDevice: `- (void)getDevicesWithTags:(NSArray *)tags operator:(NSString *)tagOperator completionHandler:(void(^)(NSArray *devices, NSError *error))completionHandler;`
-- CCHGeofenceService: `- (void)getGeofencesWithTags:(NSArray *)tags operator:(NSString *)tagOperator location:(CLLocation *)location radius:(CLLocationDistance)radius completionHandler:(void(^)(NSArray *geofences, NSError *error))completionHandler;`
-- CCHVault: `- (void)getItemsWithTags:(NSArray *)tags operator:(NSString *)tagOperator keyPath:(NSString *)keyPath value:(NSString *)value completionHandler:(vaultListingCompletionBlock)completionHandler;`
+- CCHBeaconService: 
+```objective-c
+- (void)getBeaconsWithTags:(NSArray *)tags operator:(NSString *)tagOperator completionHandler:(void (^)(NSArray *beacons, NSError *error))completionHandler;
+```
+- CCHDevice: 
+```objective-c
+- (void)getDevicesWithTags:(NSArray *)tags operator:(NSString *)tagOperator completionHandler:(void(^)(NSArray *devices, NSError *error))completionHandler;
+```
+- CCHGeofenceService: 
+```objective-c
+- (void)getGeofencesWithTags:(NSArray *)tags operator:(NSString *)tagOperator location:(CLLocation *)location radius:(CLLocationDistance)radius completionHandler:(void(^)(NSArray *geofences, NSError *error))completionHandler;
+```
+- CCHVault: 
+```
+- (void)getItemsWithTags:(NSArray *)tags operator:(NSString *)tagOperator keyPath:(NSString *)keyPath value:(NSString *)value completionHandler:(vaultListingCompletionBlock)completionHandler;
+```
 
 ### Push ###
 `CCHPush` supports the Unified Push service provided by the ContextHub API.  The following Keys are suported in the userInfo dictionary that is used in `CCHPush`.
