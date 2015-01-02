@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Tokens version="1.0">
-	<File path="Constants/CCHSubscriptionErrorCode.html">
+	<File path="Constants/CCHSensorPipelineErrorCode.html">
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/c/tdef/CCHSubscriptionErrorCode</TokenIdentifier>
-			<Abstract type="html">ContextHub Subscription error codes.</Abstract>
-			<DeclaredIn>CCHSubscriptionService.h</DeclaredIn>
+			<TokenIdentifier>//apple_ref/c/tdef/CCHSensorPipelineErrorCode</TokenIdentifier>
+			<Abstract type="html">ContextHub Pipeline error codes.</Abstract>
+			<DeclaredIn>CCHSensorPipeline.h</DeclaredIn>
             
 			
 			<NodeRef refid="18"/>
@@ -14,12 +14,34 @@
 		
         
         <Token>
-            <TokenIdentifier>//apple_ref/c/econst/CCHNullTagsCode</TokenIdentifier>
-            <Abstract type="html">     Null tags error code.
+            <TokenIdentifier>//apple_ref/c/econst/CCHSensorPipelineTimeOutError</TokenIdentifier>
+            <Abstract type="html">     Synchronization timeout error code.
      </Abstract>
-            <Declaration>CCHNullTagsCode</Declaration>
+            <Declaration>CCHSensorPipelineTimeOutError</Declaration>
             
-            <DeclaredIn>CCHSubscriptionService.h</DeclaredIn>
+            <DeclaredIn>CCHSensorPipeline.h</DeclaredIn>
+            
+            <NodeRef refid="18"/>
+        </Token>
+        
+        <Token>
+            <TokenIdentifier>//apple_ref/c/econst/CCHSensorPipelineMissingEventError</TokenIdentifier>
+            <Abstract type="html">     The custom event is nil.
+     </Abstract>
+            <Declaration>CCHSensorPipelineMissingEventError</Declaration>
+            
+            <DeclaredIn>CCHSensorPipeline.h</DeclaredIn>
+            
+            <NodeRef refid="18"/>
+        </Token>
+        
+        <Token>
+            <TokenIdentifier>//apple_ref/c/econst/CCHSensorPipelineMissingNameKeyError</TokenIdentifier>
+            <Abstract type="html">     The custom event is missing a name key
+     </Abstract>
+            <Declaration>CCHSensorPipelineMissingNameKeyError</Declaration>
+            
+            <DeclaredIn>CCHSensorPipeline.h</DeclaredIn>
             
             <NodeRef refid="18"/>
         </Token>

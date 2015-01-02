@@ -1,6 +1,52 @@
+## 1.4.1 - December 1, 2014
+
+#### Tag Operator ####
+GET API's have new methods that accept a Tag Operator.  The operator is used to build the query with the tags.  Passing ANY will find all geofences that match any of the tags. Passing ALL will find geofences that have all of the tags provided.  Passing nil will use the default ALL operator.
+- CCHBeaconService: 
+```objective-c
+- (void)getBeaconsWithTags:(NSArray *)tags operator:(NSString *)tagOperator completionHandler:(void (^)(NSArray *beacons, NSError *error))completionHandler;
+```
+- CCHDevice: 
+```objective-c
+- (void)getDevicesWithTags:(NSArray *)tags operator:(NSString *)tagOperator completionHandler:(void(^)(NSArray *devices, NSError *error))completionHandler;
+```
+- CCHGeofenceService: 
+```objective-c
+- (void)getGeofencesWithTags:(NSArray *)tags operator:(NSString *)tagOperator location:(CLLocation *)location radius:(CLLocationDistance)radius completionHandler:(void(^)(NSArray *geofences, NSError *error))completionHandler;
+```
+- CCHVault: 
+```
+- (void)getItemsWithTags:(NSArray *)tags operator:(NSString *)tagOperator keyPath:(NSString *)keyPath value:(NSString *)value completionHandler:(vaultListingCompletionBlock)completionHandler;
+```
+
+#### Push ####
+`CCHPush` supports the Unified Push service provided by the ContextHub API.  The following Keys are supported in the userInfo dictionary that is used in `CCHPush`.
+
+| key   | value |
+| ----- | ----- |
+| alert | the message you want sent |
+| sound | sound file you want played |
+| content-available | pass in a 1 if you want to deliver a push in the background |
+| badge | the number to be displayed on the icon |
+| exclude_device_ids | an array of the device ids that should be excluded |
+| exclude_push_tokens | an array of push tokens that should be excluded |
+| mdm | mobile device management key |
+| priority | can be either be set to 10 (immediate) or 5 (conserve power) |
+| expiry | identifies when a notification is no longer valid and can be discarded.  The default is 1 day |
+| category | category for push |
+| url_args | sets the url arguments |
+| collapse_key | used to group messages on the Google Cloud Messaging service |
+
+**CCHPush Method Change**: the tag operator has been added to the send method. 
+
+```objective-c
+- (void)sendNotificationToTags:(NSArray *)tags operator:(NSString *)tagOperator userInfo:(NSDictionary *)userInfo completionHandler:(void (^)(NSError *error))completionHandler;
+```
+
+
 ## 1.3.5 - November 4, 2014
 - updated the way tags are querired.  Tags are now retrieved using an AND operator rather than an OR.  So if you have a resource that is tagged [a, b, c] and query for [a, c], it will return the resource.  If you query [a, d] it will not return the resource.
-- added a new object `CCHContextHubPush` that is used when resources changes are pushed to the device
+- added a new object `CCHContextHubPush` that is used when resource changes are pushed to the device
 - CCHPush **method signature changed** Changed the signature of the completion handler in `application:didReceiveRemoteNotification:completionHandler:` from `(void (^) (enum UIBackgroundFetchResult result, BOOL CCHContextHubPush))` to `(void (^) (enum UIBackgroundFetchResult result, CCHContextHubPush contextHubPush))`  Note that it now passes the new CCHContextHubPush object to the completion handler.
 
 ## 1.3.4 - October 23, 2014

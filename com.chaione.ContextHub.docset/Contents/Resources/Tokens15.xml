@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Tokens version="1.0">
-	<File path="Constants/CCHGeofenceServiceErrorCode.html">
+	<File path="Constants/CCHDeviceErrorCode.html">
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/c/tdef/CCHGeofenceServiceErrorCode</TokenIdentifier>
-			<Abstract type="html">ContextHub GeofenceService error codes.</Abstract>
-			<DeclaredIn>CCHGeofenceService.h</DeclaredIn>
+			<TokenIdentifier>//apple_ref/c/tdef/CCHDeviceErrorCode</TokenIdentifier>
+			<Abstract type="html">ContextHub Device error codes.</Abstract>
+			<DeclaredIn>CCHDevice.h</DeclaredIn>
             
 			
 			<NodeRef refid="15"/>
@@ -14,56 +14,34 @@
 		
         
         <Token>
-            <TokenIdentifier>//apple_ref/c/econst/CCHInvalidGeofenceDictionary</TokenIdentifier>
-            <Abstract type="html">     Dictionary can&apos;t be used to create a geofence.
+            <TokenIdentifier>//apple_ref/c/econst/CCHInvalidDeviceIdParameter</TokenIdentifier>
+            <Abstract type="html">     Device id cannot be nil 
      </Abstract>
-            <Declaration>CCHInvalidGeofenceDictionary</Declaration>
+            <Declaration>CCHInvalidDeviceIdParameter</Declaration>
             
-            <DeclaredIn>CCHGeofenceService.h</DeclaredIn>
+            <DeclaredIn>CCHDevice.h</DeclaredIn>
             
             <NodeRef refid="15"/>
         </Token>
         
         <Token>
-            <TokenIdentifier>//apple_ref/c/econst/CCHInvalidCenterParameter</TokenIdentifier>
-            <Abstract type="html">    You must pass a center.
-    </Abstract>
-            <Declaration>CCHInvalidCenterParameter</Declaration>
+            <TokenIdentifier>//apple_ref/c/econst/CCHInvalidDeviceAliasParameter</TokenIdentifier>
+            <Abstract type="html">     Alias cannot be nil
+     </Abstract>
+            <Declaration>CCHInvalidDeviceAliasParameter</Declaration>
             
-            <DeclaredIn>CCHGeofenceService.h</DeclaredIn>
+            <DeclaredIn>CCHDevice.h</DeclaredIn>
             
             <NodeRef refid="15"/>
         </Token>
         
         <Token>
-            <TokenIdentifier>//apple_ref/c/econst/CCHInvalidRadiusParameter</TokenIdentifier>
-            <Abstract type="html">     Radius cannot be nil.
+            <TokenIdentifier>//apple_ref/c/econst/CCHInvalidDeviceTagsParameter</TokenIdentifier>
+            <Abstract type="html">     Tags cannot be nil
      </Abstract>
-            <Declaration>CCHInvalidRadiusParameter</Declaration>
+            <Declaration>CCHInvalidDeviceTagsParameter</Declaration>
             
-            <DeclaredIn>CCHGeofenceService.h</DeclaredIn>
-            
-            <NodeRef refid="15"/>
-        </Token>
-        
-        <Token>
-            <TokenIdentifier>//apple_ref/c/econst/CCHInvalidNameParameter</TokenIdentifier>
-            <Abstract type="html">     Name cannot be nil.
-     </Abstract>
-            <Declaration>CCHInvalidNameParameter</Declaration>
-            
-            <DeclaredIn>CCHGeofenceService.h</DeclaredIn>
-            
-            <NodeRef refid="15"/>
-        </Token>
-        
-        <Token>
-            <TokenIdentifier>//apple_ref/c/econst/CCHInvalidIdParameter</TokenIdentifier>
-            <Abstract type="html">     Geofence Id cannot be nil.
-     </Abstract>
-            <Declaration>CCHInvalidIdParameter</Declaration>
-            
-            <DeclaredIn>CCHGeofenceService.h</DeclaredIn>
+            <DeclaredIn>CCHDevice.h</DeclaredIn>
             
             <NodeRef refid="15"/>
         </Token>

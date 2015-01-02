@@ -80,6 +80,14 @@ typedef NS_ENUM(NSInteger, CCHDeviceErrorCode) {
  */
 - (void)getDevicesWithTags:(NSArray *)tags completionHandler:(void(^)(NSArray *devices, NSError *error))completionHandler;
 
+/**
+ Gets devices from ContextHub using tags.
+ 
+ @param tags Tags of the devices that you are interested in.
+ @param tagOperator (optional) Operator used to build the query with the tags.  Passing ANY will find all devices that match any of the tags. Passing ALL will find devices that have all of the tags provided.  Passing nil will use the default ALL operator.
+ @param completionHandler Called when the request completes. The block is passed an NSArray of NSDictionary objects that represent the devices.  If an error occurs, the NSError will be passed to the block.
+ */
+- (void)getDevicesWithTags:(NSArray *)tags operator:(NSString *)tagOperator completionHandler:(void(^)(NSArray *devices, NSError *error))completionHandler;
 
 /**
  Updates the device record on contexthub.
