@@ -20,7 +20,7 @@ GET API's have new methods that accept a Tag Operator.  The operator is used to 
 ```
 
 #### Push ####
-`CCHPush` supports the Unified Push service provided by the ContextHub API.  The following Keys are suported in the userInfo dictionary that is used in `CCHPush`.
+`CCHPush` supports the Unified Push service provided by the ContextHub API.  The following Keys are supported in the userInfo dictionary that is used in `CCHPush`.
 
 | key   | value |
 | ----- | ----- |
