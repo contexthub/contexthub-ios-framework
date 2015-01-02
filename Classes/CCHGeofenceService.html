@@ -58,6 +58,8 @@
 	
 	<option value="//api/name/getGeofencesWithTags:location:radius:completionHandler:">&nbsp;&nbsp;&nbsp;&nbsp;- getGeofencesWithTags:location:radius:completionHandler:</option>
 	
+	<option value="//api/name/getGeofencesWithTags:operator:location:radius:completionHandler:">&nbsp;&nbsp;&nbsp;&nbsp;- getGeofencesWithTags:operator:location:radius:completionHandler:</option>
+	
 	<option value="//api/name/updateGeofence:completionHandler:">&nbsp;&nbsp;&nbsp;&nbsp;- updateGeofence:completionHandler:</option>
 	
 	
@@ -103,6 +105,8 @@
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/getGeofenceWithId:completionHandler:">getGeofenceWithId:completionHandler:</a></span></li>
 	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/getGeofencesWithTags:location:radius:completionHandler:">getGeofencesWithTags:location:radius:completionHandler:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/getGeofencesWithTags:operator:location:radius:completionHandler:">getGeofencesWithTags:operator:location:radius:completionHandler:</a></span></li>
 	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/updateGeofence:completionHandler:">updateGeofence:completionHandler:</a></span></li>
 	
@@ -218,6 +222,12 @@
 </li><li>
 	<span class="tooltip">
 		<code><a href="#//api/name/getGeofencesWithTags:location:radius:completionHandler:">&ndash;&nbsp;getGeofencesWithTags:location:radius:completionHandler:</a></code>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/getGeofencesWithTags:operator:location:radius:completionHandler:">&ndash;&nbsp;getGeofencesWithTags:operator:location:radius:completionHandler:</a></code>
 	</span>
 	
 	
@@ -594,6 +604,72 @@
 </div>
 						
 						<div class="section-method">
+	<a name="//api/name/getGeofencesWithTags:operator:location:radius:completionHandler:" title="getGeofencesWithTags:operator:location:radius:completionHandler:"></a>
+	<h3 class="subsubtitle method-title">getGeofencesWithTags:operator:location:radius:completionHandler:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Gets geofences from <a href="../Classes/ContextHub.html">ContextHub</a> server.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (void)getGeofencesWithTags:(NSArray *)<em>tags</em> operator:(NSString *)<em>tagOperator</em> location:(CLLocation *)<em>location</em> radius:(CLLocationDistance)<em>radius</em> completionHandler:(void ( ^ ) ( NSArray *geofences , NSError *error ))<em>completionHandler</em></code></div>
+
+    
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>tags</em></dt>
+			<dd><p>(optional) Tags of the geofences that you are interested in.  Passing nil will return geofences without tags.</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>tagOperator</em></dt>
+			<dd><p>(optional) Operator used to build the query with the tags.  Passing ANY will find all geofences that match any of the tags. Passing ALL will find geofences that have all of the tags provided.  Passing nil will use the default ALL operator.</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>location</em></dt>
+			<dd><p>(optional) Locatoin is used to filter the results to the nearest geofences.  Passing nil will remove the location filter.</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>radius</em></dt>
+			<dd><p>(optional) Radius in meters around the location which <a href="../Classes/ContextHub.html">ContextHub</a> considers &ldquo;nearby&rdquo;. Passing nil to location will cause this parameter to be ignored. Passing 0 will use the default radius of 50 miles (80437 meters)</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>completionHandler</em></dt>
+			<dd><p>Called when the request completes. The block is passed an NSArray of NSDictionary objects that represent geofences.  If an error occurs, the NSError will be passed to the block.</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">CCHGeofenceService.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
 	<a name="//api/name/updateGeofence:completionHandler:" title="updateGeofence:completionHandler:"></a>
 	<h3 class="subsubtitle method-title">updateGeofence:completionHandler:</h3>
 	
@@ -659,7 +735,7 @@
 				<div id="footer">
 					<hr />
 					<div class="footer-copyright">
-						<p><span class="copyright">&copy; 2014 ContextHub. All rights reserved. (Last updated: 2014-10-29)</span><br />
+						<p><span class="copyright">&copy; 2015 ContextHub. All rights reserved. (Last updated: 2015-01-02)</span><br />
 						
 						<span class="generator">Generated by <a href="http://appledoc.gentlebytes.com">appledoc 2.2 (build 963)</a>.</span></p>
 						
