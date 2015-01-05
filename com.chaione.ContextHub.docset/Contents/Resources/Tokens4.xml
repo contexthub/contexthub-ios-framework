@@ -85,7 +85,7 @@
 					<Abstract type="html">(optional) Tags of the geofences that you are interested in.  Passing nil will return geofences without tags.</Abstract>
 				</Parameter><Parameter>
 					<Name>location</Name>
-					<Abstract type="html">(optional) Locatoin is used to filter the results to the nearest geofences.  Passing nil will remove the location filter.</Abstract>
+					<Abstract type="html">(optional) Location is used to filter the results to the nearest geofences.  Passing nil will remove the location filter.</Abstract>
 				</Parameter><Parameter>
 					<Name>radius</Name>
 					<Abstract type="html">(optional) Radius in meters around the location which ContextHub considers &quot;nearby&quot;. Passing nil to location will cause this parameter to be ignored. Passing 0 will use the default radius of 50 miles (80437 meters)</Abstract>
@@ -114,10 +114,10 @@
 					<Abstract type="html">(optional) Operator used to build the query with the tags.  Passing ANY will find all geofences that match any of the tags. Passing ALL will find geofences that have all of the tags provided.  Passing nil will use the default ALL operator.</Abstract>
 				</Parameter><Parameter>
 					<Name>location</Name>
-					<Abstract type="html">(optional) Locatoin is used to filter the results to the nearest geofences.  Passing nil will remove the location filter.</Abstract>
+					<Abstract type="html">(optional) Location is used to filter the results to the nearest geofences.  Passing nil will remove the location filter.</Abstract>
 				</Parameter><Parameter>
 					<Name>radius</Name>
-					<Abstract type="html">(optional) Radius in meters around the location which ContextHub considers &quot;nearby&quot;. Passing nil to location will cause this parameter to be ignored. Passing 0 will use the default radius of 50 miles (80437 meters)</Abstract>
+					<Abstract type="html">(optional) Radius in meters around the location which ContextHub considers &quot;nearby&quot;. Passing 0 to radius will cause this parameter to be ignored. Passing 0 will use the default radius of 50 miles (80437 meters)</Abstract>
 				</Parameter><Parameter>
 					<Name>completionHandler</Name>
 					<Abstract type="html">Called when the request completes. The block is passed an NSArray of NSDictionary objects that represent geofences.  If an error occurs, the NSError will be passed to the block.</Abstract>
