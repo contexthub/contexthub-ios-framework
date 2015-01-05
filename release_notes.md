@@ -1,6 +1,7 @@
 ## 1.5.1 January 5, 2015
-Release 1.5.1
-#### CCHDevice #### 
+
+#### CCHDevice ####
+
 - added a new method to get devices location with a location filter.
 
 ```objective-c
