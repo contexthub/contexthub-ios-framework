@@ -1,3 +1,18 @@
+## 1.5.1 January 5, 2015
+
+#### CCHDevice ####
+
+- added a new method to get devices location with a location filter.
+
+```objective-c
+- (void)getDevicesWithTags:(NSArray *)tags operator:(NSString *)tagOperator location:(CLLocation *)location radius:(CLLocationDistance)radius completionHandler:(void(^)(NSArray *devices, NSError *error))completionHandler;
+```
+
+#### Device Profile ####
+
+- added en_US_POSIX Locale to triggered_at date formatter. 
+- added local keys to the device profile:  `locale_id`, `locale_language`, `locale_country`, `locale_currency`.
+
 ## 1.4.1 - December 1, 2014
 
 #### Tag Operator ####
