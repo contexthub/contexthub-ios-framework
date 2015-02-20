@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Tokens version="1.0">
-	<File path="Classes/CCHSubscriptionService.html">
+	<File path="Classes/CCHVault.html">
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/cl/CCHSubscriptionService</TokenIdentifier>
-			<Abstract type="html">The subscription service is used tell ContextHub that you want to be notified when tagged elements are created, updated, and deleted on the server.  You must enable push notifications if you want to receive updates from the server.
-When server changes are made, the device is notified using a background push notification.  The subscription service will post notifications to the NSNotificationCenter when changes are detected.</Abstract>
-			<DeclaredIn>CCHSubscriptionService.h</DeclaredIn>
+			<TokenIdentifier>//apple_ref/occ/cl/CCHVault</TokenIdentifier>
+			<Abstract type="html">The CCHVault is used to persist data on the ContextHub servers.  This class provides methods for storing data on ContextHub servers.  Data stored in the vault can be accessed inside the ContextRules.
+Once you persist data, you can retrieve it by Tag or id.</Abstract>
+			<DeclaredIn>CCHVault.h</DeclaredIn>
             
 			
 			<NodeRef refid="9"/>
@@ -14,157 +14,146 @@ When server changes are made, the device is notified using a background push not
 		
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/clm/CCHSubscriptionService/sharedInstance</TokenIdentifier>
-			<Abstract type="html">The singleton instance of the CCHSubscriptionService.</Abstract>
-			<DeclaredIn>CCHSubscriptionService.h</DeclaredIn>
+			<TokenIdentifier>//apple_ref/occ/clm/CCHVault/sharedInstance</TokenIdentifier>
+			<Abstract type="html">Returns the singleton instance of the the Vault.</Abstract>
+			<DeclaredIn>CCHVault.h</DeclaredIn>
 			
 			<Declaration>+ (instancetype)sharedInstance</Declaration>
 			
-			<ReturnValue><Abstract type="html">The singleton instance of the CCHSubscriptionService.</Abstract></ReturnValue>
+			<ReturnValue><Abstract type="html">Returns the singleton instance of the the Vault.</Abstract></ReturnValue>
 			<Anchor>//api/name/sharedInstance</Anchor>
             <NodeRef refid="9"/>
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/CCHSubscriptionService/getSubscriptionsWithCompletionHandler:</TokenIdentifier>
-			<Abstract type="html">Gets all subscriptions for the current device.</Abstract>
-			<DeclaredIn>CCHSubscriptionService.h</DeclaredIn>
+			<TokenIdentifier>//apple_ref/occ/instm/CCHVault/createItem:tags:completionHandler:</TokenIdentifier>
+			<Abstract type="html">Creates items in the Vault.</Abstract>
+			<DeclaredIn>CCHVault.h</DeclaredIn>
 			
-			<Declaration>- (void)getSubscriptionsWithCompletionHandler:(void ( ^ ) ( NSDictionary *subscriptions , NSError *error ))completionHandler</Declaration>
+			<Declaration>- (void)createItem:(id)item tags:(NSArray *)tags completionHandler:(void ( ^ ) ( NSDictionary *response , NSError *error ))completionHandler</Declaration>
 			<Parameters>
 				<Parameter>
+					<Name>item</Name>
+					<Abstract type="html">The item you want to persist.  This item must be a valid JSON object. See NSJSONSerialization:isValidJSONObject.</Abstract>
+				</Parameter><Parameter>
+					<Name>tags</Name>
+					<Abstract type="html">(optional) The tags to be applied to the item.</Abstract>
+				</Parameter><Parameter>
 					<Name>completionHandler</Name>
-					<Abstract type="html">executed when the request completes.  The block is passed an NSDictionary of subscriptions.  If an error occurs, the NSError will be passed to the block.</Abstract>
+					<Abstract type="html">(optional) Called when the request completes. The block is passed an NSDictionary representation of the item. If an error occurs, the NSError will be passed to the block.</Abstract>
 				</Parameter>
 			</Parameters>
 			
-			<Anchor>//api/name/getSubscriptionsWithCompletionHandler:</Anchor>
+			<Anchor>//api/name/createItem:tags:completionHandler:</Anchor>
             <NodeRef refid="9"/>
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/CCHSubscriptionService/addBeaconSubscriptionForTags:completionHandler:</TokenIdentifier>
-			<Abstract type="html">Subscribes the device to beacon change notifications for the specified tags.</Abstract>
-			<DeclaredIn>CCHSubscriptionService.h</DeclaredIn>
+			<TokenIdentifier>//apple_ref/occ/instm/CCHVault/getItemWithId:completionHandler:</TokenIdentifier>
+			<Abstract type="html">Gets an item from the Vault.</Abstract>
+			<DeclaredIn>CCHVault.h</DeclaredIn>
 			
-			<Declaration>- (void)addBeaconSubscriptionForTags:(NSArray *)tags completionHandler:(void ( ^ ) ( NSError *error ))completionHandler</Declaration>
+			<Declaration>- (void)getItemWithId:(NSString *)vaultId completionHandler:(void ( ^ ) ( NSDictionary *response , NSError *error ))completionHandler</Declaration>
 			<Parameters>
 				<Parameter>
-					<Name>tags</Name>
-					<Abstract type="html">An NSArray of tags.</Abstract>
+					<Name>vaultId</Name>
+					<Abstract type="html">The vault id of the item.  The id is found in the key path @&quot;vault_info.id&quot;.</Abstract>
 				</Parameter><Parameter>
 					<Name>completionHandler</Name>
-					<Abstract type="html">(optional) Is executed when the request completes.  If an error occurs, the NSError will be passed to the block.</Abstract>
+					<Abstract type="html">Called when the request completes.</Abstract>
 				</Parameter>
 			</Parameters>
 			
-			<Anchor>//api/name/addBeaconSubscriptionForTags:completionHandler:</Anchor>
+			<Anchor>//api/name/getItemWithId:completionHandler:</Anchor>
             <NodeRef refid="9"/>
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/CCHSubscriptionService/removeBeaconSubscriptionForTags:completionHandler:</TokenIdentifier>
-			<Abstract type="html">Unsubscribes the device from beacon change notifications for the specified tags.</Abstract>
-			<DeclaredIn>CCHSubscriptionService.h</DeclaredIn>
+			<TokenIdentifier>//apple_ref/occ/instm/CCHVault/getItemsWithTags:completionHandler:</TokenIdentifier>
+			<Abstract type="html">Gets items stored in the Vault.</Abstract>
+			<DeclaredIn>CCHVault.h</DeclaredIn>
 			
-			<Declaration>- (void)removeBeaconSubscriptionForTags:(NSArray *)tags completionHandler:(void ( ^ ) ( NSError *error ))completionHandler</Declaration>
+			<Declaration>- (void)getItemsWithTags:(NSArray *)tags completionHandler:(void ( ^ ) ( NSArray *responses , NSError *error ))completionHandler</Declaration>
 			<Parameters>
 				<Parameter>
 					<Name>tags</Name>
-					<Abstract type="html">An NSArray of tags.</Abstract>
+					<Abstract type="html">(optional) The tags to be applied to the item.</Abstract>
 				</Parameter><Parameter>
 					<Name>completionHandler</Name>
-					<Abstract type="html">(optional) Is executed when the request completes.  If an error occurs, the NSError will be passed to the block.</Abstract>
+					<Abstract type="html">Called when the request completes. The block is passed an NSArray of dictionaries that represent the items.  If an error occurs, the NSError will be passed to the block.</Abstract>
 				</Parameter>
 			</Parameters>
 			
-			<Anchor>//api/name/removeBeaconSubscriptionForTags:completionHandler:</Anchor>
+			<Anchor>//api/name/getItemsWithTags:completionHandler:</Anchor>
             <NodeRef refid="9"/>
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/CCHSubscriptionService/addGeofenceSubscriptionForTags:completionHandler:</TokenIdentifier>
-			<Abstract type="html">Subscribes the device to geofence change notifications for the specified tags.</Abstract>
-			<DeclaredIn>CCHSubscriptionService.h</DeclaredIn>
+			<TokenIdentifier>//apple_ref/occ/instm/CCHVault/getItemsWithTags:operator:keyPath:value:completionHandler:</TokenIdentifier>
+			<Abstract type="html">Gets items stored in the Vault.</Abstract>
+			<DeclaredIn>CCHVault.h</DeclaredIn>
 			
-			<Declaration>- (void)addGeofenceSubscriptionForTags:(NSArray *)tags completionHandler:(void ( ^ ) ( NSError *error ))completionHandler</Declaration>
+			<Declaration>- (void)getItemsWithTags:(NSArray *)tags operator:(NSString *)tagOperator keyPath:(NSString *)keyPath value:(NSString *)value completionHandler:(vaultListingCompletionBlock)completionHandler</Declaration>
 			<Parameters>
 				<Parameter>
 					<Name>tags</Name>
-					<Abstract type="html">An NSArray of tags</Abstract>
+					<Abstract type="html">(optional) The tags to be applied to the item.</Abstract>
+				</Parameter><Parameter>
+					<Name>tagOperator</Name>
+					<Abstract type="html">(optional) Operator used to build the query with the tags.  Passing ANY will find all items that match any of the tags. Passing ALL will find items that have all of the tags provided.  Passing nil will use the default ALL operator.</Abstract>
+				</Parameter><Parameter>
+					<Name>keyPath</Name>
+					<Abstract type="html">(optional) The keyPath that you want to look for.</Abstract>
+				</Parameter><Parameter>
+					<Name>value</Name>
+					<Abstract type="html">(optional) The value that you want to find for the keyPath.</Abstract>
 				</Parameter><Parameter>
 					<Name>completionHandler</Name>
-					<Abstract type="html">(optional) Is executed when the request completes.  If an error occurs, the NSError will be passed to the block.</Abstract>
+					<Abstract type="html">Called when the request completes. The block is passed an NSArray of dictionaries that represent the items.  If an error occurs, the NSError will be passed to the block.</Abstract>
 				</Parameter>
 			</Parameters>
 			
-			<Anchor>//api/name/addGeofenceSubscriptionForTags:completionHandler:</Anchor>
+			<Anchor>//api/name/getItemsWithTags:operator:keyPath:value:completionHandler:</Anchor>
             <NodeRef refid="9"/>
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/CCHSubscriptionService/removeGeofenceSubscriptionForTags:completionHandler:</TokenIdentifier>
-			<Abstract type="html">Unubscribes the device from geofence change notifications for the specified tags.</Abstract>
-			<DeclaredIn>CCHSubscriptionService.h</DeclaredIn>
+			<TokenIdentifier>//apple_ref/occ/instm/CCHVault/updateItem:completionHandler:</TokenIdentifier>
+			<Abstract type="html">Updates an item in the Vault.</Abstract>
+			<DeclaredIn>CCHVault.h</DeclaredIn>
 			
-			<Declaration>- (void)removeGeofenceSubscriptionForTags:(NSArray *)tags completionHandler:(void ( ^ ) ( NSError *error ))completionHandler</Declaration>
+			<Declaration>- (void)updateItem:(NSDictionary *)item completionHandler:(void ( ^ ) ( NSDictionary *response , NSError *error ))completionHandler</Declaration>
 			<Parameters>
 				<Parameter>
-					<Name>tags</Name>
-					<Abstract type="html">An NSArray of tags.</Abstract>
+					<Name>item</Name>
+					<Abstract type="html">The item to be updated.</Abstract>
 				</Parameter><Parameter>
 					<Name>completionHandler</Name>
-					<Abstract type="html">(optional) Is executed when the request completes.  If an error occurs, the NSError will be passed to the block.</Abstract>
+					<Abstract type="html">(optional) Called when the request completes. The block is passed an NSDictionary representation of the item. If an error occurs, the NSError will be passed to the block.</Abstract>
 				</Parameter>
 			</Parameters>
 			
-			<Anchor>//api/name/removeGeofenceSubscriptionForTags:completionHandler:</Anchor>
+			<Anchor>//api/name/updateItem:completionHandler:</Anchor>
             <NodeRef refid="9"/>
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/CCHSubscriptionService/addSubscriptionsForTags:options:completionHandler:</TokenIdentifier>
-			<Abstract type="html">Subscribes the device to change notifications for the specified tags.</Abstract>
-			<DeclaredIn>CCHSubscriptionService.h</DeclaredIn>
+			<TokenIdentifier>//apple_ref/occ/instm/CCHVault/deleteItem:completionHandler:</TokenIdentifier>
+			<Abstract type="html">Deletes an item from the Vault.</Abstract>
+			<DeclaredIn>CCHVault.h</DeclaredIn>
 			
-			<Declaration>- (void)addSubscriptionsForTags:(NSArray *)tags options:(NSArray *)options completionHandler:(void ( ^ ) ( NSError *error ))completionHandler</Declaration>
+			<Declaration>- (void)deleteItem:(NSDictionary *)item completionHandler:(void ( ^ ) ( NSDictionary *response , NSError *error ))completionHandler</Declaration>
 			<Parameters>
 				<Parameter>
-					<Name>tags</Name>
-					<Abstract type="html">An NSArray of tags</Abstract>
-				</Parameter><Parameter>
-					<Name>options</Name>
-					<Abstract type="html">(optional) an NSArray of the elements that you want to subscribe to. (CCHOptionBeacon, CCHOptionGeofence, CCHOptionVault, CCHOptionDevice)</Abstract>
+					<Name>item</Name>
+					<Abstract type="html">The item to be deleted;</Abstract>
 				</Parameter><Parameter>
 					<Name>completionHandler</Name>
-					<Abstract type="html">(optional) Is executed when the request completes.  If an error occurs, the NSError will be passed to the block.</Abstract>
+					<Abstract type="html">(optional) Called when the request completes. If an error occurs, the NSError will be passed to the block.</Abstract>
 				</Parameter>
 			</Parameters>
 			
-			<Anchor>//api/name/addSubscriptionsForTags:options:completionHandler:</Anchor>
-            <NodeRef refid="9"/>
-		</Token>
-		
-		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/CCHSubscriptionService/removeSubscriptionsForTags:options:completionHandler:</TokenIdentifier>
-			<Abstract type="html">Unsubscribes the device from change notifications for the specified tags.</Abstract>
-			<DeclaredIn>CCHSubscriptionService.h</DeclaredIn>
-			
-			<Declaration>- (void)removeSubscriptionsForTags:(NSArray *)tags options:(NSArray *)options completionHandler:(void ( ^ ) ( NSError *error ))completionHandler</Declaration>
-			<Parameters>
-				<Parameter>
-					<Name>tags</Name>
-					<Abstract type="html">An NSArray of tags</Abstract>
-				</Parameter><Parameter>
-					<Name>options</Name>
-					<Abstract type="html">(optional) an NSArray of the elements that you want to unsubscribe from. (CCHOptionBeacon, CCHOptionGeofence, CCHOptionVault, CCHOptionDevice)</Abstract>
-				</Parameter><Parameter>
-					<Name>completionHandler</Name>
-					<Abstract type="html">(optional) Is executed when the request completes.  If an error occurs, the NSError will be passed to the block.</Abstract>
-				</Parameter>
-			</Parameters>
-			
-			<Anchor>//api/name/removeSubscriptionsForTags:options:completionHandler:</Anchor>
+			<Anchor>//api/name/deleteItem:completionHandler:</Anchor>
             <NodeRef refid="9"/>
 		</Token>
 		
