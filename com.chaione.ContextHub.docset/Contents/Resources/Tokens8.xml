@@ -1,13 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Tokens version="1.0">
-	<File path="Classes/CCHSensorPipeline.html">
+	<File path="Classes/CCHSubscriptionService.html">
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/cl/CCHSensorPipeline</TokenIdentifier>
-			<Abstract type="html">The CCHSensorPipeline monitors events as they are triggered.  You can use the CCHSensorPipeline to gain access to the events before and after they are sent to the server.  The CCHSensorPipelineDelegate and CCHSensorPipelineDataSource give you the ability to filter events and add custom data to events before they are sent to the ContextHub server.
-As events are triggered on the device, the framework will assemble a context dictionary that includes data about the event.
-The CCHSensorPipeline will call datasource and delegate life cycle methods and post lifecycle notifications.</Abstract>
-			<DeclaredIn>CCHSensorPipeline.h</DeclaredIn>
+			<TokenIdentifier>//apple_ref/occ/cl/CCHSubscriptionService</TokenIdentifier>
+			<Abstract type="html">The subscription service is used tell ContextHub that you want to be notified when tagged elements are created, updated, and deleted on the server.  You must enable push notifications if you want to receive updates from the server.
+When server changes are made, the device is notified using a background push notification.  The subscription service will post notifications to the NSNotificationCenter when changes are detected.</Abstract>
+			<DeclaredIn>CCHSubscriptionService.h</DeclaredIn>
             
 			
 			<NodeRef refid="8"/>
@@ -15,170 +14,157 @@ The CCHSensorPipeline will call datasource and delegate life cycle methods and p
 		
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/clm/CCHSensorPipeline/sharedInstance</TokenIdentifier>
-			<Abstract type="html">Returns the singleton instanace of the CCHSensorPipeline</Abstract>
-			<DeclaredIn>CCHSensorPipeline.h</DeclaredIn>
+			<TokenIdentifier>//apple_ref/occ/clm/CCHSubscriptionService/sharedInstance</TokenIdentifier>
+			<Abstract type="html">The singleton instance of the CCHSubscriptionService.</Abstract>
+			<DeclaredIn>CCHSubscriptionService.h</DeclaredIn>
 			
 			<Declaration>+ (instancetype)sharedInstance</Declaration>
 			
-			
+			<ReturnValue><Abstract type="html">The singleton instance of the CCHSubscriptionService.</Abstract></ReturnValue>
 			<Anchor>//api/name/sharedInstance</Anchor>
             <NodeRef refid="8"/>
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/CCHSensorPipeline/triggerEvent:completionHandler:</TokenIdentifier>
-			<Abstract type="html">This method give you the ability to trigger custom events on the ContextHub sensor pipeline</Abstract>
-			<DeclaredIn>CCHSensorPipeline.h</DeclaredIn>
+			<TokenIdentifier>//apple_ref/occ/instm/CCHSubscriptionService/getSubscriptionsWithCompletionHandler:</TokenIdentifier>
+			<Abstract type="html">Gets all subscriptions for the current device.</Abstract>
+			<DeclaredIn>CCHSubscriptionService.h</DeclaredIn>
 			
-			<Declaration>- (void)triggerEvent:(NSDictionary *)event completionHandler:(void ( ^ ) ( NSError *error ))completionHandler</Declaration>
+			<Declaration>- (void)getSubscriptionsWithCompletionHandler:(void ( ^ ) ( NSDictionary *subscriptions , NSError *error ))completionHandler</Declaration>
 			<Parameters>
 				<Parameter>
-					<Name>event</Name>
-					<Abstract type="html">The event that you want to send to the server.</Abstract>
+					<Name>completionHandler</Name>
+					<Abstract type="html">executed when the request completes.  The block is passed an NSDictionary of subscriptions.  If an error occurs, the NSError will be passed to the block.</Abstract>
+				</Parameter>
+			</Parameters>
+			
+			<Anchor>//api/name/getSubscriptionsWithCompletionHandler:</Anchor>
+            <NodeRef refid="8"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/CCHSubscriptionService/addBeaconSubscriptionForTags:completionHandler:</TokenIdentifier>
+			<Abstract type="html">Subscribes the device to beacon change notifications for the specified tags.</Abstract>
+			<DeclaredIn>CCHSubscriptionService.h</DeclaredIn>
+			
+			<Declaration>- (void)addBeaconSubscriptionForTags:(NSArray *)tags completionHandler:(void ( ^ ) ( NSError *error ))completionHandler</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>tags</Name>
+					<Abstract type="html">An NSArray of tags.</Abstract>
 				</Parameter><Parameter>
 					<Name>completionHandler</Name>
-					<Abstract type="html">(optional) Called when the event is created.  If an error occurs, the NSError will be passed to the block.</Abstract>
+					<Abstract type="html">(optional) Is executed when the request completes.  If an error occurs, the NSError will be passed to the block.</Abstract>
 				</Parameter>
 			</Parameters>
 			
-			<Anchor>//api/name/triggerEvent:completionHandler:</Anchor>
+			<Anchor>//api/name/addBeaconSubscriptionForTags:completionHandler:</Anchor>
             <NodeRef refid="8"/>
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/CCHSensorPipeline/synchronize:</TokenIdentifier>
-			<Abstract type="html">Calling synchronize will tell the SDK to check for server-side context changes and will update monitored regions.
-The method gives you a way to load new context information if you are not using background push notifications.</Abstract>
-			<DeclaredIn>CCHSensorPipeline.h</DeclaredIn>
+			<TokenIdentifier>//apple_ref/occ/instm/CCHSubscriptionService/removeBeaconSubscriptionForTags:completionHandler:</TokenIdentifier>
+			<Abstract type="html">Unsubscribes the device from beacon change notifications for the specified tags.</Abstract>
+			<DeclaredIn>CCHSubscriptionService.h</DeclaredIn>
 			
-			<Declaration>- (void)synchronize:(void ( ^ ) ( NSError *error ))completionHandler</Declaration>
+			<Declaration>- (void)removeBeaconSubscriptionForTags:(NSArray *)tags completionHandler:(void ( ^ ) ( NSError *error ))completionHandler</Declaration>
 			<Parameters>
 				<Parameter>
+					<Name>tags</Name>
+					<Abstract type="html">An NSArray of tags.</Abstract>
+				</Parameter><Parameter>
 					<Name>completionHandler</Name>
-					<Abstract type="html">(optional) Called when the synchronization completes.  If an error occurs, the NSError will be passed to the block.</Abstract>
+					<Abstract type="html">(optional) Is executed when the request completes.  If an error occurs, the NSError will be passed to the block.</Abstract>
 				</Parameter>
 			</Parameters>
 			
-			<Anchor>//api/name/synchronize:</Anchor>
+			<Anchor>//api/name/removeBeaconSubscriptionForTags:completionHandler:</Anchor>
             <NodeRef refid="8"/>
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/CCHSensorPipeline/addElementsWithTags:</TokenIdentifier>
-			<Abstract type="html">To enable automatic region monitoring for geofences and iBeacons you must add the tags of the elements to the sensor pipeline.</Abstract>
-			<DeclaredIn>CCHSensorPipeline.h</DeclaredIn>
+			<TokenIdentifier>//apple_ref/occ/instm/CCHSubscriptionService/addGeofenceSubscriptionForTags:completionHandler:</TokenIdentifier>
+			<Abstract type="html">Subscribes the device to geofence change notifications for the specified tags.</Abstract>
+			<DeclaredIn>CCHSubscriptionService.h</DeclaredIn>
 			
-			<Declaration>- (BOOL)addElementsWithTags:(NSArray *)tags</Declaration>
+			<Declaration>- (void)addGeofenceSubscriptionForTags:(NSArray *)tags completionHandler:(void ( ^ ) ( NSError *error ))completionHandler</Declaration>
 			<Parameters>
 				<Parameter>
 					<Name>tags</Name>
-					<Abstract type="html">The tags of the elements that you want to monitor.</Abstract>
+					<Abstract type="html">An NSArray of tags</Abstract>
+				</Parameter><Parameter>
+					<Name>completionHandler</Name>
+					<Abstract type="html">(optional) Is executed when the request completes.  If an error occurs, the NSError will be passed to the block.</Abstract>
 				</Parameter>
 			</Parameters>
-			<ReturnValue><Abstract type="html">Returns A boolean indicating that the tags were added successfully.</Abstract></ReturnValue>
-			<Anchor>//api/name/addElementsWithTags:</Anchor>
+			
+			<Anchor>//api/name/addGeofenceSubscriptionForTags:completionHandler:</Anchor>
             <NodeRef refid="8"/>
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/CCHSensorPipeline/removeElementsWithTags:</TokenIdentifier>
-			<Abstract type="html">To disable automatic region monitoring for geofences and beacons, you must remove the tags from the sensor pipeline.</Abstract>
-			<DeclaredIn>CCHSensorPipeline.h</DeclaredIn>
+			<TokenIdentifier>//apple_ref/occ/instm/CCHSubscriptionService/removeGeofenceSubscriptionForTags:completionHandler:</TokenIdentifier>
+			<Abstract type="html">Unubscribes the device from geofence change notifications for the specified tags.</Abstract>
+			<DeclaredIn>CCHSubscriptionService.h</DeclaredIn>
 			
-			<Declaration>- (BOOL)removeElementsWithTags:(NSArray *)tags</Declaration>
+			<Declaration>- (void)removeGeofenceSubscriptionForTags:(NSArray *)tags completionHandler:(void ( ^ ) ( NSError *error ))completionHandler</Declaration>
 			<Parameters>
 				<Parameter>
 					<Name>tags</Name>
-					<Abstract type="html">The tags of the elements that you want to stop monitoring.</Abstract>
+					<Abstract type="html">An NSArray of tags.</Abstract>
+				</Parameter><Parameter>
+					<Name>completionHandler</Name>
+					<Abstract type="html">(optional) Is executed when the request completes.  If an error occurs, the NSError will be passed to the block.</Abstract>
 				</Parameter>
 			</Parameters>
-			<ReturnValue><Abstract type="html">Returns A boolean indicating that the tags were removed successfully.</Abstract></ReturnValue>
-			<Anchor>//api/name/removeElementsWithTags:</Anchor>
+			
+			<Anchor>//api/name/removeGeofenceSubscriptionForTags:completionHandler:</Anchor>
             <NodeRef refid="8"/>
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/CCHSensorPipeline/elementTags</TokenIdentifier>
-			<Abstract type="html">Returns an array of the tags that the pipeline is tracking.</Abstract>
-			<DeclaredIn>CCHSensorPipeline.h</DeclaredIn>
+			<TokenIdentifier>//apple_ref/occ/instm/CCHSubscriptionService/addSubscriptionsForTags:options:completionHandler:</TokenIdentifier>
+			<Abstract type="html">Subscribes the device to change notifications for the specified tags.</Abstract>
+			<DeclaredIn>CCHSubscriptionService.h</DeclaredIn>
 			
-			<Declaration>- (NSArray *)elementTags</Declaration>
+			<Declaration>- (void)addSubscriptionsForTags:(NSArray *)tags options:(NSArray *)options completionHandler:(void ( ^ ) ( NSError *error ))completionHandler</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>tags</Name>
+					<Abstract type="html">An NSArray of tags</Abstract>
+				</Parameter><Parameter>
+					<Name>options</Name>
+					<Abstract type="html">(optional) an NSArray of the elements that you want to subscribe to. (CCHOptionBeacon, CCHOptionGeofence, CCHOptionVault, CCHOptionDevice)</Abstract>
+				</Parameter><Parameter>
+					<Name>completionHandler</Name>
+					<Abstract type="html">(optional) Is executed when the request completes.  If an error occurs, the NSError will be passed to the block.</Abstract>
+				</Parameter>
+			</Parameters>
 			
-			<ReturnValue><Abstract type="html">Returns an array of the tags that the pipeline is tracking.</Abstract></ReturnValue>
-			<Anchor>//api/name/elementTags</Anchor>
+			<Anchor>//api/name/addSubscriptionsForTags:options:completionHandler:</Anchor>
             <NodeRef refid="8"/>
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/CCHSensorPipeline/setDelegate:</TokenIdentifier>
-			<Abstract type="html">The CCHSensorPipelineDelegate</Abstract>
-			<DeclaredIn>CCHSensorPipeline.h</DeclaredIn>
+			<TokenIdentifier>//apple_ref/occ/instm/CCHSubscriptionService/removeSubscriptionsForTags:options:completionHandler:</TokenIdentifier>
+			<Abstract type="html">Unsubscribes the device from change notifications for the specified tags.</Abstract>
+			<DeclaredIn>CCHSubscriptionService.h</DeclaredIn>
 			
-			<Declaration>@property (nonatomic, strong) id&lt;CCHSensorPipelineDelegate&gt; delegate</Declaration>
+			<Declaration>- (void)removeSubscriptionsForTags:(NSArray *)tags options:(NSArray *)options completionHandler:(void ( ^ ) ( NSError *error ))completionHandler</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>tags</Name>
+					<Abstract type="html">An NSArray of tags</Abstract>
+				</Parameter><Parameter>
+					<Name>options</Name>
+					<Abstract type="html">(optional) an NSArray of the elements that you want to unsubscribe from. (CCHOptionBeacon, CCHOptionGeofence, CCHOptionVault, CCHOptionDevice)</Abstract>
+				</Parameter><Parameter>
+					<Name>completionHandler</Name>
+					<Abstract type="html">(optional) Is executed when the request completes.  If an error occurs, the NSError will be passed to the block.</Abstract>
+				</Parameter>
+			</Parameters>
 			
-			
-			<Anchor>//api/name/delegate</Anchor>
-            <NodeRef refid="8"/>
-		</Token>
-		
-		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/CCHSensorPipeline/delegate</TokenIdentifier>
-			<Abstract type="html">The CCHSensorPipelineDelegate</Abstract>
-			<DeclaredIn>CCHSensorPipeline.h</DeclaredIn>
-			
-			<Declaration>@property (nonatomic, strong) id&lt;CCHSensorPipelineDelegate&gt; delegate</Declaration>
-			
-			
-			<Anchor>//api/name/delegate</Anchor>
-            <NodeRef refid="8"/>
-		</Token>
-		
-		<Token>
-			<TokenIdentifier>//apple_ref/occ/instp/CCHSensorPipeline/delegate</TokenIdentifier>
-			<Abstract type="html">The CCHSensorPipelineDelegate</Abstract>
-			<DeclaredIn>CCHSensorPipeline.h</DeclaredIn>
-			
-			<Declaration>@property (nonatomic, strong) id&lt;CCHSensorPipelineDelegate&gt; delegate</Declaration>
-			
-			
-			<Anchor>//api/name/delegate</Anchor>
-            <NodeRef refid="8"/>
-		</Token>
-		
-		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/CCHSensorPipeline/setDataSource:</TokenIdentifier>
-			<Abstract type="html">The CCHSensorPipelineDataSource</Abstract>
-			<DeclaredIn>CCHSensorPipeline.h</DeclaredIn>
-			
-			<Declaration>@property (nonatomic, strong) id&lt;CCHSensorPipelineDataSource&gt; dataSource</Declaration>
-			
-			
-			<Anchor>//api/name/dataSource</Anchor>
-            <NodeRef refid="8"/>
-		</Token>
-		
-		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/CCHSensorPipeline/dataSource</TokenIdentifier>
-			<Abstract type="html">The CCHSensorPipelineDataSource</Abstract>
-			<DeclaredIn>CCHSensorPipeline.h</DeclaredIn>
-			
-			<Declaration>@property (nonatomic, strong) id&lt;CCHSensorPipelineDataSource&gt; dataSource</Declaration>
-			
-			
-			<Anchor>//api/name/dataSource</Anchor>
-            <NodeRef refid="8"/>
-		</Token>
-		
-		<Token>
-			<TokenIdentifier>//apple_ref/occ/instp/CCHSensorPipeline/dataSource</TokenIdentifier>
-			<Abstract type="html">The CCHSensorPipelineDataSource</Abstract>
-			<DeclaredIn>CCHSensorPipeline.h</DeclaredIn>
-			
-			<Declaration>@property (nonatomic, strong) id&lt;CCHSensorPipelineDataSource&gt; dataSource</Declaration>
-			
-			
-			<Anchor>//api/name/dataSource</Anchor>
+			<Anchor>//api/name/removeSubscriptionsForTags:options:completionHandler:</Anchor>
             <NodeRef refid="8"/>
 		</Token>
 		

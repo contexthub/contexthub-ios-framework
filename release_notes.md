@@ -1,3 +1,12 @@
+## 1.6.0 February 20, 2015
+#### Geofences ####
+- ContextHub will monitor more than 20 geofences at a time
+- ContextHub will only use one of the 20 monitored regions provide by apple.
+
+#### Device Profile ####
+- name is no longer captured in the device profile.  We decided that it was too personal :)
+
+
 ## 1.5.1 January 5, 2015
 
 #### CCHDevice ####

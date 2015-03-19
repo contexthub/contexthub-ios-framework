@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Tokens version="1.0">
-	<File path="Constants/CCHSubscriptionErrorCode.html">
+	<File path="Constants/CCHVaultErrorCode.html">
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/c/tdef/CCHSubscriptionErrorCode</TokenIdentifier>
-			<Abstract type="html">ContextHub Subscription error codes.</Abstract>
-			<DeclaredIn>CCHSubscriptionService.h</DeclaredIn>
+			<TokenIdentifier>//apple_ref/c/tdef/CCHVaultErrorCode</TokenIdentifier>
+			<Abstract type="html">ContextHub Vault error codes.</Abstract>
+			<DeclaredIn>CCHVault.h</DeclaredIn>
             
 			
 			<NodeRef refid="19"/>
@@ -14,12 +14,56 @@
 		
         
         <Token>
-            <TokenIdentifier>//apple_ref/c/econst/CCHNullTagsCode</TokenIdentifier>
-            <Abstract type="html">     Null tags error code.
+            <TokenIdentifier>//apple_ref/c/econst/CCHMissingContainer</TokenIdentifier>
+            <Abstract type="html">     missing container error code.
      </Abstract>
-            <Declaration>CCHNullTagsCode</Declaration>
+            <Declaration>CCHMissingContainer</Declaration>
             
-            <DeclaredIn>CCHSubscriptionService.h</DeclaredIn>
+            <DeclaredIn>CCHVault.h</DeclaredIn>
+            
+            <NodeRef refid="19"/>
+        </Token>
+        
+        <Token>
+            <TokenIdentifier>//apple_ref/c/econst/CCHMissingItem</TokenIdentifier>
+            <Abstract type="html">     missing item error code.
+     </Abstract>
+            <Declaration>CCHMissingItem</Declaration>
+            
+            <DeclaredIn>CCHVault.h</DeclaredIn>
+            
+            <NodeRef refid="19"/>
+        </Token>
+        
+        <Token>
+            <TokenIdentifier>//apple_ref/c/econst/CCHMissingVaultId</TokenIdentifier>
+            <Abstract type="html">     missing vault id error code.
+     </Abstract>
+            <Declaration>CCHMissingVaultId</Declaration>
+            
+            <DeclaredIn>CCHVault.h</DeclaredIn>
+            
+            <NodeRef refid="19"/>
+        </Token>
+        
+        <Token>
+            <TokenIdentifier>//apple_ref/c/econst/CCHInvalidVaultDictionary</TokenIdentifier>
+            <Abstract type="html">     missing vault information error code.
+     </Abstract>
+            <Declaration>CCHInvalidVaultDictionary</Declaration>
+            
+            <DeclaredIn>CCHVault.h</DeclaredIn>
+            
+            <NodeRef refid="19"/>
+        </Token>
+        
+        <Token>
+            <TokenIdentifier>//apple_ref/c/econst/CCHInvalidVaultJSONObject</TokenIdentifier>
+            <Abstract type="html">     invalid JSON object.
+     </Abstract>
+            <Declaration>CCHInvalidVaultJSONObject</Declaration>
+            
+            <DeclaredIn>CCHVault.h</DeclaredIn>
             
             <NodeRef refid="19"/>
         </Token>
