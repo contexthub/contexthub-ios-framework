@@ -1,3 +1,7 @@
+## 1.6.1 March 19, 2015
+- added `monitoredRegions` to `CCHSensorPipeline`. It Returns the set of geofences that are considered significant based on the devices context. It contains a subset of all regions that are being monitored.
+- fixed a bug with geofence detection while a phone is stationary for an extended period of time.
+
 ## 1.6.0 February 20, 2015
 #### Geofences ####
 - ContextHub will monitor more than 20 geofences at a time
