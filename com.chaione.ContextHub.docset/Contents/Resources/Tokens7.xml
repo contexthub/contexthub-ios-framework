@@ -182,6 +182,42 @@ The method gives you a way to load new context information if you are not using 
             <NodeRef refid="7"/>
 		</Token>
 		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/CCHSensorPipeline/setMonitoredRegions:</TokenIdentifier>
+			<Abstract type="html">Returns the set of geofences that are considered significant based on the devices context.  It contains a subset of all regions that are being monitored.</Abstract>
+			<DeclaredIn>CCHSensorPipeline.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readonly) NSSet *monitoredRegions</Declaration>
+			
+			
+			<Anchor>//api/name/monitoredRegions</Anchor>
+            <NodeRef refid="7"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/CCHSensorPipeline/monitoredRegions</TokenIdentifier>
+			<Abstract type="html">Returns the set of geofences that are considered significant based on the devices context.  It contains a subset of all regions that are being monitored.</Abstract>
+			<DeclaredIn>CCHSensorPipeline.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readonly) NSSet *monitoredRegions</Declaration>
+			
+			
+			<Anchor>//api/name/monitoredRegions</Anchor>
+            <NodeRef refid="7"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/CCHSensorPipeline/monitoredRegions</TokenIdentifier>
+			<Abstract type="html">Returns the set of geofences that are considered significant based on the devices context.  It contains a subset of all regions that are being monitored.</Abstract>
+			<DeclaredIn>CCHSensorPipeline.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readonly) NSSet *monitoredRegions</Declaration>
+			
+			
+			<Anchor>//api/name/monitoredRegions</Anchor>
+            <NodeRef refid="7"/>
+		</Token>
+		
         
 	</File>
 </Tokens>

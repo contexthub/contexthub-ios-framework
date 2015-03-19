@@ -194,6 +194,11 @@ extern NSString * const CCHUntaggedElements;
  */
 @property (nonatomic, strong) id<CCHSensorPipelineDataSource> dataSource;
 
+/**
+ Returns the set of geofences that are considered significant based on the devices context.  It contains a subset of all regions that are being monitored.
+ */
+@property (nonatomic, readonly) NSSet *monitoredRegions;
+
 @end
 
 
