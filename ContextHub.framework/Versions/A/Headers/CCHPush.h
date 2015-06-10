@@ -44,11 +44,19 @@
 /**
   Register a device for push notifications.
   @param token The device token.
-  @param alias (optional) A string alias to associate with the device token.
-  @param tags (optional) An array of tags to associate with the token.
+  @param alias (optional) A string alias to associate with the device token. (pass nil to ignore value, @"" to remove current alias)
+  @param tags (optional) An array of tags to associate with the token. (pass nil to ignore value, @[] to remove all current tags)
   @param completionHandler (optional) returns nil if succeeded otherwise includes an error object.
  */
 - (void)registerDeviceToken:(id)token alias:(NSString *)alias tags:(NSArray *)tags completionHandler:(void(^)(NSError *error))completionHandler;
+
+/**
+ Update a device's alias and tags.
+ @param alias (optional) A string alias to associate with the device token. (pass "nil" to ignore value, @"" to remove current alias)
+ @param tags (optional) An array of tags to associate with the token. (pass nil to ignore value, @[] to remove all current tags)
+ @param completionHandler (optional) returns nil if succeeded otherwise includes an error object.
+ */
+- (void)updateAlias:(NSString *)alias tags:(NSArray *)tags completionHandler:(void(^)(NSError *error))completionHandler;
 
 /**
  Send Push Notifications to devices.
@@ -63,7 +71,7 @@
  Send Push Notification to aliases.
 
  @param aliases The aliases to notify.
- @param userInfo The data to be sent in the notification.
+ @param userInfo The data to be sent in the notification. Exclude devices by passing an array of device IDs in the @"exclude_device_ids" key.
  @param completionHandler Completion block.  If an error occurs an NSError will be passed to the block.
  */
 - (void)sendNotificationToAliases:(NSArray *)aliases userInfo:(NSDictionary *)userInfo completionHandler:(void (^)(NSError *error))completionHandler;
@@ -72,7 +80,7 @@
 /**
  Send Push Notification to tags.
  @param tags The tags to notify.
- @param userInfo The data to be sent in the notification.
+ @param userInfo The data to be sent in the notification. Exclude devices by passing an array of device IDs in the @"exclude_device_ids" key.
  @param completionHandler Completion block.  If an error occurs an NSError will be passed to the block.
  */
 - (void)sendNotificationToTags:(NSArray *)tags userInfo:(NSDictionary *)userInfo completionHandler:(void (^)(NSError *error))completionHandler;
@@ -82,7 +90,7 @@
  
  @param tags The tags to notify.
  @param tagOperator (optional) Operator used to build the query with the tags.  Passing ANY will find all geofences that match any of the tags. Passing ALL will find geofences that have all of the tags provided.  Passing nil will use the default ALL operator.
- @param userInfo  The data to be sent in the notification.
+ @param userInfo  The data to be sent in the notification. Exclude devices by passing an array of device IDs in the @"exclude_device_ids" key.
  @param completionHandler Completion block.  If an error occurs an NSError will be passed to the block.
  */
 - (void)sendNotificationToTags:(NSArray *)tags operator:(NSString *)tagOperator userInfo:(NSDictionary *)userInfo completionHandler:(void (^)(NSError *error))completionHandler;

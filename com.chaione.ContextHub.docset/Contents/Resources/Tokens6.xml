@@ -36,10 +36,10 @@
 					<Abstract type="html">The device token.</Abstract>
 				</Parameter><Parameter>
 					<Name>alias</Name>
-					<Abstract type="html">(optional) A string alias to associate with the device token.</Abstract>
+					<Abstract type="html">(optional) A string alias to associate with the device token. (pass nil to ignore value, @&quot;&quot; to remove current alias)</Abstract>
 				</Parameter><Parameter>
 					<Name>tags</Name>
-					<Abstract type="html">(optional) An array of tags to associate with the token.</Abstract>
+					<Abstract type="html">(optional) An array of tags to associate with the token. (pass nil to ignore value, @[] to remove all current tags)</Abstract>
 				</Parameter><Parameter>
 					<Name>completionHandler</Name>
 					<Abstract type="html">(optional) returns nil if succeeded otherwise includes an error object.</Abstract>
@@ -47,6 +47,29 @@
 			</Parameters>
 			
 			<Anchor>//api/name/registerDeviceToken:alias:tags:completionHandler:</Anchor>
+            <NodeRef refid="6"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/CCHPush/updateAlias:tags:completionHandler:</TokenIdentifier>
+			<Abstract type="html">Update a device&apos;s alias and tags.</Abstract>
+			<DeclaredIn>CCHPush.h</DeclaredIn>
+			
+			<Declaration>- (void)updateAlias:(NSString *)alias tags:(NSArray *)tags completionHandler:(void ( ^ ) ( NSError *error ))completionHandler</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>alias</Name>
+					<Abstract type="html">(optional) A string alias to associate with the device token. (pass &quot;nil&quot; to ignore value, @&quot;&quot; to remove current alias)</Abstract>
+				</Parameter><Parameter>
+					<Name>tags</Name>
+					<Abstract type="html">(optional) An array of tags to associate with the token. (pass nil to ignore value, @[] to remove all current tags)</Abstract>
+				</Parameter><Parameter>
+					<Name>completionHandler</Name>
+					<Abstract type="html">(optional) returns nil if succeeded otherwise includes an error object.</Abstract>
+				</Parameter>
+			</Parameters>
+			
+			<Anchor>//api/name/updateAlias:tags:completionHandler:</Anchor>
             <NodeRef refid="6"/>
 		</Token>
 		
@@ -85,7 +108,7 @@
 					<Abstract type="html">The aliases to notify.</Abstract>
 				</Parameter><Parameter>
 					<Name>userInfo</Name>
-					<Abstract type="html">The data to be sent in the notification.</Abstract>
+					<Abstract type="html">The data to be sent in the notification. Exclude devices by passing an array of device IDs in the @&quot;excludedeviceids&quot; key.</Abstract>
 				</Parameter><Parameter>
 					<Name>completionHandler</Name>
 					<Abstract type="html">Completion block.  If an error occurs an NSError will be passed to the block.</Abstract>
@@ -108,7 +131,7 @@
 					<Abstract type="html">The tags to notify.</Abstract>
 				</Parameter><Parameter>
 					<Name>userInfo</Name>
-					<Abstract type="html">The data to be sent in the notification.</Abstract>
+					<Abstract type="html">The data to be sent in the notification. Exclude devices by passing an array of device IDs in the @&quot;excludedeviceids&quot; key.</Abstract>
 				</Parameter><Parameter>
 					<Name>completionHandler</Name>
 					<Abstract type="html">Completion block.  If an error occurs an NSError will be passed to the block.</Abstract>
@@ -134,7 +157,7 @@
 					<Abstract type="html">(optional) Operator used to build the query with the tags.  Passing ANY will find all geofences that match any of the tags. Passing ALL will find geofences that have all of the tags provided.  Passing nil will use the default ALL operator.</Abstract>
 				</Parameter><Parameter>
 					<Name>userInfo</Name>
-					<Abstract type="html">The data to be sent in the notification.</Abstract>
+					<Abstract type="html">The data to be sent in the notification. Exclude devices by passing an array of device IDs in the @&quot;excludedeviceids&quot; key.</Abstract>
 				</Parameter><Parameter>
 					<Name>completionHandler</Name>
 					<Abstract type="html">Completion block.  If an error occurs an NSError will be passed to the block.</Abstract>

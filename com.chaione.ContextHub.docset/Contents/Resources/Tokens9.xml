@@ -93,7 +93,7 @@ Once you persist data, you can retrieve it by Tag or id.</Abstract>
 			<Abstract type="html">Gets items stored in the Vault.</Abstract>
 			<DeclaredIn>CCHVault.h</DeclaredIn>
 			
-			<Declaration>- (void)getItemsWithTags:(NSArray *)tags operator:(NSString *)tagOperator keyPath:(NSString *)keyPath value:(NSString *)value completionHandler:(vaultListingCompletionBlock)completionHandler</Declaration>
+			<Declaration>- (void)getItemsWithTags:(NSArray *)tags operator:(NSString *)tagOperator keyPath:(NSString *)keyPath value:(NSString *)value completionHandler:(void ( ^ ) ( NSArray *responses , NSError *error ))completionHandler</Declaration>
 			<Parameters>
 				<Parameter>
 					<Name>tags</Name>
