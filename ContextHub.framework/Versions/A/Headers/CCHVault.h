@@ -35,9 +35,6 @@ typedef NS_ENUM(NSInteger, CCHVaultErrorCode) {
     CCHInvalidVaultJSONObject
 };
 
-typedef void (^vaultCompletionBlock)(NSDictionary *response, NSError *error);
-typedef void (^vaultListingCompletionBlock)(NSArray *responses, NSError *error);
-
 /**
  The CCHVault is used to persist data on the ContextHub servers.  This class provides methods for storing data on ContextHub servers.  Data stored in the vault can be accessed inside the ContextRules.
  Once you persist data, you can retrieve it by Tag or id.
@@ -95,7 +92,7 @@ typedef void (^vaultListingCompletionBlock)(NSArray *responses, NSError *error);
  @param value (optional) The value that you want to find for the keyPath.
  @param completionHandler Called when the request completes. The block is passed an NSArray of dictionaries that represent the items.  If an error occurs, the NSError will be passed to the block.
  */
-- (void)getItemsWithTags:(NSArray *)tags operator:(NSString *)tagOperator keyPath:(NSString *)keyPath value:(NSString *)value completionHandler:(vaultListingCompletionBlock)completionHandler;
+- (void)getItemsWithTags:(NSArray *)tags operator:(NSString *)tagOperator keyPath:(NSString *)keyPath value:(NSString *)value completionHandler:(void(^)(NSArray *responses, NSError *error))completionHandler;
 
 /**
  Updates an item in the Vault.

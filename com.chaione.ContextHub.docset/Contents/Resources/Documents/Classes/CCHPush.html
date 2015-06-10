@@ -60,6 +60,8 @@
 	
 	<option value="//api/name/sendNotificationToTags:userInfo:completionHandler:">&nbsp;&nbsp;&nbsp;&nbsp;- sendNotificationToTags:userInfo:completionHandler:</option>
 	
+	<option value="//api/name/updateAlias:tags:completionHandler:">&nbsp;&nbsp;&nbsp;&nbsp;- updateAlias:tags:completionHandler:</option>
+	
 	
 	
 </select>
@@ -105,6 +107,8 @@
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/sendNotificationToTags:operator:userInfo:completionHandler:">sendNotificationToTags:operator:userInfo:completionHandler:</a></span></li>
 	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/sendNotificationToTags:userInfo:completionHandler:">sendNotificationToTags:userInfo:completionHandler:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/updateAlias:tags:completionHandler:">updateAlias:tags:completionHandler:</a></span></li>
 	
 </ul></li>
 
@@ -234,6 +238,12 @@ This implementation will pull out the apns and <a href="../Classes/ContextHub.ht
 </li><li>
 	<span class="tooltip">
 		<code><a href="#//api/name/registerDeviceToken:alias:tags:completionHandler:">&ndash;&nbsp;registerDeviceToken:alias:tags:completionHandler:</a></code>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/updateAlias:tags:completionHandler:">&ndash;&nbsp;updateAlias:tags:completionHandler:</a></code>
 	</span>
 	
 	
@@ -409,12 +419,12 @@ This will allow the context events to update and stay in sync with the server.</
 		
 		<dl class="argument-def parameter-def">
 			<dt><em>alias</em></dt>
-			<dd><p>(optional) A string alias to associate with the device token.</p></dd>
+			<dd><p>(optional) A string alias to associate with the device token. (pass nil to ignore value, @&ldquo;&rdquo; to remove current alias)</p></dd>
 		</dl>
 		
 		<dl class="argument-def parameter-def">
 			<dt><em>tags</em></dt>
-			<dd><p>(optional) An array of tags to associate with the token.</p></dd>
+			<dd><p>(optional) An array of tags to associate with the token. (pass nil to ignore value, @[] to remove all current tags)</p></dd>
 		</dl>
 		
 		<dl class="argument-def parameter-def">
@@ -470,7 +480,7 @@ This will allow the context events to update and stay in sync with the server.</
 		
 		<dl class="argument-def parameter-def">
 			<dt><em>userInfo</em></dt>
-			<dd><p>The data to be sent in the notification.</p></dd>
+			<dd><p>The data to be sent in the notification. Exclude devices by passing an array of device IDs in the @&ldquo;exclude_device_ids&rdquo; key.</p></dd>
 		</dl>
 		
 		<dl class="argument-def parameter-def">
@@ -587,7 +597,7 @@ This will allow the context events to update and stay in sync with the server.</
 		
 		<dl class="argument-def parameter-def">
 			<dt><em>userInfo</em></dt>
-			<dd><p>The data to be sent in the notification.</p></dd>
+			<dd><p>The data to be sent in the notification. Exclude devices by passing an array of device IDs in the @&ldquo;exclude_device_ids&rdquo; key.</p></dd>
 		</dl>
 		
 		<dl class="argument-def parameter-def">
@@ -643,12 +653,68 @@ This will allow the context events to update and stay in sync with the server.</
 		
 		<dl class="argument-def parameter-def">
 			<dt><em>userInfo</em></dt>
-			<dd><p>The data to be sent in the notification.</p></dd>
+			<dd><p>The data to be sent in the notification. Exclude devices by passing an array of device IDs in the @&ldquo;exclude_device_ids&rdquo; key.</p></dd>
 		</dl>
 		
 		<dl class="argument-def parameter-def">
 			<dt><em>completionHandler</em></dt>
 			<dd><p>Completion block.  If an error occurs an NSError will be passed to the block.</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">CCHPush.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/updateAlias:tags:completionHandler:" title="updateAlias:tags:completionHandler:"></a>
+	<h3 class="subsubtitle method-title">updateAlias:tags:completionHandler:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Update a device&rsquo;s alias and tags.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (void)updateAlias:(NSString *)<em>alias</em> tags:(NSArray *)<em>tags</em> completionHandler:(void ( ^ ) ( NSError *error ))<em>completionHandler</em></code></div>
+
+    
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>alias</em></dt>
+			<dd><p>(optional) A string alias to associate with the device token. (pass &ldquo;nil&rdquo; to ignore value, @&ldquo;&rdquo; to remove current alias)</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>tags</em></dt>
+			<dd><p>(optional) An array of tags to associate with the token. (pass nil to ignore value, @[] to remove all current tags)</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>completionHandler</em></dt>
+			<dd><p>(optional) returns nil if succeeded otherwise includes an error object.</p></dd>
 		</dl>
 		
 	</div>
@@ -688,7 +754,7 @@ This will allow the context events to update and stay in sync with the server.</
 				<div id="footer">
 					<hr />
 					<div class="footer-copyright">
-						<p><span class="copyright">&copy; 2015 ContextHub. All rights reserved. (Last updated: 2015-03-19)</span><br />
+						<p><span class="copyright">&copy; 2015 ContextHub. All rights reserved. (Last updated: 2015-06-10)</span><br />
 						
 						<span class="generator">Generated by <a href="http://appledoc.gentlebytes.com">appledoc 2.2 (build 963)</a>.</span></p>
 						

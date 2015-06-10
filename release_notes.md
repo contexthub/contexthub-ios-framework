@@ -1,13 +1,22 @@
+## 1.6.2 June 10, 2015
+
+- fixed an issue where inaccurate location events were causing geofence in/out events.
+- added a default pipeline tags `<device id>`, `<application id>`, `ios`
+
 ## 1.6.1 March 19, 2015
+
 - added `monitoredRegions` to `CCHSensorPipeline`. It Returns the set of geofences that are considered significant based on the devices context. It contains a subset of all regions that are being monitored.
 - fixed a bug with geofence detection while a phone is stationary for an extended period of time.
 
 ## 1.6.0 February 20, 2015
+
 #### Geofences ####
+
 - ContextHub will monitor more than 20 geofences at a time
 - ContextHub will only use one of the 20 monitored regions provide by apple.
 
 #### Device Profile ####
+
 - name is no longer captured in the device profile.  We decided that it was too personal :)
 
 
