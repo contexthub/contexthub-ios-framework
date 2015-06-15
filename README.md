@@ -15,7 +15,7 @@ Be sure you select `copy items into to destination's group folder (if needed)`
 - MobileCoreServices
 - CoreLocation
 
-## Authorization Location Services
+## Authorize Location Services
 
 You must configure your project for location services:
 
