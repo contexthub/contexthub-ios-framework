@@ -1,3 +1,6 @@
+## 1.6.3 July 13, 2015
+- improved thread safety when working with geofence services.
+
 ## 1.6.2 June 10, 2015
 
 - fixed an issue where inaccurate location events were causing geofence in/out events.
